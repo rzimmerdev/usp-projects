@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/adding_surnames.dir/lab_icc_1/adding_surnames/adding_surnames.c.o  -o adding_surnames 

@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/livro_corrompido.dir/icc/corrupted_book/corrupted_book.c.o  -o livro_corrompido 

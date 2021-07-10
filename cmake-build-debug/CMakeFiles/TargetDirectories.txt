@@ -1,0 +1,8 @@
+/mnt/d/projects/usp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/d/projects/usp/cmake-build-debug/CMakeFiles/particle_simulation.dir
+/mnt/d/projects/usp/cmake-build-debug/CMakeFiles/fonte12v3v.dir
+/mnt/d/projects/usp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/d/projects/usp/cmake-build-debug/CMakeFiles/manhattan_delivery.dir
+/mnt/d/projects/usp/cmake-build-debug/CMakeFiles/adding_surnames.dir
+/mnt/d/projects/usp/cmake-build-debug/CMakeFiles/change_coins.dir
+/mnt/d/projects/usp/cmake-build-debug/CMakeFiles/interplanetary_time.dir

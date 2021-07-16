@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/d/projects/usp/lab_icc_1/particle_simulation/particle_simulation.c" "/mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles/particle_simulation.dir/lab_icc_1/particle_simulation/particle_simulation.c.o"
+  "/mnt/d/projects/usp-projects/lab_icc_1/particle_simulation/particle_simulation.c" "/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/particle_simulation.dir/lab_icc_1/particle_simulation/particle_simulation.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -44,21 +44,22 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/projects/usp
+CMAKE_SOURCE_DIR = /mnt/d/projects/usp-projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/projects/usp/cmake-build-debug-wsl
+CMAKE_BINARY_DIR = /mnt/d/projects/usp-projects/cmake-build-debug-wsl
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/taboo_word.dir/all
 all: CMakeFiles/particle_simulation.dir/all
-all: CMakeFiles/fonte12v3v.dir/all
-all: CMakeFiles/manhattan_delivery.dir/all
 all: CMakeFiles/adding_surnames.dir/all
 all: CMakeFiles/change_coins.dir/all
-all: CMakeFiles/interplanetary_time.dir/all
+all: CMakeFiles/fonte12v3v.dir/all
+all: CMakeFiles/automatons.dir/all
+all: CMakeFiles/manhattan_delivery.dir/all
 
 .PHONY : all
 
@@ -68,14 +69,42 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/taboo_word.dir/clean
 clean: CMakeFiles/particle_simulation.dir/clean
-clean: CMakeFiles/fonte12v3v.dir/clean
-clean: CMakeFiles/manhattan_delivery.dir/clean
 clean: CMakeFiles/adding_surnames.dir/clean
 clean: CMakeFiles/change_coins.dir/clean
-clean: CMakeFiles/interplanetary_time.dir/clean
+clean: CMakeFiles/fonte12v3v.dir/clean
+clean: CMakeFiles/automatons.dir/clean
+clean: CMakeFiles/manhattan_delivery.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/taboo_word.dir
+
+# All Build rule for target.
+CMakeFiles/taboo_word.dir/all:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/depend
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=13,14 "Built target taboo_word"
+.PHONY : CMakeFiles/taboo_word.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/taboo_word.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/taboo_word.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 0
+.PHONY : CMakeFiles/taboo_word.dir/rule
+
+# Convenience name for target.
+taboo_word: CMakeFiles/taboo_word.dir/rule
+
+.PHONY : taboo_word
+
+# clean rule for target.
+CMakeFiles/taboo_word.dir/clean:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/clean
+.PHONY : CMakeFiles/taboo_word.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/particle_simulation.dir
@@ -84,14 +113,14 @@ clean: CMakeFiles/interplanetary_time.dir/clean
 CMakeFiles/particle_simulation.dir/all:
 	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/depend
 	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles --progress-num=11,12 "Built target particle_simulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=11,12 "Built target particle_simulation"
 .PHONY : CMakeFiles/particle_simulation.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/particle_simulation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/particle_simulation.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 0
 .PHONY : CMakeFiles/particle_simulation.dir/rule
 
 # Convenience name for target.
@@ -105,74 +134,20 @@ CMakeFiles/particle_simulation.dir/clean:
 .PHONY : CMakeFiles/particle_simulation.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/fonte12v3v.dir
-
-# All Build rule for target.
-CMakeFiles/fonte12v3v.dir/all:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/depend
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles --progress-num=5,6 "Built target fonte12v3v"
-.PHONY : CMakeFiles/fonte12v3v.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/fonte12v3v.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fonte12v3v.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 0
-.PHONY : CMakeFiles/fonte12v3v.dir/rule
-
-# Convenience name for target.
-fonte12v3v: CMakeFiles/fonte12v3v.dir/rule
-
-.PHONY : fonte12v3v
-
-# clean rule for target.
-CMakeFiles/fonte12v3v.dir/clean:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/clean
-.PHONY : CMakeFiles/fonte12v3v.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/manhattan_delivery.dir
-
-# All Build rule for target.
-CMakeFiles/manhattan_delivery.dir/all:
-	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/depend
-	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles --progress-num=9,10 "Built target manhattan_delivery"
-.PHONY : CMakeFiles/manhattan_delivery.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/manhattan_delivery.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/manhattan_delivery.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 0
-.PHONY : CMakeFiles/manhattan_delivery.dir/rule
-
-# Convenience name for target.
-manhattan_delivery: CMakeFiles/manhattan_delivery.dir/rule
-
-.PHONY : manhattan_delivery
-
-# clean rule for target.
-CMakeFiles/manhattan_delivery.dir/clean:
-	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/clean
-.PHONY : CMakeFiles/manhattan_delivery.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/adding_surnames.dir
 
 # All Build rule for target.
 CMakeFiles/adding_surnames.dir/all:
 	$(MAKE) -f CMakeFiles/adding_surnames.dir/build.make CMakeFiles/adding_surnames.dir/depend
 	$(MAKE) -f CMakeFiles/adding_surnames.dir/build.make CMakeFiles/adding_surnames.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles --progress-num=1,2 "Built target adding_surnames"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=1,2 "Built target adding_surnames"
 .PHONY : CMakeFiles/adding_surnames.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/adding_surnames.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/adding_surnames.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 0
 .PHONY : CMakeFiles/adding_surnames.dir/rule
 
 # Convenience name for target.
@@ -192,14 +167,14 @@ CMakeFiles/adding_surnames.dir/clean:
 CMakeFiles/change_coins.dir/all:
 	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/depend
 	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles --progress-num=3,4 "Built target change_coins"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=5,6 "Built target change_coins"
 .PHONY : CMakeFiles/change_coins.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/change_coins.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/change_coins.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 0
 .PHONY : CMakeFiles/change_coins.dir/rule
 
 # Convenience name for target.
@@ -213,31 +188,85 @@ CMakeFiles/change_coins.dir/clean:
 .PHONY : CMakeFiles/change_coins.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/interplanetary_time.dir
+# Target rules for target CMakeFiles/fonte12v3v.dir
 
 # All Build rule for target.
-CMakeFiles/interplanetary_time.dir/all:
-	$(MAKE) -f CMakeFiles/interplanetary_time.dir/build.make CMakeFiles/interplanetary_time.dir/depend
-	$(MAKE) -f CMakeFiles/interplanetary_time.dir/build.make CMakeFiles/interplanetary_time.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles --progress-num=7,8 "Built target interplanetary_time"
-.PHONY : CMakeFiles/interplanetary_time.dir/all
+CMakeFiles/fonte12v3v.dir/all:
+	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/depend
+	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=7,8 "Built target fonte12v3v"
+.PHONY : CMakeFiles/fonte12v3v.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/interplanetary_time.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/interplanetary_time.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 0
-.PHONY : CMakeFiles/interplanetary_time.dir/rule
+CMakeFiles/fonte12v3v.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fonte12v3v.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 0
+.PHONY : CMakeFiles/fonte12v3v.dir/rule
 
 # Convenience name for target.
-interplanetary_time: CMakeFiles/interplanetary_time.dir/rule
+fonte12v3v: CMakeFiles/fonte12v3v.dir/rule
 
-.PHONY : interplanetary_time
+.PHONY : fonte12v3v
 
 # clean rule for target.
-CMakeFiles/interplanetary_time.dir/clean:
-	$(MAKE) -f CMakeFiles/interplanetary_time.dir/build.make CMakeFiles/interplanetary_time.dir/clean
-.PHONY : CMakeFiles/interplanetary_time.dir/clean
+CMakeFiles/fonte12v3v.dir/clean:
+	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/clean
+.PHONY : CMakeFiles/fonte12v3v.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/automatons.dir
+
+# All Build rule for target.
+CMakeFiles/automatons.dir/all:
+	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/depend
+	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=3,4 "Built target automatons"
+.PHONY : CMakeFiles/automatons.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/automatons.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/automatons.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 0
+.PHONY : CMakeFiles/automatons.dir/rule
+
+# Convenience name for target.
+automatons: CMakeFiles/automatons.dir/rule
+
+.PHONY : automatons
+
+# clean rule for target.
+CMakeFiles/automatons.dir/clean:
+	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/clean
+.PHONY : CMakeFiles/automatons.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/manhattan_delivery.dir
+
+# All Build rule for target.
+CMakeFiles/manhattan_delivery.dir/all:
+	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/depend
+	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=9,10 "Built target manhattan_delivery"
+.PHONY : CMakeFiles/manhattan_delivery.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/manhattan_delivery.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/manhattan_delivery.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 0
+.PHONY : CMakeFiles/manhattan_delivery.dir/rule
+
+# Convenience name for target.
+manhattan_delivery: CMakeFiles/manhattan_delivery.dir/rule
+
+.PHONY : manhattan_delivery
+
+# clean rule for target.
+CMakeFiles/manhattan_delivery.dir/clean:
+	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/clean
+.PHONY : CMakeFiles/manhattan_delivery.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

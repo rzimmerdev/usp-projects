@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/projects/usp
+CMAKE_SOURCE_DIR = /mnt/d/projects/usp-projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/projects/usp/cmake-build-debug-wsl
+CMAKE_BINARY_DIR = /mnt/d/projects/usp-projects/cmake-build-debug-wsl
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp/cmake-build-debug-wsl/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named taboo_word
+
+# Build rule for target.
+taboo_word: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 taboo_word
+.PHONY : taboo_word
+
+# fast build rule for target.
+taboo_word/fast:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/build
+.PHONY : taboo_word/fast
+
+#=============================================================================
 # Target rules for targets named particle_simulation
 
 # Build rule for target.
@@ -122,32 +135,6 @@ particle_simulation: cmake_check_build_system
 particle_simulation/fast:
 	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/build
 .PHONY : particle_simulation/fast
-
-#=============================================================================
-# Target rules for targets named fonte12v3v
-
-# Build rule for target.
-fonte12v3v: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fonte12v3v
-.PHONY : fonte12v3v
-
-# fast build rule for target.
-fonte12v3v/fast:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/build
-.PHONY : fonte12v3v/fast
-
-#=============================================================================
-# Target rules for targets named manhattan_delivery
-
-# Build rule for target.
-manhattan_delivery: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 manhattan_delivery
-.PHONY : manhattan_delivery
-
-# fast build rule for target.
-manhattan_delivery/fast:
-	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/build
-.PHONY : manhattan_delivery/fast
 
 #=============================================================================
 # Target rules for targets named adding_surnames
@@ -176,17 +163,43 @@ change_coins/fast:
 .PHONY : change_coins/fast
 
 #=============================================================================
-# Target rules for targets named interplanetary_time
+# Target rules for targets named fonte12v3v
 
 # Build rule for target.
-interplanetary_time: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 interplanetary_time
-.PHONY : interplanetary_time
+fonte12v3v: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fonte12v3v
+.PHONY : fonte12v3v
 
 # fast build rule for target.
-interplanetary_time/fast:
-	$(MAKE) -f CMakeFiles/interplanetary_time.dir/build.make CMakeFiles/interplanetary_time.dir/build
-.PHONY : interplanetary_time/fast
+fonte12v3v/fast:
+	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/build
+.PHONY : fonte12v3v/fast
+
+#=============================================================================
+# Target rules for targets named automatons
+
+# Build rule for target.
+automatons: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 automatons
+.PHONY : automatons
+
+# fast build rule for target.
+automatons/fast:
+	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/build
+.PHONY : automatons/fast
+
+#=============================================================================
+# Target rules for targets named manhattan_delivery
+
+# Build rule for target.
+manhattan_delivery: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 manhattan_delivery
+.PHONY : manhattan_delivery
+
+# fast build rule for target.
+manhattan_delivery/fast:
+	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/build
+.PHONY : manhattan_delivery/fast
 
 eletronica_1/fonte.o: eletronica_1/fonte.c.o
 
@@ -214,6 +227,33 @@ eletronica_1/fonte.s: eletronica_1/fonte.c.s
 eletronica_1/fonte.c.s:
 	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.s
 .PHONY : eletronica_1/fonte.c.s
+
+icc_1/automatons/automatons.o: icc_1/automatons/automatons.c.o
+
+.PHONY : icc_1/automatons/automatons.o
+
+# target to build an object file
+icc_1/automatons/automatons.c.o:
+	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/icc_1/automatons/automatons.c.o
+.PHONY : icc_1/automatons/automatons.c.o
+
+icc_1/automatons/automatons.i: icc_1/automatons/automatons.c.i
+
+.PHONY : icc_1/automatons/automatons.i
+
+# target to preprocess a source file
+icc_1/automatons/automatons.c.i:
+	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/icc_1/automatons/automatons.c.i
+.PHONY : icc_1/automatons/automatons.c.i
+
+icc_1/automatons/automatons.s: icc_1/automatons/automatons.c.s
+
+.PHONY : icc_1/automatons/automatons.s
+
+# target to generate assembly for a file
+icc_1/automatons/automatons.c.s:
+	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/icc_1/automatons/automatons.c.s
+.PHONY : icc_1/automatons/automatons.c.s
 
 icc_1/manhattan_delivery/manhattan_delivery.o: icc_1/manhattan_delivery/manhattan_delivery.c.o
 
@@ -296,33 +336,6 @@ lab_icc_1/change_coins/change_coins.c.s:
 	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/lab_icc_1/change_coins/change_coins.c.s
 .PHONY : lab_icc_1/change_coins/change_coins.c.s
 
-lab_icc_1/interplanetary_time/interplanetary_time.o: lab_icc_1/interplanetary_time/interplanetary_time.c.o
-
-.PHONY : lab_icc_1/interplanetary_time/interplanetary_time.o
-
-# target to build an object file
-lab_icc_1/interplanetary_time/interplanetary_time.c.o:
-	$(MAKE) -f CMakeFiles/interplanetary_time.dir/build.make CMakeFiles/interplanetary_time.dir/lab_icc_1/interplanetary_time/interplanetary_time.c.o
-.PHONY : lab_icc_1/interplanetary_time/interplanetary_time.c.o
-
-lab_icc_1/interplanetary_time/interplanetary_time.i: lab_icc_1/interplanetary_time/interplanetary_time.c.i
-
-.PHONY : lab_icc_1/interplanetary_time/interplanetary_time.i
-
-# target to preprocess a source file
-lab_icc_1/interplanetary_time/interplanetary_time.c.i:
-	$(MAKE) -f CMakeFiles/interplanetary_time.dir/build.make CMakeFiles/interplanetary_time.dir/lab_icc_1/interplanetary_time/interplanetary_time.c.i
-.PHONY : lab_icc_1/interplanetary_time/interplanetary_time.c.i
-
-lab_icc_1/interplanetary_time/interplanetary_time.s: lab_icc_1/interplanetary_time/interplanetary_time.c.s
-
-.PHONY : lab_icc_1/interplanetary_time/interplanetary_time.s
-
-# target to generate assembly for a file
-lab_icc_1/interplanetary_time/interplanetary_time.c.s:
-	$(MAKE) -f CMakeFiles/interplanetary_time.dir/build.make CMakeFiles/interplanetary_time.dir/lab_icc_1/interplanetary_time/interplanetary_time.c.s
-.PHONY : lab_icc_1/interplanetary_time/interplanetary_time.c.s
-
 lab_icc_1/particle_simulation/particle_simulation.o: lab_icc_1/particle_simulation/particle_simulation.c.o
 
 .PHONY : lab_icc_1/particle_simulation/particle_simulation.o
@@ -350,6 +363,33 @@ lab_icc_1/particle_simulation/particle_simulation.c.s:
 	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/lab_icc_1/particle_simulation/particle_simulation.c.s
 .PHONY : lab_icc_1/particle_simulation/particle_simulation.c.s
 
+lab_icc_1/taboo_word/taboo_word.o: lab_icc_1/taboo_word/taboo_word.c.o
+
+.PHONY : lab_icc_1/taboo_word/taboo_word.o
+
+# target to build an object file
+lab_icc_1/taboo_word/taboo_word.c.o:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.o
+.PHONY : lab_icc_1/taboo_word/taboo_word.c.o
+
+lab_icc_1/taboo_word/taboo_word.i: lab_icc_1/taboo_word/taboo_word.c.i
+
+.PHONY : lab_icc_1/taboo_word/taboo_word.i
+
+# target to preprocess a source file
+lab_icc_1/taboo_word/taboo_word.c.i:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.i
+.PHONY : lab_icc_1/taboo_word/taboo_word.c.i
+
+lab_icc_1/taboo_word/taboo_word.s: lab_icc_1/taboo_word/taboo_word.c.s
+
+.PHONY : lab_icc_1/taboo_word/taboo_word.s
+
+# target to generate assembly for a file
+lab_icc_1/taboo_word/taboo_word.c.s:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.s
+.PHONY : lab_icc_1/taboo_word/taboo_word.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -357,16 +397,20 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... taboo_word"
 	@echo "... particle_simulation"
-	@echo "... fonte12v3v"
-	@echo "... edit_cache"
-	@echo "... manhattan_delivery"
 	@echo "... adding_surnames"
 	@echo "... change_coins"
-	@echo "... interplanetary_time"
+	@echo "... fonte12v3v"
+	@echo "... automatons"
+	@echo "... edit_cache"
+	@echo "... manhattan_delivery"
 	@echo "... eletronica_1/fonte.o"
 	@echo "... eletronica_1/fonte.i"
 	@echo "... eletronica_1/fonte.s"
+	@echo "... icc_1/automatons/automatons.o"
+	@echo "... icc_1/automatons/automatons.i"
+	@echo "... icc_1/automatons/automatons.s"
 	@echo "... icc_1/manhattan_delivery/manhattan_delivery.o"
 	@echo "... icc_1/manhattan_delivery/manhattan_delivery.i"
 	@echo "... icc_1/manhattan_delivery/manhattan_delivery.s"
@@ -376,12 +420,12 @@ help:
 	@echo "... lab_icc_1/change_coins/change_coins.o"
 	@echo "... lab_icc_1/change_coins/change_coins.i"
 	@echo "... lab_icc_1/change_coins/change_coins.s"
-	@echo "... lab_icc_1/interplanetary_time/interplanetary_time.o"
-	@echo "... lab_icc_1/interplanetary_time/interplanetary_time.i"
-	@echo "... lab_icc_1/interplanetary_time/interplanetary_time.s"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.o"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.i"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.s"
+	@echo "... lab_icc_1/taboo_word/taboo_word.o"
+	@echo "... lab_icc_1/taboo_word/taboo_word.i"
+	@echo "... lab_icc_1/taboo_word/taboo_word.s"
 .PHONY : help
 
 

@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/count_words.dir/lab/count_words/count_words.c.o  -o count_words 

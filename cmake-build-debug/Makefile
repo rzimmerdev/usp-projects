@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/projects/usp-projects
+CMAKE_SOURCE_DIR = /mnt/c/dev/usp-projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/projects/usp-projects/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/dev/usp-projects/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -187,6 +187,19 @@ fonte12v3v: cmake_check_build_system
 fonte12v3v/fast:
 	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/build
 .PHONY : fonte12v3v/fast
+
+#=============================================================================
+# Target rules for targets named polonese_notation
+
+# Build rule for target.
+polonese_notation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 polonese_notation
+.PHONY : polonese_notation
+
+# fast build rule for target.
+polonese_notation/fast:
+	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/build
+.PHONY : polonese_notation/fast
 
 #=============================================================================
 # Target rules for targets named automatons
@@ -403,6 +416,33 @@ lab_icc_1/particle_simulation/particle_simulation.c.s:
 	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/lab_icc_1/particle_simulation/particle_simulation.c.s
 .PHONY : lab_icc_1/particle_simulation/particle_simulation.c.s
 
+lab_icc_1/polonese_notation/main.o: lab_icc_1/polonese_notation/main.c.o
+
+.PHONY : lab_icc_1/polonese_notation/main.o
+
+# target to build an object file
+lab_icc_1/polonese_notation/main.c.o:
+	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/lab_icc_1/polonese_notation/main.c.o
+.PHONY : lab_icc_1/polonese_notation/main.c.o
+
+lab_icc_1/polonese_notation/main.i: lab_icc_1/polonese_notation/main.c.i
+
+.PHONY : lab_icc_1/polonese_notation/main.i
+
+# target to preprocess a source file
+lab_icc_1/polonese_notation/main.c.i:
+	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/lab_icc_1/polonese_notation/main.c.i
+.PHONY : lab_icc_1/polonese_notation/main.c.i
+
+lab_icc_1/polonese_notation/main.s: lab_icc_1/polonese_notation/main.c.s
+
+.PHONY : lab_icc_1/polonese_notation/main.s
+
+# target to generate assembly for a file
+lab_icc_1/polonese_notation/main.c.s:
+	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/lab_icc_1/polonese_notation/main.c.s
+.PHONY : lab_icc_1/polonese_notation/main.c.s
+
 lab_icc_1/taboo_word/taboo_word.o: lab_icc_1/taboo_word/taboo_word.c.o
 
 .PHONY : lab_icc_1/taboo_word/taboo_word.o
@@ -443,6 +483,7 @@ help:
 	@echo "... change_coins"
 	@echo "... playlist_manager"
 	@echo "... fonte12v3v"
+	@echo "... polonese_notation"
 	@echo "... automatons"
 	@echo "... edit_cache"
 	@echo "... manhattan_delivery"
@@ -467,6 +508,9 @@ help:
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.o"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.i"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.s"
+	@echo "... lab_icc_1/polonese_notation/main.o"
+	@echo "... lab_icc_1/polonese_notation/main.i"
+	@echo "... lab_icc_1/polonese_notation/main.s"
 	@echo "... lab_icc_1/taboo_word/taboo_word.o"
 	@echo "... lab_icc_1/taboo_word/taboo_word.i"
 	@echo "... lab_icc_1/taboo_word/taboo_word.s"

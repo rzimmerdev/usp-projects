@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "../out/fonte12v3v"
+  "../out/fonte12v3v.pdb"
   "CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.o"
-  "fonte12v3v"
-  "fonte12v3v.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

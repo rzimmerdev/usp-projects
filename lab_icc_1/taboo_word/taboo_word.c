@@ -6,7 +6,7 @@ char *read_line();
 
 int main () {
 
-	char taboo[20];
+	char taboo[21];
 	scanf("%s\n", taboo);
 
 	char *phrase = read_line();

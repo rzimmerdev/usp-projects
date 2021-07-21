@@ -57,6 +57,7 @@ all: CMakeFiles/taboo_word.dir/all
 all: CMakeFiles/particle_simulation.dir/all
 all: CMakeFiles/adding_surnames.dir/all
 all: CMakeFiles/change_coins.dir/all
+all: CMakeFiles/playlist_manager.dir/all
 all: CMakeFiles/fonte12v3v.dir/all
 all: CMakeFiles/automatons.dir/all
 all: CMakeFiles/manhattan_delivery.dir/all
@@ -73,6 +74,7 @@ clean: CMakeFiles/taboo_word.dir/clean
 clean: CMakeFiles/particle_simulation.dir/clean
 clean: CMakeFiles/adding_surnames.dir/clean
 clean: CMakeFiles/change_coins.dir/clean
+clean: CMakeFiles/playlist_manager.dir/clean
 clean: CMakeFiles/fonte12v3v.dir/clean
 clean: CMakeFiles/automatons.dir/clean
 clean: CMakeFiles/manhattan_delivery.dir/clean
@@ -86,7 +88,7 @@ clean: CMakeFiles/manhattan_delivery.dir/clean
 CMakeFiles/taboo_word.dir/all:
 	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/depend
 	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target taboo_word"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target taboo_word"
 .PHONY : CMakeFiles/taboo_word.dir/all
 
 # Build rule for subdir invocation for target.
@@ -186,6 +188,33 @@ change_coins: CMakeFiles/change_coins.dir/rule
 CMakeFiles/change_coins.dir/clean:
 	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/clean
 .PHONY : CMakeFiles/change_coins.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/playlist_manager.dir
+
+# All Build rule for target.
+CMakeFiles/playlist_manager.dir/all:
+	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/depend
+	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target playlist_manager"
+.PHONY : CMakeFiles/playlist_manager.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/playlist_manager.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/playlist_manager.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/playlist_manager.dir/rule
+
+# Convenience name for target.
+playlist_manager: CMakeFiles/playlist_manager.dir/rule
+
+.PHONY : playlist_manager
+
+# clean rule for target.
+CMakeFiles/playlist_manager.dir/clean:
+	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/clean
+.PHONY : CMakeFiles/playlist_manager.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/fonte12v3v.dir

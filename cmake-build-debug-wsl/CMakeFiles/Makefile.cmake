@@ -52,6 +52,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/particle_simulation.dir/DependInfo.cmake"
   "CMakeFiles/adding_surnames.dir/DependInfo.cmake"
   "CMakeFiles/change_coins.dir/DependInfo.cmake"
+  "CMakeFiles/playlist_manager.dir/DependInfo.cmake"
   "CMakeFiles/fonte12v3v.dir/DependInfo.cmake"
   "CMakeFiles/automatons.dir/DependInfo.cmake"
   "CMakeFiles/manhattan_delivery.dir/DependInfo.cmake"

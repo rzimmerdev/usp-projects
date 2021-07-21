@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "../out/adding_surnames"
+  "../out/adding_surnames.pdb"
   "CMakeFiles/adding_surnames.dir/lab_icc_1/adding_surnames/adding_surnames.c.o"
-  "adding_surnames"
-  "adding_surnames.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

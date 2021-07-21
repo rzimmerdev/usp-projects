@@ -1,1 +1,1 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/particle_simulation.dir/lab_icc_1/particle_simulation/particle_simulation.c.o  -o particle_simulation 
+/usr/bin/cc -g  -rdynamic CMakeFiles/particle_simulation.dir/lab_icc_1/particle_simulation/particle_simulation.c.o  -o ../out/particle_simulation 

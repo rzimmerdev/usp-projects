@@ -163,6 +163,19 @@ change_coins/fast:
 .PHONY : change_coins/fast
 
 #=============================================================================
+# Target rules for targets named playlist_manager
+
+# Build rule for target.
+playlist_manager: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 playlist_manager
+.PHONY : playlist_manager
+
+# fast build rule for target.
+playlist_manager/fast:
+	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/build
+.PHONY : playlist_manager/fast
+
+#=============================================================================
 # Target rules for targets named fonte12v3v
 
 # Build rule for target.
@@ -281,6 +294,33 @@ icc_1/manhattan_delivery/manhattan_delivery.s: icc_1/manhattan_delivery/manhatta
 icc_1/manhattan_delivery/manhattan_delivery.c.s:
 	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/icc_1/manhattan_delivery/manhattan_delivery.c.s
 .PHONY : icc_1/manhattan_delivery/manhattan_delivery.c.s
+
+icc_1/playlist_manager/main.o: icc_1/playlist_manager/main.c.o
+
+.PHONY : icc_1/playlist_manager/main.o
+
+# target to build an object file
+icc_1/playlist_manager/main.c.o:
+	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/icc_1/playlist_manager/main.c.o
+.PHONY : icc_1/playlist_manager/main.c.o
+
+icc_1/playlist_manager/main.i: icc_1/playlist_manager/main.c.i
+
+.PHONY : icc_1/playlist_manager/main.i
+
+# target to preprocess a source file
+icc_1/playlist_manager/main.c.i:
+	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/icc_1/playlist_manager/main.c.i
+.PHONY : icc_1/playlist_manager/main.c.i
+
+icc_1/playlist_manager/main.s: icc_1/playlist_manager/main.c.s
+
+.PHONY : icc_1/playlist_manager/main.s
+
+# target to generate assembly for a file
+icc_1/playlist_manager/main.c.s:
+	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/icc_1/playlist_manager/main.c.s
+.PHONY : icc_1/playlist_manager/main.c.s
 
 lab_icc_1/adding_surnames/adding_surnames.o: lab_icc_1/adding_surnames/adding_surnames.c.o
 
@@ -401,6 +441,7 @@ help:
 	@echo "... particle_simulation"
 	@echo "... adding_surnames"
 	@echo "... change_coins"
+	@echo "... playlist_manager"
 	@echo "... fonte12v3v"
 	@echo "... automatons"
 	@echo "... edit_cache"
@@ -414,6 +455,9 @@ help:
 	@echo "... icc_1/manhattan_delivery/manhattan_delivery.o"
 	@echo "... icc_1/manhattan_delivery/manhattan_delivery.i"
 	@echo "... icc_1/manhattan_delivery/manhattan_delivery.s"
+	@echo "... icc_1/playlist_manager/main.o"
+	@echo "... icc_1/playlist_manager/main.i"
+	@echo "... icc_1/playlist_manager/main.s"
 	@echo "... lab_icc_1/adding_surnames/adding_surnames.o"
 	@echo "... lab_icc_1/adding_surnames/adding_surnames.i"
 	@echo "... lab_icc_1/adding_surnames/adding_surnames.s"

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "../out/manhattan_delivery"
+  "../out/manhattan_delivery.pdb"
   "CMakeFiles/manhattan_delivery.dir/icc_1/manhattan_delivery/manhattan_delivery.c.o"
-  "manhattan_delivery"
-  "manhattan_delivery.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

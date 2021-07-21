@@ -28,8 +28,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="taboo_word">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/taboo_word" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/taboo_word" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -50,8 +50,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="taboo_word/fast">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/taboo_word" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/taboo_word" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -72,8 +72,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="particle_simulation">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/particle_simulation" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/particle_simulation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -94,8 +94,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="particle_simulation/fast">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/particle_simulation" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/particle_simulation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -116,8 +116,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="adding_surnames">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/adding_surnames" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/adding_surnames" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -138,8 +138,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="adding_surnames/fast">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/adding_surnames" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/adding_surnames" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -160,8 +160,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="change_coins">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/change_coins" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/change_coins" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -182,8 +182,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="change_coins/fast">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/change_coins" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/change_coins" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -203,9 +203,53 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="playlist_manager">
+				<Option output="/mnt/d/projects/usp-projects/out/playlist_manager" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 playlist_manager"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="playlist_manager/fast">
+				<Option output="/mnt/d/projects/usp-projects/out/playlist_manager" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 playlist_manager/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug-wsl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="fonte12v3v">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/fonte12v3v" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/fonte12v3v" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -226,8 +270,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="fonte12v3v/fast">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/fonte12v3v" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/fonte12v3v" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -248,8 +292,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="automatons">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/automatons" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/automatons" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -270,8 +314,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="automatons/fast">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/automatons" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/automatons" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -302,8 +346,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="manhattan_delivery">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/manhattan_delivery" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/manhattan_delivery" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -324,8 +368,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="manhattan_delivery/fast">
-				<Option output="/mnt/d/projects/usp-projects/cmake-build-debug-wsl/manhattan_delivery" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug-wsl"/>
+				<Option output="/mnt/d/projects/usp-projects/out/manhattan_delivery" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -354,6 +398,9 @@
 		</Unit>
 		<Unit filename="/mnt/d/projects/usp-projects/icc_1/manhattan_delivery/manhattan_delivery.c">
 			<Option target="manhattan_delivery"/>
+		</Unit>
+		<Unit filename="/mnt/d/projects/usp-projects/icc_1/playlist_manager/main.c">
+			<Option target="playlist_manager"/>
 		</Unit>
 		<Unit filename="/mnt/d/projects/usp-projects/lab_icc_1/adding_surnames/adding_surnames.c">
 			<Option target="adding_surnames"/>

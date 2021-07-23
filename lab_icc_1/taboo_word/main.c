@@ -1,5 +1,5 @@
 // Rafael Zimmer, n12542612
-// Project for Introduction Lab for CompSci - Reverse Polonaise Notation
+// Project for Introduction Lab for CompSci - Taboo Word Removal
 // 18/07/2021
 
 #include <stdio.h>

@@ -60,6 +60,7 @@ all: CMakeFiles/adding_surnames.dir/all
 all: CMakeFiles/change_coins.dir/all
 all: CMakeFiles/playlist_manager.dir/all
 all: CMakeFiles/fonte12v3v.dir/all
+all: CMakeFiles/attack_and_types.dir/all
 all: CMakeFiles/polonese_notation.dir/all
 all: CMakeFiles/automatons.dir/all
 all: CMakeFiles/manhattan_delivery.dir/all
@@ -79,6 +80,7 @@ clean: CMakeFiles/adding_surnames.dir/clean
 clean: CMakeFiles/change_coins.dir/clean
 clean: CMakeFiles/playlist_manager.dir/clean
 clean: CMakeFiles/fonte12v3v.dir/clean
+clean: CMakeFiles/attack_and_types.dir/clean
 clean: CMakeFiles/polonese_notation.dir/clean
 clean: CMakeFiles/automatons.dir/clean
 clean: CMakeFiles/manhattan_delivery.dir/clean
@@ -92,7 +94,7 @@ clean: CMakeFiles/manhattan_delivery.dir/clean
 CMakeFiles/image_padding.dir/all:
 	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/depend
 	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=9,10 "Built target image_padding"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=11,12 "Built target image_padding"
 .PHONY : CMakeFiles/image_padding.dir/all
 
 # Build rule for subdir invocation for target.
@@ -119,7 +121,7 @@ CMakeFiles/image_padding.dir/clean:
 CMakeFiles/taboo_word.dir/all:
 	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/depend
 	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=19,20 "Built target taboo_word"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=21,22 "Built target taboo_word"
 .PHONY : CMakeFiles/taboo_word.dir/all
 
 # Build rule for subdir invocation for target.
@@ -146,7 +148,7 @@ CMakeFiles/taboo_word.dir/clean:
 CMakeFiles/particle_simulation.dir/all:
 	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/depend
 	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=13,14 "Built target particle_simulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=15,16 "Built target particle_simulation"
 .PHONY : CMakeFiles/particle_simulation.dir/all
 
 # Build rule for subdir invocation for target.
@@ -200,7 +202,7 @@ CMakeFiles/adding_surnames.dir/clean:
 CMakeFiles/change_coins.dir/all:
 	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/depend
 	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=5,6 "Built target change_coins"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=7,8 "Built target change_coins"
 .PHONY : CMakeFiles/change_coins.dir/all
 
 # Build rule for subdir invocation for target.
@@ -227,7 +229,7 @@ CMakeFiles/change_coins.dir/clean:
 CMakeFiles/playlist_manager.dir/all:
 	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/depend
 	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=15,16 "Built target playlist_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=17,18 "Built target playlist_manager"
 .PHONY : CMakeFiles/playlist_manager.dir/all
 
 # Build rule for subdir invocation for target.
@@ -254,7 +256,7 @@ CMakeFiles/playlist_manager.dir/clean:
 CMakeFiles/fonte12v3v.dir/all:
 	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/depend
 	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=7,8 "Built target fonte12v3v"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=9,10 "Built target fonte12v3v"
 .PHONY : CMakeFiles/fonte12v3v.dir/all
 
 # Build rule for subdir invocation for target.
@@ -275,13 +277,40 @@ CMakeFiles/fonte12v3v.dir/clean:
 .PHONY : CMakeFiles/fonte12v3v.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/attack_and_types.dir
+
+# All Build rule for target.
+CMakeFiles/attack_and_types.dir/all:
+	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/depend
+	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=3,4 "Built target attack_and_types"
+.PHONY : CMakeFiles/attack_and_types.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/attack_and_types.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/attack_and_types.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles 0
+.PHONY : CMakeFiles/attack_and_types.dir/rule
+
+# Convenience name for target.
+attack_and_types: CMakeFiles/attack_and_types.dir/rule
+
+.PHONY : attack_and_types
+
+# clean rule for target.
+CMakeFiles/attack_and_types.dir/clean:
+	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/clean
+.PHONY : CMakeFiles/attack_and_types.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/polonese_notation.dir
 
 # All Build rule for target.
 CMakeFiles/polonese_notation.dir/all:
 	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/depend
 	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=17,18 "Built target polonese_notation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=19,20 "Built target polonese_notation"
 .PHONY : CMakeFiles/polonese_notation.dir/all
 
 # Build rule for subdir invocation for target.
@@ -308,7 +337,7 @@ CMakeFiles/polonese_notation.dir/clean:
 CMakeFiles/automatons.dir/all:
 	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/depend
 	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=3,4 "Built target automatons"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=5,6 "Built target automatons"
 .PHONY : CMakeFiles/automatons.dir/all
 
 # Build rule for subdir invocation for target.
@@ -335,7 +364,7 @@ CMakeFiles/automatons.dir/clean:
 CMakeFiles/manhattan_delivery.dir/all:
 	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/depend
 	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=11,12 "Built target manhattan_delivery"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=13,14 "Built target manhattan_delivery"
 .PHONY : CMakeFiles/manhattan_delivery.dir/all
 
 # Build rule for subdir invocation for target.

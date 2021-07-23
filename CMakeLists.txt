@@ -12,6 +12,7 @@ add_executable(adding_surnames lab_icc_1/adding_surnames/adding_surnames.c)
 add_executable(taboo_word lab_icc_1/taboo_word/main.c)
 add_executable(polonese_notation lab_icc_1/polonese_notation/main.c)
 add_executable(image_padding lab_icc_1/image_padding/main.c)
+add_executable(attack_and_types lab_icc_1/attack_and_types/main.c)
 
 add_executable(fonte12v3v eletronica_1/fonte.c)
 

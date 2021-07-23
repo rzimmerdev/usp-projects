@@ -55,6 +55,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/change_coins.dir/DependInfo.cmake"
   "CMakeFiles/playlist_manager.dir/DependInfo.cmake"
   "CMakeFiles/fonte12v3v.dir/DependInfo.cmake"
+  "CMakeFiles/attack_and_types.dir/DependInfo.cmake"
   "CMakeFiles/polonese_notation.dir/DependInfo.cmake"
   "CMakeFiles/automatons.dir/DependInfo.cmake"
   "CMakeFiles/manhattan_delivery.dir/DependInfo.cmake"

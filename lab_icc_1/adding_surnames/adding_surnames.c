@@ -1,61 +1,12 @@
-// Rafael Zimmer, 12542612
+// Rafael Zimmer, n12542612
+// Project for Introduction Lab for CompSci - Adding Surnames to Next Line
+// 08/07/2021
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// Function for reading stdin, separating return statements by specific characters => { ' ', '\n', '$' } and returning
-// separated words
-char *read_word() {
-
-	char current_char = 1;
-	char *word = NULL;
-	int index = 0, word_size = 0;
-
-	while (current_char != 0) {
-
-		scanf("%c", &current_char);
-
-		// Verify if read character should result in returning word, or if read word is result of previous ungetc, and is
-		// therefore empty (!word); in the later case, function should return read character as string
-		if (current_char == '\n' || current_char == ' ' || current_char == '$') {
-
-			if (word) {
-
-				ungetc(current_char, stdin);
-				current_char = 0;
-
-			}
-
-			if (!word) {
-				switch (current_char) {
-
-					case '\n':
-						current_char = 0;
-						return "\n";
-					case ' ':
-						current_char = 0;
-						return " ";
-					case '$':
-						current_char = 0;
-						return "$";
-
-				}
-			}
-
-		// In case read character is not returning character, keep adding to word dynamic array
-		} else {
-
-			if (word_size++ <= index) {
-				word = ( char* ) realloc(word, word_size);
-			}
-
-			*(word + index++) = current_char;
-		}
-	}
-
-	return word;
-}
+char *read_word();
 
 int main() {
 
@@ -112,4 +63,57 @@ int main() {
 	} free(file);
 
 	return 0;
+}
+
+// Function for reading stdin, separating return statements by specific characters => { ' ', '\n', '$' } and returning
+// separated words
+char *read_word() {
+
+	char current_char = 1;
+	char *word = NULL;
+	int index = 0, word_size = 0;
+
+	while (current_char != 0) {
+
+		scanf("%c", &current_char);
+
+		// Verify if read character should result in returning word, or if read word is result of previous ungetc, and is
+		// therefore empty (!word); in the later case, function should return read character as string
+		if (current_char == '\n' || current_char == ' ' || current_char == '$') {
+
+			if (word) {
+
+				ungetc(current_char, stdin);
+				current_char = 0;
+
+			}
+
+			if (!word) {
+				switch (current_char) {
+
+					case '\n':
+						current_char = 0;
+						return "\n";
+					case ' ':
+						current_char = 0;
+						return " ";
+					case '$':
+						current_char = 0;
+						return "$";
+
+				}
+			}
+
+			// In case read character is not returning character, keep adding to word dynamic array
+		} else {
+
+			if (word_size++ <= index) {
+				word = ( char* ) realloc(word, word_size);
+			}
+
+			*(word + index++) = current_char;
+		}
+	}
+
+	return word;
 }

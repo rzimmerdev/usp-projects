@@ -6,6 +6,7 @@
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/change_coins.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/playlist_manager.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/fonte12v3v.dir
+/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/attack_and_types.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/polonese_notation.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/automatons.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/edit_cache.dir

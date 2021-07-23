@@ -202,6 +202,19 @@ fonte12v3v/fast:
 .PHONY : fonte12v3v/fast
 
 #=============================================================================
+# Target rules for targets named attack_and_types
+
+# Build rule for target.
+attack_and_types: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 attack_and_types
+.PHONY : attack_and_types
+
+# fast build rule for target.
+attack_and_types/fast:
+	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/build
+.PHONY : attack_and_types/fast
+
+#=============================================================================
 # Target rules for targets named polonese_notation
 
 # Build rule for target.
@@ -375,6 +388,33 @@ lab_icc_1/adding_surnames/adding_surnames.c.s:
 	$(MAKE) -f CMakeFiles/adding_surnames.dir/build.make CMakeFiles/adding_surnames.dir/lab_icc_1/adding_surnames/adding_surnames.c.s
 .PHONY : lab_icc_1/adding_surnames/adding_surnames.c.s
 
+lab_icc_1/attack_and_types/main.o: lab_icc_1/attack_and_types/main.c.o
+
+.PHONY : lab_icc_1/attack_and_types/main.o
+
+# target to build an object file
+lab_icc_1/attack_and_types/main.c.o:
+	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/lab_icc_1/attack_and_types/main.c.o
+.PHONY : lab_icc_1/attack_and_types/main.c.o
+
+lab_icc_1/attack_and_types/main.i: lab_icc_1/attack_and_types/main.c.i
+
+.PHONY : lab_icc_1/attack_and_types/main.i
+
+# target to preprocess a source file
+lab_icc_1/attack_and_types/main.c.i:
+	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/lab_icc_1/attack_and_types/main.c.i
+.PHONY : lab_icc_1/attack_and_types/main.c.i
+
+lab_icc_1/attack_and_types/main.s: lab_icc_1/attack_and_types/main.c.s
+
+.PHONY : lab_icc_1/attack_and_types/main.s
+
+# target to generate assembly for a file
+lab_icc_1/attack_and_types/main.c.s:
+	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/lab_icc_1/attack_and_types/main.c.s
+.PHONY : lab_icc_1/attack_and_types/main.c.s
+
 lab_icc_1/change_coins/change_coins.o: lab_icc_1/change_coins/change_coins.c.o
 
 .PHONY : lab_icc_1/change_coins/change_coins.o
@@ -524,6 +564,7 @@ help:
 	@echo "... change_coins"
 	@echo "... playlist_manager"
 	@echo "... fonte12v3v"
+	@echo "... attack_and_types"
 	@echo "... polonese_notation"
 	@echo "... automatons"
 	@echo "... edit_cache"
@@ -543,6 +584,9 @@ help:
 	@echo "... lab_icc_1/adding_surnames/adding_surnames.o"
 	@echo "... lab_icc_1/adding_surnames/adding_surnames.i"
 	@echo "... lab_icc_1/adding_surnames/adding_surnames.s"
+	@echo "... lab_icc_1/attack_and_types/main.o"
+	@echo "... lab_icc_1/attack_and_types/main.i"
+	@echo "... lab_icc_1/attack_and_types/main.s"
 	@echo "... lab_icc_1/change_coins/change_coins.o"
 	@echo "... lab_icc_1/change_coins/change_coins.i"
 	@echo "... lab_icc_1/change_coins/change_coins.s"

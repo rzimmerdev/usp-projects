@@ -1,24 +1,40 @@
+// Rafael Zimmer, n12542612
+// Project for Introduction Lab for CompSci - Reverse Polonaise Notation
+// 18/07/2021
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+// Function for reading input phrase for removing taboo word occurrence
 char *read_line();
 
 int main () {
 
+	// Scan taboo word to remove
 	char taboo[21];
 	scanf("%s\n", taboo);
 
+	// Scan phrase to remove word from, as well as instantiate temporary phrase
+	// which should be set to result of verifying if taboo is substring of previously iterated phrase
+	// strstr returns original string, if substring exists in string, else returns NULL
 	char *phrase = read_line();
 	char *result_phrase = phrase;
 
-	while (result_phrase != NULL) {
+	int taboo_occurrences = 0;
 
+	while ( ( result_phrase = strstr(result_phrase, taboo) ) != NULL ) {
+
+		// memmove is used while iterating through occurrences for removing substring if pointers (which means the string header)
+		// are the same, meaning that clearing subsequent memory removes substring from original phrase
 		memmove(result_phrase, result_phrase + strlen(taboo), strlen(result_phrase + strlen(taboo)) + 1);
-		result_phrase = strstr(result_phrase, phrase);
+		taboo_occurrences++;
+
 	}
 
-	printf("The substring is: %s\n", result_phrase);
+	// Print original phrase, which was being updated until the point that result_phrase became null, but not original phrase
+	printf("A palavra tabu foi encontrada %d vezes\n", taboo_occurrences);
+	printf("Frase: %s\n", phrase);
 
 	return(0);
 }

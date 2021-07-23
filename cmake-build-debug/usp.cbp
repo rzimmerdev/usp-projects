@@ -8,28 +8,72 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/c/dev/usp-projects/cmake-build-debug"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/c/dev/usp-projects/cmake-build-debug"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="image_padding">
+				<Option output="/mnt/d/projects/usp-projects/out/image_padding" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 image_padding"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="image_padding/fast">
+				<Option output="/mnt/d/projects/usp-projects/out/image_padding" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 image_padding/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="taboo_word">
-				<Option output="/mnt/c/dev/usp-projects/out/taboo_word" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/taboo_word" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -43,15 +87,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 taboo_word"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 taboo_word"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="taboo_word/fast">
-				<Option output="/mnt/c/dev/usp-projects/out/taboo_word" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/taboo_word" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -65,15 +109,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 taboo_word/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 taboo_word/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="particle_simulation">
-				<Option output="/mnt/c/dev/usp-projects/out/particle_simulation" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/particle_simulation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -87,15 +131,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 particle_simulation"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 particle_simulation"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="particle_simulation/fast">
-				<Option output="/mnt/c/dev/usp-projects/out/particle_simulation" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/particle_simulation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -109,15 +153,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 particle_simulation/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 particle_simulation/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="adding_surnames">
-				<Option output="/mnt/c/dev/usp-projects/out/adding_surnames" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/adding_surnames" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -131,15 +175,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 adding_surnames"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 adding_surnames"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="adding_surnames/fast">
-				<Option output="/mnt/c/dev/usp-projects/out/adding_surnames" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/adding_surnames" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -153,15 +197,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 adding_surnames/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 adding_surnames/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="change_coins">
-				<Option output="/mnt/c/dev/usp-projects/out/change_coins" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/change_coins" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -175,15 +219,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 change_coins"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 change_coins"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="change_coins/fast">
-				<Option output="/mnt/c/dev/usp-projects/out/change_coins" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/change_coins" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -197,15 +241,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 change_coins/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 change_coins/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="playlist_manager">
-				<Option output="/mnt/c/dev/usp-projects/out/playlist_manager" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/playlist_manager" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -219,15 +263,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 playlist_manager"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 playlist_manager"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="playlist_manager/fast">
-				<Option output="/mnt/c/dev/usp-projects/out/playlist_manager" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/playlist_manager" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -241,15 +285,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 playlist_manager/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 playlist_manager/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fonte12v3v">
-				<Option output="/mnt/c/dev/usp-projects/out/fonte12v3v" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/fonte12v3v" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -263,15 +307,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 fonte12v3v"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 fonte12v3v"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fonte12v3v/fast">
-				<Option output="/mnt/c/dev/usp-projects/out/fonte12v3v" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/fonte12v3v" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -285,15 +329,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 fonte12v3v/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 fonte12v3v/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="polonese_notation">
-				<Option output="/mnt/c/dev/usp-projects/out/polonese_notation" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/polonese_notation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -307,15 +351,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 polonese_notation"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 polonese_notation"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="polonese_notation/fast">
-				<Option output="/mnt/c/dev/usp-projects/out/polonese_notation" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/polonese_notation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -329,15 +373,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 polonese_notation/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 polonese_notation/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="automatons">
-				<Option output="/mnt/c/dev/usp-projects/out/automatons" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/automatons" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -351,15 +395,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 automatons"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 automatons"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="automatons/fast">
-				<Option output="/mnt/c/dev/usp-projects/out/automatons" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/automatons" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -373,25 +417,25 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 automatons/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 automatons/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/mnt/c/dev/usp-projects/cmake-build-debug"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="manhattan_delivery">
-				<Option output="/mnt/c/dev/usp-projects/out/manhattan_delivery" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/manhattan_delivery" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -405,15 +449,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 manhattan_delivery"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 manhattan_delivery"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="manhattan_delivery/fast">
-				<Option output="/mnt/c/dev/usp-projects/out/manhattan_delivery" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/dev/usp-projects/out"/>
+				<Option output="/mnt/d/projects/usp-projects/out/manhattan_delivery" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/d/projects/usp-projects/out"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -427,41 +471,44 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 manhattan_delivery/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/dev/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 manhattan_delivery/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/d/projects/usp-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/dev/usp-projects/eletronica_1/fonte.c">
+		<Unit filename="/mnt/d/projects/usp-projects/eletronica_1/fonte.c">
 			<Option target="fonte12v3v"/>
 		</Unit>
-		<Unit filename="/mnt/c/dev/usp-projects/icc_1/automatons/automatons.c">
+		<Unit filename="/mnt/d/projects/usp-projects/icc_1/automatons/automatons.c">
 			<Option target="automatons"/>
 		</Unit>
-		<Unit filename="/mnt/c/dev/usp-projects/icc_1/manhattan_delivery/manhattan_delivery.c">
+		<Unit filename="/mnt/d/projects/usp-projects/icc_1/manhattan_delivery/manhattan_delivery.c">
 			<Option target="manhattan_delivery"/>
 		</Unit>
-		<Unit filename="/mnt/c/dev/usp-projects/icc_1/playlist_manager/main.c">
+		<Unit filename="/mnt/d/projects/usp-projects/icc_1/playlist_manager/main.c">
 			<Option target="playlist_manager"/>
 		</Unit>
-		<Unit filename="/mnt/c/dev/usp-projects/lab_icc_1/adding_surnames/adding_surnames.c">
+		<Unit filename="/mnt/d/projects/usp-projects/lab_icc_1/adding_surnames/adding_surnames.c">
 			<Option target="adding_surnames"/>
 		</Unit>
-		<Unit filename="/mnt/c/dev/usp-projects/lab_icc_1/change_coins/change_coins.c">
+		<Unit filename="/mnt/d/projects/usp-projects/lab_icc_1/change_coins/change_coins.c">
 			<Option target="change_coins"/>
 		</Unit>
-		<Unit filename="/mnt/c/dev/usp-projects/lab_icc_1/particle_simulation/particle_simulation.c">
+		<Unit filename="/mnt/d/projects/usp-projects/lab_icc_1/image_padding/main.c">
+			<Option target="image_padding"/>
+		</Unit>
+		<Unit filename="/mnt/d/projects/usp-projects/lab_icc_1/particle_simulation/particle_simulation.c">
 			<Option target="particle_simulation"/>
 		</Unit>
-		<Unit filename="/mnt/c/dev/usp-projects/lab_icc_1/polonese_notation/main.c">
+		<Unit filename="/mnt/d/projects/usp-projects/lab_icc_1/polonese_notation/main.c">
 			<Option target="polonese_notation"/>
 		</Unit>
-		<Unit filename="/mnt/c/dev/usp-projects/lab_icc_1/taboo_word/taboo_word.c">
+		<Unit filename="/mnt/d/projects/usp-projects/lab_icc_1/taboo_word/main.c">
 			<Option target="taboo_word"/>
 		</Unit>
-		<Unit filename="/mnt/c/dev/usp-projects/CMakeLists.txt">
+		<Unit filename="/mnt/d/projects/usp-projects/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

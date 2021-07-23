@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named image_padding
+
+# Build rule for target.
+image_padding: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_padding
+.PHONY : image_padding
+
+# fast build rule for target.
+image_padding/fast:
+	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/build
+.PHONY : image_padding/fast
+
+#=============================================================================
 # Target rules for targets named taboo_word
 
 # Build rule for target.
@@ -187,6 +200,19 @@ fonte12v3v: cmake_check_build_system
 fonte12v3v/fast:
 	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/build
 .PHONY : fonte12v3v/fast
+
+#=============================================================================
+# Target rules for targets named polonese_notation
+
+# Build rule for target.
+polonese_notation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 polonese_notation
+.PHONY : polonese_notation
+
+# fast build rule for target.
+polonese_notation/fast:
+	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/build
+.PHONY : polonese_notation/fast
 
 #=============================================================================
 # Target rules for targets named automatons
@@ -376,6 +402,33 @@ lab_icc_1/change_coins/change_coins.c.s:
 	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/lab_icc_1/change_coins/change_coins.c.s
 .PHONY : lab_icc_1/change_coins/change_coins.c.s
 
+lab_icc_1/image_padding/main.o: lab_icc_1/image_padding/main.c.o
+
+.PHONY : lab_icc_1/image_padding/main.o
+
+# target to build an object file
+lab_icc_1/image_padding/main.c.o:
+	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/lab_icc_1/image_padding/main.c.o
+.PHONY : lab_icc_1/image_padding/main.c.o
+
+lab_icc_1/image_padding/main.i: lab_icc_1/image_padding/main.c.i
+
+.PHONY : lab_icc_1/image_padding/main.i
+
+# target to preprocess a source file
+lab_icc_1/image_padding/main.c.i:
+	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/lab_icc_1/image_padding/main.c.i
+.PHONY : lab_icc_1/image_padding/main.c.i
+
+lab_icc_1/image_padding/main.s: lab_icc_1/image_padding/main.c.s
+
+.PHONY : lab_icc_1/image_padding/main.s
+
+# target to generate assembly for a file
+lab_icc_1/image_padding/main.c.s:
+	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/lab_icc_1/image_padding/main.c.s
+.PHONY : lab_icc_1/image_padding/main.c.s
+
 lab_icc_1/particle_simulation/particle_simulation.o: lab_icc_1/particle_simulation/particle_simulation.c.o
 
 .PHONY : lab_icc_1/particle_simulation/particle_simulation.o
@@ -403,32 +456,59 @@ lab_icc_1/particle_simulation/particle_simulation.c.s:
 	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/lab_icc_1/particle_simulation/particle_simulation.c.s
 .PHONY : lab_icc_1/particle_simulation/particle_simulation.c.s
 
-lab_icc_1/taboo_word/taboo_word.o: lab_icc_1/taboo_word/taboo_word.c.o
+lab_icc_1/polonese_notation/main.o: lab_icc_1/polonese_notation/main.c.o
 
-.PHONY : lab_icc_1/taboo_word/taboo_word.o
+.PHONY : lab_icc_1/polonese_notation/main.o
 
 # target to build an object file
-lab_icc_1/taboo_word/taboo_word.c.o:
-	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.o
-.PHONY : lab_icc_1/taboo_word/taboo_word.c.o
+lab_icc_1/polonese_notation/main.c.o:
+	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/lab_icc_1/polonese_notation/main.c.o
+.PHONY : lab_icc_1/polonese_notation/main.c.o
 
-lab_icc_1/taboo_word/taboo_word.i: lab_icc_1/taboo_word/taboo_word.c.i
+lab_icc_1/polonese_notation/main.i: lab_icc_1/polonese_notation/main.c.i
 
-.PHONY : lab_icc_1/taboo_word/taboo_word.i
+.PHONY : lab_icc_1/polonese_notation/main.i
 
 # target to preprocess a source file
-lab_icc_1/taboo_word/taboo_word.c.i:
-	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.i
-.PHONY : lab_icc_1/taboo_word/taboo_word.c.i
+lab_icc_1/polonese_notation/main.c.i:
+	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/lab_icc_1/polonese_notation/main.c.i
+.PHONY : lab_icc_1/polonese_notation/main.c.i
 
-lab_icc_1/taboo_word/taboo_word.s: lab_icc_1/taboo_word/taboo_word.c.s
+lab_icc_1/polonese_notation/main.s: lab_icc_1/polonese_notation/main.c.s
 
-.PHONY : lab_icc_1/taboo_word/taboo_word.s
+.PHONY : lab_icc_1/polonese_notation/main.s
 
 # target to generate assembly for a file
-lab_icc_1/taboo_word/taboo_word.c.s:
-	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.s
-.PHONY : lab_icc_1/taboo_word/taboo_word.c.s
+lab_icc_1/polonese_notation/main.c.s:
+	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/lab_icc_1/polonese_notation/main.c.s
+.PHONY : lab_icc_1/polonese_notation/main.c.s
+
+lab_icc_1/taboo_word/main.o: lab_icc_1/taboo_word/main.c.o
+
+.PHONY : lab_icc_1/taboo_word/main.o
+
+# target to build an object file
+lab_icc_1/taboo_word/main.c.o:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.o
+.PHONY : lab_icc_1/taboo_word/main.c.o
+
+lab_icc_1/taboo_word/main.i: lab_icc_1/taboo_word/main.c.i
+
+.PHONY : lab_icc_1/taboo_word/main.i
+
+# target to preprocess a source file
+lab_icc_1/taboo_word/main.c.i:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.i
+.PHONY : lab_icc_1/taboo_word/main.c.i
+
+lab_icc_1/taboo_word/main.s: lab_icc_1/taboo_word/main.c.s
+
+.PHONY : lab_icc_1/taboo_word/main.s
+
+# target to generate assembly for a file
+lab_icc_1/taboo_word/main.c.s:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.s
+.PHONY : lab_icc_1/taboo_word/main.c.s
 
 # Help Target
 help:
@@ -437,12 +517,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... image_padding"
 	@echo "... taboo_word"
 	@echo "... particle_simulation"
 	@echo "... adding_surnames"
 	@echo "... change_coins"
 	@echo "... playlist_manager"
 	@echo "... fonte12v3v"
+	@echo "... polonese_notation"
 	@echo "... automatons"
 	@echo "... edit_cache"
 	@echo "... manhattan_delivery"
@@ -464,12 +546,18 @@ help:
 	@echo "... lab_icc_1/change_coins/change_coins.o"
 	@echo "... lab_icc_1/change_coins/change_coins.i"
 	@echo "... lab_icc_1/change_coins/change_coins.s"
+	@echo "... lab_icc_1/image_padding/main.o"
+	@echo "... lab_icc_1/image_padding/main.i"
+	@echo "... lab_icc_1/image_padding/main.s"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.o"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.i"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.s"
-	@echo "... lab_icc_1/taboo_word/taboo_word.o"
-	@echo "... lab_icc_1/taboo_word/taboo_word.i"
-	@echo "... lab_icc_1/taboo_word/taboo_word.s"
+	@echo "... lab_icc_1/polonese_notation/main.o"
+	@echo "... lab_icc_1/polonese_notation/main.i"
+	@echo "... lab_icc_1/polonese_notation/main.s"
+	@echo "... lab_icc_1/taboo_word/main.o"
+	@echo "... lab_icc_1/taboo_word/main.i"
+	@echo "... lab_icc_1/taboo_word/main.s"
 .PHONY : help
 
 

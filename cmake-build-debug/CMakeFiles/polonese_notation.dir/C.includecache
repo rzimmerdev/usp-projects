@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/dev/usp-projects/lab_icc_1/polonese_notation/main.c
+/mnt/d/projects/usp-projects/lab_icc_1/polonese_notation/main.c
 stdio.h
 -
 stdlib.h

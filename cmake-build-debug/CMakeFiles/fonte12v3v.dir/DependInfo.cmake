@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/dev/usp-projects/eletronica_1/fonte.c" "/mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.o"
+  "/mnt/d/projects/usp-projects/eletronica_1/fonte.c" "/mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

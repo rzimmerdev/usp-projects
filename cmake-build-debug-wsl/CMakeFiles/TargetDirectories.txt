@@ -1,10 +1,12 @@
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/rebuild_cache.dir
+/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/image_padding.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/taboo_word.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/particle_simulation.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/adding_surnames.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/change_coins.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/playlist_manager.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/fonte12v3v.dir
+/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/polonese_notation.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/automatons.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/edit_cache.dir
 /mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/manhattan_delivery.dir

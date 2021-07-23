@@ -57,27 +57,27 @@ include CMakeFiles/taboo_word.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/taboo_word.dir/flags.make
 
-CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.o: CMakeFiles/taboo_word.dir/flags.make
-CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.o: ../lab_icc_1/taboo_word/taboo_word.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.o   -c /mnt/d/projects/usp-projects/lab_icc_1/taboo_word/taboo_word.c
+CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.o: CMakeFiles/taboo_word.dir/flags.make
+CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.o: ../lab_icc_1/taboo_word/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.o   -c /mnt/d/projects/usp-projects/lab_icc_1/taboo_word/main.c
 
-CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/d/projects/usp-projects/lab_icc_1/taboo_word/taboo_word.c > CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.i
+CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/d/projects/usp-projects/lab_icc_1/taboo_word/main.c > CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.i
 
-CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/d/projects/usp-projects/lab_icc_1/taboo_word/taboo_word.c -o CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.s
+CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/d/projects/usp-projects/lab_icc_1/taboo_word/main.c -o CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.s
 
 # Object files for target taboo_word
 taboo_word_OBJECTS = \
-"CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.o"
+"CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.o"
 
 # External object files for target taboo_word
 taboo_word_EXTERNAL_OBJECTS =
 
-../out/taboo_word: CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.o
+../out/taboo_word: CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.o
 ../out/taboo_word: CMakeFiles/taboo_word.dir/build.make
 ../out/taboo_word: CMakeFiles/taboo_word.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ../out/taboo_word"

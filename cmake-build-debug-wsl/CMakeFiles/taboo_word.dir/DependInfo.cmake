@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/d/projects/usp-projects/lab_icc_1/taboo_word/taboo_word.c" "/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.o"
+  "/mnt/d/projects/usp-projects/lab_icc_1/taboo_word/main.c" "/mnt/d/projects/usp-projects/cmake-build-debug-wsl/CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

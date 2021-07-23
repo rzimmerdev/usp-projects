@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/dev/usp-projects
+CMAKE_SOURCE_DIR = /mnt/d/projects/usp-projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/dev/usp-projects/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/d/projects/usp-projects/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named image_padding
+
+# Build rule for target.
+image_padding: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_padding
+.PHONY : image_padding
+
+# fast build rule for target.
+image_padding/fast:
+	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/build
+.PHONY : image_padding/fast
 
 #=============================================================================
 # Target rules for targets named taboo_word
@@ -389,6 +402,33 @@ lab_icc_1/change_coins/change_coins.c.s:
 	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/lab_icc_1/change_coins/change_coins.c.s
 .PHONY : lab_icc_1/change_coins/change_coins.c.s
 
+lab_icc_1/image_padding/main.o: lab_icc_1/image_padding/main.c.o
+
+.PHONY : lab_icc_1/image_padding/main.o
+
+# target to build an object file
+lab_icc_1/image_padding/main.c.o:
+	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/lab_icc_1/image_padding/main.c.o
+.PHONY : lab_icc_1/image_padding/main.c.o
+
+lab_icc_1/image_padding/main.i: lab_icc_1/image_padding/main.c.i
+
+.PHONY : lab_icc_1/image_padding/main.i
+
+# target to preprocess a source file
+lab_icc_1/image_padding/main.c.i:
+	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/lab_icc_1/image_padding/main.c.i
+.PHONY : lab_icc_1/image_padding/main.c.i
+
+lab_icc_1/image_padding/main.s: lab_icc_1/image_padding/main.c.s
+
+.PHONY : lab_icc_1/image_padding/main.s
+
+# target to generate assembly for a file
+lab_icc_1/image_padding/main.c.s:
+	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/lab_icc_1/image_padding/main.c.s
+.PHONY : lab_icc_1/image_padding/main.c.s
+
 lab_icc_1/particle_simulation/particle_simulation.o: lab_icc_1/particle_simulation/particle_simulation.c.o
 
 .PHONY : lab_icc_1/particle_simulation/particle_simulation.o
@@ -443,32 +483,32 @@ lab_icc_1/polonese_notation/main.c.s:
 	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/lab_icc_1/polonese_notation/main.c.s
 .PHONY : lab_icc_1/polonese_notation/main.c.s
 
-lab_icc_1/taboo_word/taboo_word.o: lab_icc_1/taboo_word/taboo_word.c.o
+lab_icc_1/taboo_word/main.o: lab_icc_1/taboo_word/main.c.o
 
-.PHONY : lab_icc_1/taboo_word/taboo_word.o
+.PHONY : lab_icc_1/taboo_word/main.o
 
 # target to build an object file
-lab_icc_1/taboo_word/taboo_word.c.o:
-	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.o
-.PHONY : lab_icc_1/taboo_word/taboo_word.c.o
+lab_icc_1/taboo_word/main.c.o:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.o
+.PHONY : lab_icc_1/taboo_word/main.c.o
 
-lab_icc_1/taboo_word/taboo_word.i: lab_icc_1/taboo_word/taboo_word.c.i
+lab_icc_1/taboo_word/main.i: lab_icc_1/taboo_word/main.c.i
 
-.PHONY : lab_icc_1/taboo_word/taboo_word.i
+.PHONY : lab_icc_1/taboo_word/main.i
 
 # target to preprocess a source file
-lab_icc_1/taboo_word/taboo_word.c.i:
-	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.i
-.PHONY : lab_icc_1/taboo_word/taboo_word.c.i
+lab_icc_1/taboo_word/main.c.i:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.i
+.PHONY : lab_icc_1/taboo_word/main.c.i
 
-lab_icc_1/taboo_word/taboo_word.s: lab_icc_1/taboo_word/taboo_word.c.s
+lab_icc_1/taboo_word/main.s: lab_icc_1/taboo_word/main.c.s
 
-.PHONY : lab_icc_1/taboo_word/taboo_word.s
+.PHONY : lab_icc_1/taboo_word/main.s
 
 # target to generate assembly for a file
-lab_icc_1/taboo_word/taboo_word.c.s:
-	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/taboo_word.c.s
-.PHONY : lab_icc_1/taboo_word/taboo_word.c.s
+lab_icc_1/taboo_word/main.c.s:
+	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.s
+.PHONY : lab_icc_1/taboo_word/main.c.s
 
 # Help Target
 help:
@@ -477,6 +517,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... image_padding"
 	@echo "... taboo_word"
 	@echo "... particle_simulation"
 	@echo "... adding_surnames"
@@ -505,15 +546,18 @@ help:
 	@echo "... lab_icc_1/change_coins/change_coins.o"
 	@echo "... lab_icc_1/change_coins/change_coins.i"
 	@echo "... lab_icc_1/change_coins/change_coins.s"
+	@echo "... lab_icc_1/image_padding/main.o"
+	@echo "... lab_icc_1/image_padding/main.i"
+	@echo "... lab_icc_1/image_padding/main.s"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.o"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.i"
 	@echo "... lab_icc_1/particle_simulation/particle_simulation.s"
 	@echo "... lab_icc_1/polonese_notation/main.o"
 	@echo "... lab_icc_1/polonese_notation/main.i"
 	@echo "... lab_icc_1/polonese_notation/main.s"
-	@echo "... lab_icc_1/taboo_word/taboo_word.o"
-	@echo "... lab_icc_1/taboo_word/taboo_word.i"
-	@echo "... lab_icc_1/taboo_word/taboo_word.s"
+	@echo "... lab_icc_1/taboo_word/main.o"
+	@echo "... lab_icc_1/taboo_word/main.i"
+	@echo "... lab_icc_1/taboo_word/main.s"
 .PHONY : help
 
 

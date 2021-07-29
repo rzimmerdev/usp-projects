@@ -48,15 +48,19 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/image_padding.dir/DependInfo.cmake"
-  "CMakeFiles/taboo_word.dir/DependInfo.cmake"
-  "CMakeFiles/particle_simulation.dir/DependInfo.cmake"
-  "CMakeFiles/adding_surnames.dir/DependInfo.cmake"
-  "CMakeFiles/change_coins.dir/DependInfo.cmake"
-  "CMakeFiles/playlist_manager.dir/DependInfo.cmake"
   "CMakeFiles/fonte12v3v.dir/DependInfo.cmake"
-  "CMakeFiles/attack_and_types.dir/DependInfo.cmake"
-  "CMakeFiles/polonese_notation.dir/DependInfo.cmake"
-  "CMakeFiles/automatons.dir/DependInfo.cmake"
   "CMakeFiles/manhattan_delivery.dir/DependInfo.cmake"
+  "CMakeFiles/automatons.dir/DependInfo.cmake"
+  "CMakeFiles/polonese_notation.dir/DependInfo.cmake"
+  "CMakeFiles/attack_and_types.dir/DependInfo.cmake"
+  "CMakeFiles/redrum.dir/DependInfo.cmake"
+  "CMakeFiles/taboo_word.dir/DependInfo.cmake"
+  "CMakeFiles/adding_surnames.dir/DependInfo.cmake"
+  "CMakeFiles/particle_simulation.dir/DependInfo.cmake"
+  "CMakeFiles/change_coins.dir/DependInfo.cmake"
+  "CMakeFiles/image_padding.dir/DependInfo.cmake"
+  "CMakeFiles/playlist_manager.dir/DependInfo.cmake"
+  "CMakeFiles/student_manager.dir/DependInfo.cmake"
+  "CMakeFiles/jit_compiler.dir/DependInfo.cmake"
+  "CMakeFiles/pokedex.dir/DependInfo.cmake"
   )

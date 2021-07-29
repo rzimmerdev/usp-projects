@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/jit_compiler.dir/lab_icc_1/jit_compiler/main.c.o  -o ../out/jit_compiler 

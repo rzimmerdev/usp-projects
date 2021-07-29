@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/student_manager.dir/lab_icc_1/student_manager/main.c.o  -o ../out/student_manager 

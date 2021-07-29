@@ -6,6 +6,7 @@ add_executable(manhattan_delivery icc_1/manhattan_delivery/manhattan_delivery.c)
 add_executable(automatons icc_1/automatons/automatons.c)
 add_executable(playlist_manager icc_1/playlist_manager/main.c)
 add_executable(redrum icc_1/redrum/main.c)
+add_executable(ascii_drawer icc_1/ascii_drawer/main.c)
 
 add_executable(change_coins lab_icc_1/change_coins/change_coins.c)
 add_executable(particle_simulation lab_icc_1/particle_simulation/particle_simulation.c)

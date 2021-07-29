@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/projects/usp-projects
+CMAKE_SOURCE_DIR = /mnt/c/dev/usp-projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/projects/usp-projects/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/dev/usp-projects/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,17 +124,30 @@ fonte12v3v/fast:
 .PHONY : fonte12v3v/fast
 
 #=============================================================================
-# Target rules for targets named manhattan_delivery
+# Target rules for targets named jit_compiler
 
 # Build rule for target.
-manhattan_delivery: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 manhattan_delivery
-.PHONY : manhattan_delivery
+jit_compiler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 jit_compiler
+.PHONY : jit_compiler
 
 # fast build rule for target.
-manhattan_delivery/fast:
-	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/build
-.PHONY : manhattan_delivery/fast
+jit_compiler/fast:
+	$(MAKE) -f CMakeFiles/jit_compiler.dir/build.make CMakeFiles/jit_compiler.dir/build
+.PHONY : jit_compiler/fast
+
+#=============================================================================
+# Target rules for targets named pokedex
+
+# Build rule for target.
+pokedex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pokedex
+.PHONY : pokedex
+
+# fast build rule for target.
+pokedex/fast:
+	$(MAKE) -f CMakeFiles/pokedex.dir/build.make CMakeFiles/pokedex.dir/build
+.PHONY : pokedex/fast
 
 #=============================================================================
 # Target rules for targets named automatons
@@ -200,6 +213,32 @@ taboo_word: cmake_check_build_system
 taboo_word/fast:
 	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/build
 .PHONY : taboo_word/fast
+
+#=============================================================================
+# Target rules for targets named manhattan_delivery
+
+# Build rule for target.
+manhattan_delivery: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 manhattan_delivery
+.PHONY : manhattan_delivery
+
+# fast build rule for target.
+manhattan_delivery/fast:
+	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/build
+.PHONY : manhattan_delivery/fast
+
+#=============================================================================
+# Target rules for targets named ascii_drawer
+
+# Build rule for target.
+ascii_drawer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ascii_drawer
+.PHONY : ascii_drawer
+
+# fast build rule for target.
+ascii_drawer/fast:
+	$(MAKE) -f CMakeFiles/ascii_drawer.dir/build.make CMakeFiles/ascii_drawer.dir/build
+.PHONY : ascii_drawer/fast
 
 #=============================================================================
 # Target rules for targets named adding_surnames
@@ -279,32 +318,6 @@ student_manager/fast:
 	$(MAKE) -f CMakeFiles/student_manager.dir/build.make CMakeFiles/student_manager.dir/build
 .PHONY : student_manager/fast
 
-#=============================================================================
-# Target rules for targets named jit_compiler
-
-# Build rule for target.
-jit_compiler: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 jit_compiler
-.PHONY : jit_compiler
-
-# fast build rule for target.
-jit_compiler/fast:
-	$(MAKE) -f CMakeFiles/jit_compiler.dir/build.make CMakeFiles/jit_compiler.dir/build
-.PHONY : jit_compiler/fast
-
-#=============================================================================
-# Target rules for targets named pokedex
-
-# Build rule for target.
-pokedex: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pokedex
-.PHONY : pokedex
-
-# fast build rule for target.
-pokedex/fast:
-	$(MAKE) -f CMakeFiles/pokedex.dir/build.make CMakeFiles/pokedex.dir/build
-.PHONY : pokedex/fast
-
 eletronica_1/fonte.o: eletronica_1/fonte.c.o
 
 .PHONY : eletronica_1/fonte.o
@@ -331,6 +344,33 @@ eletronica_1/fonte.s: eletronica_1/fonte.c.s
 eletronica_1/fonte.c.s:
 	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.s
 .PHONY : eletronica_1/fonte.c.s
+
+icc_1/ascii_drawer/main.o: icc_1/ascii_drawer/main.c.o
+
+.PHONY : icc_1/ascii_drawer/main.o
+
+# target to build an object file
+icc_1/ascii_drawer/main.c.o:
+	$(MAKE) -f CMakeFiles/ascii_drawer.dir/build.make CMakeFiles/ascii_drawer.dir/icc_1/ascii_drawer/main.c.o
+.PHONY : icc_1/ascii_drawer/main.c.o
+
+icc_1/ascii_drawer/main.i: icc_1/ascii_drawer/main.c.i
+
+.PHONY : icc_1/ascii_drawer/main.i
+
+# target to preprocess a source file
+icc_1/ascii_drawer/main.c.i:
+	$(MAKE) -f CMakeFiles/ascii_drawer.dir/build.make CMakeFiles/ascii_drawer.dir/icc_1/ascii_drawer/main.c.i
+.PHONY : icc_1/ascii_drawer/main.c.i
+
+icc_1/ascii_drawer/main.s: icc_1/ascii_drawer/main.c.s
+
+.PHONY : icc_1/ascii_drawer/main.s
+
+# target to generate assembly for a file
+icc_1/ascii_drawer/main.c.s:
+	$(MAKE) -f CMakeFiles/ascii_drawer.dir/build.make CMakeFiles/ascii_drawer.dir/icc_1/ascii_drawer/main.c.s
+.PHONY : icc_1/ascii_drawer/main.c.s
 
 icc_1/automatons/automatons.o: icc_1/automatons/automatons.c.o
 
@@ -719,23 +759,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fonte12v3v"
-	@echo "... manhattan_delivery"
+	@echo "... jit_compiler"
+	@echo "... pokedex"
 	@echo "... automatons"
 	@echo "... polonese_notation"
 	@echo "... attack_and_types"
 	@echo "... redrum"
 	@echo "... taboo_word"
+	@echo "... manhattan_delivery"
+	@echo "... ascii_drawer"
 	@echo "... adding_surnames"
 	@echo "... particle_simulation"
 	@echo "... change_coins"
 	@echo "... image_padding"
 	@echo "... playlist_manager"
 	@echo "... student_manager"
-	@echo "... jit_compiler"
-	@echo "... pokedex"
 	@echo "... eletronica_1/fonte.o"
 	@echo "... eletronica_1/fonte.i"
 	@echo "... eletronica_1/fonte.s"
+	@echo "... icc_1/ascii_drawer/main.o"
+	@echo "... icc_1/ascii_drawer/main.i"
+	@echo "... icc_1/ascii_drawer/main.s"
 	@echo "... icc_1/automatons/automatons.o"
 	@echo "... icc_1/automatons/automatons.i"
 	@echo "... icc_1/automatons/automatons.s"

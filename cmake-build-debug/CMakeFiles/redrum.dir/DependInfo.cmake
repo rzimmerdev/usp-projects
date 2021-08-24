@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/dev/usp-projects/icc_1/redrum/main.c" "/mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles/redrum.dir/icc_1/redrum/main.c.o"
+  "/mnt/d/projects/usp-projects/icc_1/redrum/main.c" "/mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles/redrum.dir/icc_1/redrum/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

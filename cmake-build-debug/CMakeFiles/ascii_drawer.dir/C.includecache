@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/dev/usp-projects/icc_1/ascii_drawer/main.c
+/mnt/d/projects/usp-projects/icc_1/ascii_drawer/main.c
 stdio.h
 -
 stdlib.h

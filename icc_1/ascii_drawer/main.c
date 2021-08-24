@@ -1,5 +1,5 @@
 // Rafael Zimmer, n12542612
-// Project for Introduction Lab for CompSci - Reverse Polonese Notation
+// Project for Introduction Lab for CompSci - ASCII Drawing, Fill Function
 // 21/07/2021
 
 #include <stdio.h>
@@ -8,7 +8,7 @@
 char *read_console();
 char *read_file(FILE *file_pointer, int *width);
 void fill_area(char ***canvas, int height, int width, int x, int y, char fill_color, char placeholder_color);
-void print_canvas(char **canvas, int height);
+void print_canvas(char **canvas, int height, int width);
 
 void enquadra_arte(
         char *nome_do_arquivo_da_arte,
@@ -24,9 +24,10 @@ int main() {
 
     FILE *art_file = fopen(art_name, "r");
 
-    int width = 1, height = 0;
+    int width = 0, height = 0;
     char **canvas = malloc(height * sizeof(char *));
 
+    // Scan line by line of file, as well as allocating memory to canvas and setting lines
     char *current_line;
     while ((current_line = read_file(art_file, &width))) {
 
@@ -36,9 +37,9 @@ int main() {
     } fclose(art_file);
 
     printf("Arte inicial:\n");
-    print_canvas(canvas, height);
+    print_canvas(canvas, height, width);
 
-
+    // Fill in point in canvas, as well as printing specific output (or step)
     for (int i = 0; i < total_steps; i++) {
 
         char fill_color;
@@ -47,23 +48,33 @@ int main() {
 
         fill_area(&canvas, height, width, x, y, fill_color, canvas[y][x]);
 
-        printf("Arte apos a etapa %d:\n", i);
-        print_canvas(canvas, height);
+        printf("\n\nArte apos a etapa %d:\n", i);
+        print_canvas(canvas, height, width);
 
     }
 
+    // Reopening file for writting final output, as to pass to framing function
     art_file = fopen(art_name, "w");
 
     for (int i = 0; i < height; i++) {
 
-        fprintf(art_file, "%s", canvas[i]);
+        for (int j = 0; j < width; j++) {
+
+			fprintf(art_file, "%c", canvas[i][j]);
+
+        }
+
         if (i < height - 1) fprintf(art_file, "\n");
 
     }
 
     fclose(art_file);
 
-    printf("Arte enquadrada:\n");
+    for (int i = 0; i < height; i++) {
+    	free(canvas[i]);
+    } free (canvas);
+
+    printf("\n\nArte enquadrada:\n");
     enquadra_arte(art_name, height, width);
 
     return 0;
@@ -100,6 +111,10 @@ char *read_console() {
     return line;
 }
 
+// Function for returning single line read from file pointer
+//
+// Parameters: pointer to file, pointer to width value to write on
+// Returns: array of chars for line, allocated dynamically
 char *read_file(FILE *file_pointer, int *width) {
 
     int current_char, line_size = 0;
@@ -110,18 +125,26 @@ char *read_file(FILE *file_pointer, int *width) {
         line = realloc(line, sizeof(char) * ++line_size);
         line[line_size - 1] = (char) current_char;
 
-    }; fgetc(file_pointer);
+    };
 
+	if (line != NULL) line[line_size] = '\0';
     if (line_size) *width = line_size;
 
     return line;
 
 }
 
+// Recursive function for filling in specific point in matrix canvas, as well as changing adjacent values in x and y
+// axis to fill_color
+//
+// Parameters: pointer to canvas, canvas height and width, pixel coordinates, color in specific coordinate and
+// color to fill in
+// Returns: none
 void fill_area(char ***canvas, int height, int width, int x, int y, char fill_color, char placeholder_color) {
 
     (*canvas)[y][x] = fill_color;
 
+    // Recursive part of the function, for filling in x and y, and iterating from that point on
     if (x > 0 && (*canvas)[y][x - 1] == placeholder_color) {
         fill_area(canvas, height, width, x - 1, y, fill_color, placeholder_color);
     }
@@ -139,10 +162,21 @@ void fill_area(char ***canvas, int height, int width, int x, int y, char fill_co
     }
 }
 
-void print_canvas(char **canvas, int height) {
+// Function for printing matrix of pixels (canvas) to console
+//
+// Parameters: char **canvas matrix, int height, int width
+// Returns: none
+void print_canvas(char **canvas, int height, int width) {
+	for (int i = 0; i < height; i++) {
+		for (int j = 0; j < width; j++) {
 
-    for (int i = 0; i < height; i++) printf("%s\n", canvas[i]);
+			printf("%c", canvas[i][j]);
 
+		}
+
+		if (i < height - 1) printf("\n");
+
+	}
 }
 
 void enquadra_arte(

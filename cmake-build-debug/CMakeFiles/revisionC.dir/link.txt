@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/revisionC.dir/icc_2/revision/main.c.o  -o ../out/revisionC 

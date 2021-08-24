@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/dev/usp-projects
+CMAKE_SOURCE_DIR = /mnt/d/projects/usp-projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/dev/usp-projects/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/d/projects/usp-projects/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,644 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fonte12v3v
+# Target rules for targets named revisionC
 
 # Build rule for target.
-fonte12v3v: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fonte12v3v
-.PHONY : fonte12v3v
+revisionC: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 revisionC
+.PHONY : revisionC
 
 # fast build rule for target.
-fonte12v3v/fast:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/build
-.PHONY : fonte12v3v/fast
+revisionC/fast:
+	$(MAKE) -f CMakeFiles/revisionC.dir/build.make CMakeFiles/revisionC.dir/build
+.PHONY : revisionC/fast
 
-#=============================================================================
-# Target rules for targets named jit_compiler
+icc_2/revision/main.o: icc_2/revision/main.c.o
 
-# Build rule for target.
-jit_compiler: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 jit_compiler
-.PHONY : jit_compiler
-
-# fast build rule for target.
-jit_compiler/fast:
-	$(MAKE) -f CMakeFiles/jit_compiler.dir/build.make CMakeFiles/jit_compiler.dir/build
-.PHONY : jit_compiler/fast
-
-#=============================================================================
-# Target rules for targets named pokedex
-
-# Build rule for target.
-pokedex: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pokedex
-.PHONY : pokedex
-
-# fast build rule for target.
-pokedex/fast:
-	$(MAKE) -f CMakeFiles/pokedex.dir/build.make CMakeFiles/pokedex.dir/build
-.PHONY : pokedex/fast
-
-#=============================================================================
-# Target rules for targets named automatons
-
-# Build rule for target.
-automatons: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 automatons
-.PHONY : automatons
-
-# fast build rule for target.
-automatons/fast:
-	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/build
-.PHONY : automatons/fast
-
-#=============================================================================
-# Target rules for targets named polonese_notation
-
-# Build rule for target.
-polonese_notation: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 polonese_notation
-.PHONY : polonese_notation
-
-# fast build rule for target.
-polonese_notation/fast:
-	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/build
-.PHONY : polonese_notation/fast
-
-#=============================================================================
-# Target rules for targets named attack_and_types
-
-# Build rule for target.
-attack_and_types: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 attack_and_types
-.PHONY : attack_and_types
-
-# fast build rule for target.
-attack_and_types/fast:
-	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/build
-.PHONY : attack_and_types/fast
-
-#=============================================================================
-# Target rules for targets named redrum
-
-# Build rule for target.
-redrum: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 redrum
-.PHONY : redrum
-
-# fast build rule for target.
-redrum/fast:
-	$(MAKE) -f CMakeFiles/redrum.dir/build.make CMakeFiles/redrum.dir/build
-.PHONY : redrum/fast
-
-#=============================================================================
-# Target rules for targets named taboo_word
-
-# Build rule for target.
-taboo_word: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 taboo_word
-.PHONY : taboo_word
-
-# fast build rule for target.
-taboo_word/fast:
-	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/build
-.PHONY : taboo_word/fast
-
-#=============================================================================
-# Target rules for targets named manhattan_delivery
-
-# Build rule for target.
-manhattan_delivery: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 manhattan_delivery
-.PHONY : manhattan_delivery
-
-# fast build rule for target.
-manhattan_delivery/fast:
-	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/build
-.PHONY : manhattan_delivery/fast
-
-#=============================================================================
-# Target rules for targets named ascii_drawer
-
-# Build rule for target.
-ascii_drawer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ascii_drawer
-.PHONY : ascii_drawer
-
-# fast build rule for target.
-ascii_drawer/fast:
-	$(MAKE) -f CMakeFiles/ascii_drawer.dir/build.make CMakeFiles/ascii_drawer.dir/build
-.PHONY : ascii_drawer/fast
-
-#=============================================================================
-# Target rules for targets named adding_surnames
-
-# Build rule for target.
-adding_surnames: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 adding_surnames
-.PHONY : adding_surnames
-
-# fast build rule for target.
-adding_surnames/fast:
-	$(MAKE) -f CMakeFiles/adding_surnames.dir/build.make CMakeFiles/adding_surnames.dir/build
-.PHONY : adding_surnames/fast
-
-#=============================================================================
-# Target rules for targets named particle_simulation
-
-# Build rule for target.
-particle_simulation: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 particle_simulation
-.PHONY : particle_simulation
-
-# fast build rule for target.
-particle_simulation/fast:
-	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/build
-.PHONY : particle_simulation/fast
-
-#=============================================================================
-# Target rules for targets named change_coins
-
-# Build rule for target.
-change_coins: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 change_coins
-.PHONY : change_coins
-
-# fast build rule for target.
-change_coins/fast:
-	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/build
-.PHONY : change_coins/fast
-
-#=============================================================================
-# Target rules for targets named image_padding
-
-# Build rule for target.
-image_padding: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 image_padding
-.PHONY : image_padding
-
-# fast build rule for target.
-image_padding/fast:
-	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/build
-.PHONY : image_padding/fast
-
-#=============================================================================
-# Target rules for targets named playlist_manager
-
-# Build rule for target.
-playlist_manager: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 playlist_manager
-.PHONY : playlist_manager
-
-# fast build rule for target.
-playlist_manager/fast:
-	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/build
-.PHONY : playlist_manager/fast
-
-#=============================================================================
-# Target rules for targets named student_manager
-
-# Build rule for target.
-student_manager: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 student_manager
-.PHONY : student_manager
-
-# fast build rule for target.
-student_manager/fast:
-	$(MAKE) -f CMakeFiles/student_manager.dir/build.make CMakeFiles/student_manager.dir/build
-.PHONY : student_manager/fast
-
-eletronica_1/fonte.o: eletronica_1/fonte.c.o
-
-.PHONY : eletronica_1/fonte.o
+.PHONY : icc_2/revision/main.o
 
 # target to build an object file
-eletronica_1/fonte.c.o:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.o
-.PHONY : eletronica_1/fonte.c.o
+icc_2/revision/main.c.o:
+	$(MAKE) -f CMakeFiles/revisionC.dir/build.make CMakeFiles/revisionC.dir/icc_2/revision/main.c.o
+.PHONY : icc_2/revision/main.c.o
 
-eletronica_1/fonte.i: eletronica_1/fonte.c.i
+icc_2/revision/main.i: icc_2/revision/main.c.i
 
-.PHONY : eletronica_1/fonte.i
-
-# target to preprocess a source file
-eletronica_1/fonte.c.i:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.i
-.PHONY : eletronica_1/fonte.c.i
-
-eletronica_1/fonte.s: eletronica_1/fonte.c.s
-
-.PHONY : eletronica_1/fonte.s
-
-# target to generate assembly for a file
-eletronica_1/fonte.c.s:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.s
-.PHONY : eletronica_1/fonte.c.s
-
-icc_1/ascii_drawer/main.o: icc_1/ascii_drawer/main.c.o
-
-.PHONY : icc_1/ascii_drawer/main.o
-
-# target to build an object file
-icc_1/ascii_drawer/main.c.o:
-	$(MAKE) -f CMakeFiles/ascii_drawer.dir/build.make CMakeFiles/ascii_drawer.dir/icc_1/ascii_drawer/main.c.o
-.PHONY : icc_1/ascii_drawer/main.c.o
-
-icc_1/ascii_drawer/main.i: icc_1/ascii_drawer/main.c.i
-
-.PHONY : icc_1/ascii_drawer/main.i
+.PHONY : icc_2/revision/main.i
 
 # target to preprocess a source file
-icc_1/ascii_drawer/main.c.i:
-	$(MAKE) -f CMakeFiles/ascii_drawer.dir/build.make CMakeFiles/ascii_drawer.dir/icc_1/ascii_drawer/main.c.i
-.PHONY : icc_1/ascii_drawer/main.c.i
+icc_2/revision/main.c.i:
+	$(MAKE) -f CMakeFiles/revisionC.dir/build.make CMakeFiles/revisionC.dir/icc_2/revision/main.c.i
+.PHONY : icc_2/revision/main.c.i
 
-icc_1/ascii_drawer/main.s: icc_1/ascii_drawer/main.c.s
+icc_2/revision/main.s: icc_2/revision/main.c.s
 
-.PHONY : icc_1/ascii_drawer/main.s
-
-# target to generate assembly for a file
-icc_1/ascii_drawer/main.c.s:
-	$(MAKE) -f CMakeFiles/ascii_drawer.dir/build.make CMakeFiles/ascii_drawer.dir/icc_1/ascii_drawer/main.c.s
-.PHONY : icc_1/ascii_drawer/main.c.s
-
-icc_1/automatons/automatons.o: icc_1/automatons/automatons.c.o
-
-.PHONY : icc_1/automatons/automatons.o
-
-# target to build an object file
-icc_1/automatons/automatons.c.o:
-	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/icc_1/automatons/automatons.c.o
-.PHONY : icc_1/automatons/automatons.c.o
-
-icc_1/automatons/automatons.i: icc_1/automatons/automatons.c.i
-
-.PHONY : icc_1/automatons/automatons.i
-
-# target to preprocess a source file
-icc_1/automatons/automatons.c.i:
-	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/icc_1/automatons/automatons.c.i
-.PHONY : icc_1/automatons/automatons.c.i
-
-icc_1/automatons/automatons.s: icc_1/automatons/automatons.c.s
-
-.PHONY : icc_1/automatons/automatons.s
+.PHONY : icc_2/revision/main.s
 
 # target to generate assembly for a file
-icc_1/automatons/automatons.c.s:
-	$(MAKE) -f CMakeFiles/automatons.dir/build.make CMakeFiles/automatons.dir/icc_1/automatons/automatons.c.s
-.PHONY : icc_1/automatons/automatons.c.s
-
-icc_1/manhattan_delivery/manhattan_delivery.o: icc_1/manhattan_delivery/manhattan_delivery.c.o
-
-.PHONY : icc_1/manhattan_delivery/manhattan_delivery.o
-
-# target to build an object file
-icc_1/manhattan_delivery/manhattan_delivery.c.o:
-	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/icc_1/manhattan_delivery/manhattan_delivery.c.o
-.PHONY : icc_1/manhattan_delivery/manhattan_delivery.c.o
-
-icc_1/manhattan_delivery/manhattan_delivery.i: icc_1/manhattan_delivery/manhattan_delivery.c.i
-
-.PHONY : icc_1/manhattan_delivery/manhattan_delivery.i
-
-# target to preprocess a source file
-icc_1/manhattan_delivery/manhattan_delivery.c.i:
-	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/icc_1/manhattan_delivery/manhattan_delivery.c.i
-.PHONY : icc_1/manhattan_delivery/manhattan_delivery.c.i
-
-icc_1/manhattan_delivery/manhattan_delivery.s: icc_1/manhattan_delivery/manhattan_delivery.c.s
-
-.PHONY : icc_1/manhattan_delivery/manhattan_delivery.s
-
-# target to generate assembly for a file
-icc_1/manhattan_delivery/manhattan_delivery.c.s:
-	$(MAKE) -f CMakeFiles/manhattan_delivery.dir/build.make CMakeFiles/manhattan_delivery.dir/icc_1/manhattan_delivery/manhattan_delivery.c.s
-.PHONY : icc_1/manhattan_delivery/manhattan_delivery.c.s
-
-icc_1/playlist_manager/main.o: icc_1/playlist_manager/main.c.o
-
-.PHONY : icc_1/playlist_manager/main.o
-
-# target to build an object file
-icc_1/playlist_manager/main.c.o:
-	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/icc_1/playlist_manager/main.c.o
-.PHONY : icc_1/playlist_manager/main.c.o
-
-icc_1/playlist_manager/main.i: icc_1/playlist_manager/main.c.i
-
-.PHONY : icc_1/playlist_manager/main.i
-
-# target to preprocess a source file
-icc_1/playlist_manager/main.c.i:
-	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/icc_1/playlist_manager/main.c.i
-.PHONY : icc_1/playlist_manager/main.c.i
-
-icc_1/playlist_manager/main.s: icc_1/playlist_manager/main.c.s
-
-.PHONY : icc_1/playlist_manager/main.s
-
-# target to generate assembly for a file
-icc_1/playlist_manager/main.c.s:
-	$(MAKE) -f CMakeFiles/playlist_manager.dir/build.make CMakeFiles/playlist_manager.dir/icc_1/playlist_manager/main.c.s
-.PHONY : icc_1/playlist_manager/main.c.s
-
-icc_1/redrum/main.o: icc_1/redrum/main.c.o
-
-.PHONY : icc_1/redrum/main.o
-
-# target to build an object file
-icc_1/redrum/main.c.o:
-	$(MAKE) -f CMakeFiles/redrum.dir/build.make CMakeFiles/redrum.dir/icc_1/redrum/main.c.o
-.PHONY : icc_1/redrum/main.c.o
-
-icc_1/redrum/main.i: icc_1/redrum/main.c.i
-
-.PHONY : icc_1/redrum/main.i
-
-# target to preprocess a source file
-icc_1/redrum/main.c.i:
-	$(MAKE) -f CMakeFiles/redrum.dir/build.make CMakeFiles/redrum.dir/icc_1/redrum/main.c.i
-.PHONY : icc_1/redrum/main.c.i
-
-icc_1/redrum/main.s: icc_1/redrum/main.c.s
-
-.PHONY : icc_1/redrum/main.s
-
-# target to generate assembly for a file
-icc_1/redrum/main.c.s:
-	$(MAKE) -f CMakeFiles/redrum.dir/build.make CMakeFiles/redrum.dir/icc_1/redrum/main.c.s
-.PHONY : icc_1/redrum/main.c.s
-
-lab_icc_1/adding_surnames/adding_surnames.o: lab_icc_1/adding_surnames/adding_surnames.c.o
-
-.PHONY : lab_icc_1/adding_surnames/adding_surnames.o
-
-# target to build an object file
-lab_icc_1/adding_surnames/adding_surnames.c.o:
-	$(MAKE) -f CMakeFiles/adding_surnames.dir/build.make CMakeFiles/adding_surnames.dir/lab_icc_1/adding_surnames/adding_surnames.c.o
-.PHONY : lab_icc_1/adding_surnames/adding_surnames.c.o
-
-lab_icc_1/adding_surnames/adding_surnames.i: lab_icc_1/adding_surnames/adding_surnames.c.i
-
-.PHONY : lab_icc_1/adding_surnames/adding_surnames.i
-
-# target to preprocess a source file
-lab_icc_1/adding_surnames/adding_surnames.c.i:
-	$(MAKE) -f CMakeFiles/adding_surnames.dir/build.make CMakeFiles/adding_surnames.dir/lab_icc_1/adding_surnames/adding_surnames.c.i
-.PHONY : lab_icc_1/adding_surnames/adding_surnames.c.i
-
-lab_icc_1/adding_surnames/adding_surnames.s: lab_icc_1/adding_surnames/adding_surnames.c.s
-
-.PHONY : lab_icc_1/adding_surnames/adding_surnames.s
-
-# target to generate assembly for a file
-lab_icc_1/adding_surnames/adding_surnames.c.s:
-	$(MAKE) -f CMakeFiles/adding_surnames.dir/build.make CMakeFiles/adding_surnames.dir/lab_icc_1/adding_surnames/adding_surnames.c.s
-.PHONY : lab_icc_1/adding_surnames/adding_surnames.c.s
-
-lab_icc_1/attack_and_types/main.o: lab_icc_1/attack_and_types/main.c.o
-
-.PHONY : lab_icc_1/attack_and_types/main.o
-
-# target to build an object file
-lab_icc_1/attack_and_types/main.c.o:
-	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/lab_icc_1/attack_and_types/main.c.o
-.PHONY : lab_icc_1/attack_and_types/main.c.o
-
-lab_icc_1/attack_and_types/main.i: lab_icc_1/attack_and_types/main.c.i
-
-.PHONY : lab_icc_1/attack_and_types/main.i
-
-# target to preprocess a source file
-lab_icc_1/attack_and_types/main.c.i:
-	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/lab_icc_1/attack_and_types/main.c.i
-.PHONY : lab_icc_1/attack_and_types/main.c.i
-
-lab_icc_1/attack_and_types/main.s: lab_icc_1/attack_and_types/main.c.s
-
-.PHONY : lab_icc_1/attack_and_types/main.s
-
-# target to generate assembly for a file
-lab_icc_1/attack_and_types/main.c.s:
-	$(MAKE) -f CMakeFiles/attack_and_types.dir/build.make CMakeFiles/attack_and_types.dir/lab_icc_1/attack_and_types/main.c.s
-.PHONY : lab_icc_1/attack_and_types/main.c.s
-
-lab_icc_1/change_coins/change_coins.o: lab_icc_1/change_coins/change_coins.c.o
-
-.PHONY : lab_icc_1/change_coins/change_coins.o
-
-# target to build an object file
-lab_icc_1/change_coins/change_coins.c.o:
-	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/lab_icc_1/change_coins/change_coins.c.o
-.PHONY : lab_icc_1/change_coins/change_coins.c.o
-
-lab_icc_1/change_coins/change_coins.i: lab_icc_1/change_coins/change_coins.c.i
-
-.PHONY : lab_icc_1/change_coins/change_coins.i
-
-# target to preprocess a source file
-lab_icc_1/change_coins/change_coins.c.i:
-	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/lab_icc_1/change_coins/change_coins.c.i
-.PHONY : lab_icc_1/change_coins/change_coins.c.i
-
-lab_icc_1/change_coins/change_coins.s: lab_icc_1/change_coins/change_coins.c.s
-
-.PHONY : lab_icc_1/change_coins/change_coins.s
-
-# target to generate assembly for a file
-lab_icc_1/change_coins/change_coins.c.s:
-	$(MAKE) -f CMakeFiles/change_coins.dir/build.make CMakeFiles/change_coins.dir/lab_icc_1/change_coins/change_coins.c.s
-.PHONY : lab_icc_1/change_coins/change_coins.c.s
-
-lab_icc_1/image_padding/main.o: lab_icc_1/image_padding/main.c.o
-
-.PHONY : lab_icc_1/image_padding/main.o
-
-# target to build an object file
-lab_icc_1/image_padding/main.c.o:
-	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/lab_icc_1/image_padding/main.c.o
-.PHONY : lab_icc_1/image_padding/main.c.o
-
-lab_icc_1/image_padding/main.i: lab_icc_1/image_padding/main.c.i
-
-.PHONY : lab_icc_1/image_padding/main.i
-
-# target to preprocess a source file
-lab_icc_1/image_padding/main.c.i:
-	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/lab_icc_1/image_padding/main.c.i
-.PHONY : lab_icc_1/image_padding/main.c.i
-
-lab_icc_1/image_padding/main.s: lab_icc_1/image_padding/main.c.s
-
-.PHONY : lab_icc_1/image_padding/main.s
-
-# target to generate assembly for a file
-lab_icc_1/image_padding/main.c.s:
-	$(MAKE) -f CMakeFiles/image_padding.dir/build.make CMakeFiles/image_padding.dir/lab_icc_1/image_padding/main.c.s
-.PHONY : lab_icc_1/image_padding/main.c.s
-
-lab_icc_1/jit_compiler/main.o: lab_icc_1/jit_compiler/main.c.o
-
-.PHONY : lab_icc_1/jit_compiler/main.o
-
-# target to build an object file
-lab_icc_1/jit_compiler/main.c.o:
-	$(MAKE) -f CMakeFiles/jit_compiler.dir/build.make CMakeFiles/jit_compiler.dir/lab_icc_1/jit_compiler/main.c.o
-.PHONY : lab_icc_1/jit_compiler/main.c.o
-
-lab_icc_1/jit_compiler/main.i: lab_icc_1/jit_compiler/main.c.i
-
-.PHONY : lab_icc_1/jit_compiler/main.i
-
-# target to preprocess a source file
-lab_icc_1/jit_compiler/main.c.i:
-	$(MAKE) -f CMakeFiles/jit_compiler.dir/build.make CMakeFiles/jit_compiler.dir/lab_icc_1/jit_compiler/main.c.i
-.PHONY : lab_icc_1/jit_compiler/main.c.i
-
-lab_icc_1/jit_compiler/main.s: lab_icc_1/jit_compiler/main.c.s
-
-.PHONY : lab_icc_1/jit_compiler/main.s
-
-# target to generate assembly for a file
-lab_icc_1/jit_compiler/main.c.s:
-	$(MAKE) -f CMakeFiles/jit_compiler.dir/build.make CMakeFiles/jit_compiler.dir/lab_icc_1/jit_compiler/main.c.s
-.PHONY : lab_icc_1/jit_compiler/main.c.s
-
-lab_icc_1/particle_simulation/particle_simulation.o: lab_icc_1/particle_simulation/particle_simulation.c.o
-
-.PHONY : lab_icc_1/particle_simulation/particle_simulation.o
-
-# target to build an object file
-lab_icc_1/particle_simulation/particle_simulation.c.o:
-	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/lab_icc_1/particle_simulation/particle_simulation.c.o
-.PHONY : lab_icc_1/particle_simulation/particle_simulation.c.o
-
-lab_icc_1/particle_simulation/particle_simulation.i: lab_icc_1/particle_simulation/particle_simulation.c.i
-
-.PHONY : lab_icc_1/particle_simulation/particle_simulation.i
-
-# target to preprocess a source file
-lab_icc_1/particle_simulation/particle_simulation.c.i:
-	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/lab_icc_1/particle_simulation/particle_simulation.c.i
-.PHONY : lab_icc_1/particle_simulation/particle_simulation.c.i
-
-lab_icc_1/particle_simulation/particle_simulation.s: lab_icc_1/particle_simulation/particle_simulation.c.s
-
-.PHONY : lab_icc_1/particle_simulation/particle_simulation.s
-
-# target to generate assembly for a file
-lab_icc_1/particle_simulation/particle_simulation.c.s:
-	$(MAKE) -f CMakeFiles/particle_simulation.dir/build.make CMakeFiles/particle_simulation.dir/lab_icc_1/particle_simulation/particle_simulation.c.s
-.PHONY : lab_icc_1/particle_simulation/particle_simulation.c.s
-
-lab_icc_1/pokedex/main.o: lab_icc_1/pokedex/main.c.o
-
-.PHONY : lab_icc_1/pokedex/main.o
-
-# target to build an object file
-lab_icc_1/pokedex/main.c.o:
-	$(MAKE) -f CMakeFiles/pokedex.dir/build.make CMakeFiles/pokedex.dir/lab_icc_1/pokedex/main.c.o
-.PHONY : lab_icc_1/pokedex/main.c.o
-
-lab_icc_1/pokedex/main.i: lab_icc_1/pokedex/main.c.i
-
-.PHONY : lab_icc_1/pokedex/main.i
-
-# target to preprocess a source file
-lab_icc_1/pokedex/main.c.i:
-	$(MAKE) -f CMakeFiles/pokedex.dir/build.make CMakeFiles/pokedex.dir/lab_icc_1/pokedex/main.c.i
-.PHONY : lab_icc_1/pokedex/main.c.i
-
-lab_icc_1/pokedex/main.s: lab_icc_1/pokedex/main.c.s
-
-.PHONY : lab_icc_1/pokedex/main.s
-
-# target to generate assembly for a file
-lab_icc_1/pokedex/main.c.s:
-	$(MAKE) -f CMakeFiles/pokedex.dir/build.make CMakeFiles/pokedex.dir/lab_icc_1/pokedex/main.c.s
-.PHONY : lab_icc_1/pokedex/main.c.s
-
-lab_icc_1/polonese_notation/main.o: lab_icc_1/polonese_notation/main.c.o
-
-.PHONY : lab_icc_1/polonese_notation/main.o
-
-# target to build an object file
-lab_icc_1/polonese_notation/main.c.o:
-	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/lab_icc_1/polonese_notation/main.c.o
-.PHONY : lab_icc_1/polonese_notation/main.c.o
-
-lab_icc_1/polonese_notation/main.i: lab_icc_1/polonese_notation/main.c.i
-
-.PHONY : lab_icc_1/polonese_notation/main.i
-
-# target to preprocess a source file
-lab_icc_1/polonese_notation/main.c.i:
-	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/lab_icc_1/polonese_notation/main.c.i
-.PHONY : lab_icc_1/polonese_notation/main.c.i
-
-lab_icc_1/polonese_notation/main.s: lab_icc_1/polonese_notation/main.c.s
-
-.PHONY : lab_icc_1/polonese_notation/main.s
-
-# target to generate assembly for a file
-lab_icc_1/polonese_notation/main.c.s:
-	$(MAKE) -f CMakeFiles/polonese_notation.dir/build.make CMakeFiles/polonese_notation.dir/lab_icc_1/polonese_notation/main.c.s
-.PHONY : lab_icc_1/polonese_notation/main.c.s
-
-lab_icc_1/student_manager/main.o: lab_icc_1/student_manager/main.c.o
-
-.PHONY : lab_icc_1/student_manager/main.o
-
-# target to build an object file
-lab_icc_1/student_manager/main.c.o:
-	$(MAKE) -f CMakeFiles/student_manager.dir/build.make CMakeFiles/student_manager.dir/lab_icc_1/student_manager/main.c.o
-.PHONY : lab_icc_1/student_manager/main.c.o
-
-lab_icc_1/student_manager/main.i: lab_icc_1/student_manager/main.c.i
-
-.PHONY : lab_icc_1/student_manager/main.i
-
-# target to preprocess a source file
-lab_icc_1/student_manager/main.c.i:
-	$(MAKE) -f CMakeFiles/student_manager.dir/build.make CMakeFiles/student_manager.dir/lab_icc_1/student_manager/main.c.i
-.PHONY : lab_icc_1/student_manager/main.c.i
-
-lab_icc_1/student_manager/main.s: lab_icc_1/student_manager/main.c.s
-
-.PHONY : lab_icc_1/student_manager/main.s
-
-# target to generate assembly for a file
-lab_icc_1/student_manager/main.c.s:
-	$(MAKE) -f CMakeFiles/student_manager.dir/build.make CMakeFiles/student_manager.dir/lab_icc_1/student_manager/main.c.s
-.PHONY : lab_icc_1/student_manager/main.c.s
-
-lab_icc_1/taboo_word/main.o: lab_icc_1/taboo_word/main.c.o
-
-.PHONY : lab_icc_1/taboo_word/main.o
-
-# target to build an object file
-lab_icc_1/taboo_word/main.c.o:
-	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.o
-.PHONY : lab_icc_1/taboo_word/main.c.o
-
-lab_icc_1/taboo_word/main.i: lab_icc_1/taboo_word/main.c.i
-
-.PHONY : lab_icc_1/taboo_word/main.i
-
-# target to preprocess a source file
-lab_icc_1/taboo_word/main.c.i:
-	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.i
-.PHONY : lab_icc_1/taboo_word/main.c.i
-
-lab_icc_1/taboo_word/main.s: lab_icc_1/taboo_word/main.c.s
-
-.PHONY : lab_icc_1/taboo_word/main.s
-
-# target to generate assembly for a file
-lab_icc_1/taboo_word/main.c.s:
-	$(MAKE) -f CMakeFiles/taboo_word.dir/build.make CMakeFiles/taboo_word.dir/lab_icc_1/taboo_word/main.c.s
-.PHONY : lab_icc_1/taboo_word/main.c.s
+icc_2/revision/main.c.s:
+	$(MAKE) -f CMakeFiles/revisionC.dir/build.make CMakeFiles/revisionC.dir/icc_2/revision/main.c.s
+.PHONY : icc_2/revision/main.c.s
 
 # Help Target
 help:
@@ -758,70 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... fonte12v3v"
-	@echo "... jit_compiler"
-	@echo "... pokedex"
-	@echo "... automatons"
-	@echo "... polonese_notation"
-	@echo "... attack_and_types"
-	@echo "... redrum"
-	@echo "... taboo_word"
-	@echo "... manhattan_delivery"
-	@echo "... ascii_drawer"
-	@echo "... adding_surnames"
-	@echo "... particle_simulation"
-	@echo "... change_coins"
-	@echo "... image_padding"
-	@echo "... playlist_manager"
-	@echo "... student_manager"
-	@echo "... eletronica_1/fonte.o"
-	@echo "... eletronica_1/fonte.i"
-	@echo "... eletronica_1/fonte.s"
-	@echo "... icc_1/ascii_drawer/main.o"
-	@echo "... icc_1/ascii_drawer/main.i"
-	@echo "... icc_1/ascii_drawer/main.s"
-	@echo "... icc_1/automatons/automatons.o"
-	@echo "... icc_1/automatons/automatons.i"
-	@echo "... icc_1/automatons/automatons.s"
-	@echo "... icc_1/manhattan_delivery/manhattan_delivery.o"
-	@echo "... icc_1/manhattan_delivery/manhattan_delivery.i"
-	@echo "... icc_1/manhattan_delivery/manhattan_delivery.s"
-	@echo "... icc_1/playlist_manager/main.o"
-	@echo "... icc_1/playlist_manager/main.i"
-	@echo "... icc_1/playlist_manager/main.s"
-	@echo "... icc_1/redrum/main.o"
-	@echo "... icc_1/redrum/main.i"
-	@echo "... icc_1/redrum/main.s"
-	@echo "... lab_icc_1/adding_surnames/adding_surnames.o"
-	@echo "... lab_icc_1/adding_surnames/adding_surnames.i"
-	@echo "... lab_icc_1/adding_surnames/adding_surnames.s"
-	@echo "... lab_icc_1/attack_and_types/main.o"
-	@echo "... lab_icc_1/attack_and_types/main.i"
-	@echo "... lab_icc_1/attack_and_types/main.s"
-	@echo "... lab_icc_1/change_coins/change_coins.o"
-	@echo "... lab_icc_1/change_coins/change_coins.i"
-	@echo "... lab_icc_1/change_coins/change_coins.s"
-	@echo "... lab_icc_1/image_padding/main.o"
-	@echo "... lab_icc_1/image_padding/main.i"
-	@echo "... lab_icc_1/image_padding/main.s"
-	@echo "... lab_icc_1/jit_compiler/main.o"
-	@echo "... lab_icc_1/jit_compiler/main.i"
-	@echo "... lab_icc_1/jit_compiler/main.s"
-	@echo "... lab_icc_1/particle_simulation/particle_simulation.o"
-	@echo "... lab_icc_1/particle_simulation/particle_simulation.i"
-	@echo "... lab_icc_1/particle_simulation/particle_simulation.s"
-	@echo "... lab_icc_1/pokedex/main.o"
-	@echo "... lab_icc_1/pokedex/main.i"
-	@echo "... lab_icc_1/pokedex/main.s"
-	@echo "... lab_icc_1/polonese_notation/main.o"
-	@echo "... lab_icc_1/polonese_notation/main.i"
-	@echo "... lab_icc_1/polonese_notation/main.s"
-	@echo "... lab_icc_1/student_manager/main.o"
-	@echo "... lab_icc_1/student_manager/main.i"
-	@echo "... lab_icc_1/student_manager/main.s"
-	@echo "... lab_icc_1/taboo_word/main.o"
-	@echo "... lab_icc_1/taboo_word/main.i"
-	@echo "... lab_icc_1/taboo_word/main.s"
+	@echo "... revisionC"
+	@echo "... icc_2/revision/main.o"
+	@echo "... icc_2/revision/main.i"
+	@echo "... icc_2/revision/main.s"
 .PHONY : help
 
 

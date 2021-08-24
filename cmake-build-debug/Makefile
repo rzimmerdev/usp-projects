@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/dev/usp-projects
+CMAKE_SOURCE_DIR = /mnt/d/projects/usp-projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/dev/usp-projects/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/d/projects/usp-projects/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/usp-projects/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,84 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fonte12v3v
+# Target rules for targets named revisionC
 
 # Build rule for target.
-fonte12v3v: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fonte12v3v
-.PHONY : fonte12v3v
+revisionC: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 revisionC
+.PHONY : revisionC
 
 # fast build rule for target.
-fonte12v3v/fast:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/build
-.PHONY : fonte12v3v/fast
+revisionC/fast:
+	$(MAKE) -f CMakeFiles/revisionC.dir/build.make CMakeFiles/revisionC.dir/build
+.PHONY : revisionC/fast
 
-#=============================================================================
-# Target rules for targets named labyrinth
+icc_2/revision/main.o: icc_2/revision/main.c.o
 
-# Build rule for target.
-labyrinth: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 labyrinth
-.PHONY : labyrinth
-
-# fast build rule for target.
-labyrinth/fast:
-	$(MAKE) -f CMakeFiles/labyrinth.dir/build.make CMakeFiles/labyrinth.dir/build
-.PHONY : labyrinth/fast
-
-eletronica_1/fonte.o: eletronica_1/fonte.c.o
-
-.PHONY : eletronica_1/fonte.o
+.PHONY : icc_2/revision/main.o
 
 # target to build an object file
-eletronica_1/fonte.c.o:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.o
-.PHONY : eletronica_1/fonte.c.o
+icc_2/revision/main.c.o:
+	$(MAKE) -f CMakeFiles/revisionC.dir/build.make CMakeFiles/revisionC.dir/icc_2/revision/main.c.o
+.PHONY : icc_2/revision/main.c.o
 
-eletronica_1/fonte.i: eletronica_1/fonte.c.i
+icc_2/revision/main.i: icc_2/revision/main.c.i
 
-.PHONY : eletronica_1/fonte.i
-
-# target to preprocess a source file
-eletronica_1/fonte.c.i:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.i
-.PHONY : eletronica_1/fonte.c.i
-
-eletronica_1/fonte.s: eletronica_1/fonte.c.s
-
-.PHONY : eletronica_1/fonte.s
-
-# target to generate assembly for a file
-eletronica_1/fonte.c.s:
-	$(MAKE) -f CMakeFiles/fonte12v3v.dir/build.make CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.s
-.PHONY : eletronica_1/fonte.c.s
-
-icc_2/labyrinth/main.o: icc_2/labyrinth/main.c.o
-
-.PHONY : icc_2/labyrinth/main.o
-
-# target to build an object file
-icc_2/labyrinth/main.c.o:
-	$(MAKE) -f CMakeFiles/labyrinth.dir/build.make CMakeFiles/labyrinth.dir/icc_2/labyrinth/main.c.o
-.PHONY : icc_2/labyrinth/main.c.o
-
-icc_2/labyrinth/main.i: icc_2/labyrinth/main.c.i
-
-.PHONY : icc_2/labyrinth/main.i
+.PHONY : icc_2/revision/main.i
 
 # target to preprocess a source file
-icc_2/labyrinth/main.c.i:
-	$(MAKE) -f CMakeFiles/labyrinth.dir/build.make CMakeFiles/labyrinth.dir/icc_2/labyrinth/main.c.i
-.PHONY : icc_2/labyrinth/main.c.i
+icc_2/revision/main.c.i:
+	$(MAKE) -f CMakeFiles/revisionC.dir/build.make CMakeFiles/revisionC.dir/icc_2/revision/main.c.i
+.PHONY : icc_2/revision/main.c.i
 
-icc_2/labyrinth/main.s: icc_2/labyrinth/main.c.s
+icc_2/revision/main.s: icc_2/revision/main.c.s
 
-.PHONY : icc_2/labyrinth/main.s
+.PHONY : icc_2/revision/main.s
 
 # target to generate assembly for a file
-icc_2/labyrinth/main.c.s:
-	$(MAKE) -f CMakeFiles/labyrinth.dir/build.make CMakeFiles/labyrinth.dir/icc_2/labyrinth/main.c.s
-.PHONY : icc_2/labyrinth/main.c.s
+icc_2/revision/main.c.s:
+	$(MAKE) -f CMakeFiles/revisionC.dir/build.make CMakeFiles/revisionC.dir/icc_2/revision/main.c.s
+.PHONY : icc_2/revision/main.c.s
 
 # Help Target
 help:
@@ -197,15 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... fonte12v3v"
 	@echo "... edit_cache"
-	@echo "... labyrinth"
-	@echo "... eletronica_1/fonte.o"
-	@echo "... eletronica_1/fonte.i"
-	@echo "... eletronica_1/fonte.s"
-	@echo "... icc_2/labyrinth/main.o"
-	@echo "... icc_2/labyrinth/main.i"
-	@echo "... icc_2/labyrinth/main.s"
+	@echo "... revisionC"
+	@echo "... icc_2/revision/main.o"
+	@echo "... icc_2/revision/main.i"
+	@echo "... icc_2/revision/main.s"
 .PHONY : help
 
 

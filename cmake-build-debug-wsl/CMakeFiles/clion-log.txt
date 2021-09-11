@@ -1,4 +1,1 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/d/projects/usp-projects
--- Configuring done
--- Generating done
--- Build files have been written to: /mnt/d/projects/usp-projects/cmake-build-debug-wsl
+CMakeLists.txt not found in D:\projects\usp-projects Select CMakeLists.txt

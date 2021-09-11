@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/playlist_manager.dir/icc_1/playlist_manager/main.c.o  -o ../out/playlist_manager 

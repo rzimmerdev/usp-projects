@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/manhattan_delivery.dir/icc_1/manhattan_delivery/manhattan_delivery.c.o  -o ../out/manhattan_delivery  -lm 

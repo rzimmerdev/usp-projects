@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/pokedex.dir/lab_icc_1/pokedex/main.c.o  -o ../out/pokedex 

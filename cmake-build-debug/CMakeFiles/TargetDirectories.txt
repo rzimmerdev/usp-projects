@@ -1,3 +1,0 @@
-/mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/d/projects/usp-projects/cmake-build-debug/CMakeFiles/revisionC.dir

@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/automatons.dir/icc_1/automatons/automatons.c.o  -o ../out/automatons 

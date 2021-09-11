@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, D:/projects/quartus/Rafael Zimmer - 12542612 - CompleteBitwiseSubtract/project8.bdf
+source_file = 1, D:/projects/quartus/Rafael Zimmer - 12542612 - CompleteBitwiseSubtract/db/project8.cbx.xml
+design_name = project8
+instance = comp, \S~output\, S~output, project8, 1
+instance = comp, \Cout~output\, Cout~output, project8, 1
+instance = comp, \A~input\, A~input, project8, 1
+instance = comp, \B~input\, B~input, project8, 1
+instance = comp, \Cin~input\, Cin~input, project8, 1
+instance = comp, \inst10~0\, inst10~0, project8, 1
+instance = comp, \inst16~0\, inst16~0, project8, 1
+instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, project8, 1

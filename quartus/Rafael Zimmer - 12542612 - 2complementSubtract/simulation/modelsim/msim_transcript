@@ -1,0 +1,82 @@
+# Reading pref.tcl
+# do project10_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying D:/programs/quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {project10.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:08 on Jul 06,2021
+# vcom -reportprogress 300 -93 -work work project10.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity project10
+# -- Compiling architecture structure of project10
+# End time: 11:53:09 on Jul 06,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vsim work.project10
+# vsim work.project10 
+# Start time: 11:53:53 on Jul 06,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading altera_lnsim.altera_lnsim_components
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.project10(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+add wave -position insertpoint  \
+sim:/project10/Cout \
+sim:/project10/A0 \
+sim:/project10/B0 \
+sim:/project10/A1 \
+sim:/project10/B1 \
+sim:/project10/A2 \
+sim:/project10/B2 \
+sim:/project10/A3 \
+sim:/project10/B3 \
+sim:/project10/display_g \
+sim:/project10/display_f \
+sim:/project10/display_e \
+sim:/project10/display_d \
+sim:/project10/display_c \
+sim:/project10/display_b \
+sim:/project10/display_a
+force -freeze sim:/project10/A0 1 0
+force -freeze sim:/project10/A1 0 0
+force -freeze sim:/project10/A2 1 0
+force -freeze sim:/project10/A3 1 0
+force -freeze sim:/project10/B0 1 0
+force -freeze sim:/project10/B1 0 0
+force -freeze sim:/project10/B2 0 0
+force -freeze sim:/project10/B3 1 0
+run
+force -freeze sim:/project10/A0 0 0
+force -freeze sim:/project10/A1 1 0
+force -freeze sim:/project10/A2 1 0
+force -freeze sim:/project10/A3 1 0
+force -freeze sim:/project10/B0 1 0
+force -freeze sim:/project10/B1 0 0
+force -freeze sim:/project10/B2 0 0
+force -freeze sim:/project10/B3 0 0
+run
+# End time: 12:33:27 on Jul 06,2021, Elapsed time: 0:39:34
+# Errors: 0, Warnings: 0

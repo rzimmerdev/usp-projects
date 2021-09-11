@@ -1,0 +1,64 @@
+# Reading pref.tcl
+# do project8_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying D:/programs/quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {project8.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:20:01 on Jun 22,2021
+# vcom -reportprogress 300 -93 -work work project8.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity project8
+# -- Compiling architecture structure of project8
+# End time: 11:20:01 on Jun 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.project8
+# vsim work.project8 
+# Start time: 11:23:46 on Jun 22,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading altera_lnsim.altera_lnsim_components
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.project8(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+add wave -position insertpoint  \
+sim:/project8/S \
+sim:/project8/A \
+sim:/project8/B \
+sim:/project8/Cin \
+sim:/project8/Cout
+force -freeze sim:/project8/Cin 0 0, 1 {100 ps} -r 200
+force -freeze sim:/project8/B 0 0, 1 {200 ps} -r 400
+force -freeze sim:/project8/A 0 0, 1 {400 ps} -r 800
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 11:24:46 on Jun 22,2021, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 0

@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/change_coins.dir/lab_icc_1/change_coins/change_coins.c.o  -o ../out/change_coins 

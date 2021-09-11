@@ -1,0 +1,108 @@
+# Reading pref.tcl
+# do project12_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying D:/programs/quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {project12.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:22:42 on Jul 23,2021
+# vcom -reportprogress 300 -93 -work work project12.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity project12
+# -- Compiling architecture structure of project12
+# End time: 01:22:42 on Jul 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.project12
+# vsim work.project12 
+# Start time: 01:22:44 on Jul 23,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading altera_lnsim.altera_lnsim_components
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.project12(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+add wave -position insertpoint  \
+sim:/project12/D4 \
+sim:/project12/Y4 \
+sim:/project12/Y3 \
+sim:/project12/Y2 \
+sim:/project12/X4 \
+sim:/project12/Y1 \
+sim:/project12/D3 \
+sim:/project12/X3 \
+sim:/project12/D2 \
+sim:/project12/X2 \
+sim:/project12/D1 \
+sim:/project12/X1 \
+sim:/project12/M1 \
+sim:/project12/M2 \
+sim:/project12/M3 \
+sim:/project12/M4 \
+sim:/project12/M5
+force -freeze sim:/project12/X4 1 0
+force -freeze sim:/project12/X3 0 0
+force -freeze sim:/project12/X2 0 0
+force -freeze sim:/project12/X1 1 0
+force -freeze sim:/project12/Y4 0 0
+force -freeze sim:/project12/Y3 0 0
+force -freeze sim:/project12/Y2 1 0
+force -freeze sim:/project12/Y1 1 0
+run
+force -freeze sim:/project12/X4 0 0
+force -freeze sim:/project12/X3 1 0
+force -freeze sim:/project12/X2 1 0
+force -freeze sim:/project12/X1 1 0
+force -freeze sim:/project12/Y4 0 0
+force -freeze sim:/project12/Y3 0 0
+force -freeze sim:/project12/Y2 1 0
+force -freeze sim:/project12/Y1 0 0
+run
+force -freeze sim:/project12/X4 1 0
+force -freeze sim:/project12/X3 1 0
+force -freeze sim:/project12/X2 1 0
+force -freeze sim:/project12/X1 1 0
+force -freeze sim:/project12/Y4 1 0
+force -freeze sim:/project12/Y3 0 0
+force -freeze sim:/project12/Y2 1 0
+force -freeze sim:/project12/X4 1 0
+force -freeze sim:/project12/X3 1 0
+force -freeze sim:/project12/X2 1 0
+force -freeze sim:/project12/X1 1 0
+force -freeze sim:/project12/Y4 1 0
+force -freeze sim:/project12/Y3 0 0
+force -freeze sim:/project12/Y2 1 0
+force -freeze sim:/project12/Y1 0 0
+run
+force -freeze sim:/project12/X4 0 0
+force -freeze sim:/project12/X3 0 0
+force -freeze sim:/project12/X2 1 0
+force -freeze sim:/project12/X1 1 0
+force -freeze sim:/project12/Y4 1 0
+force -freeze sim:/project12/Y3 0 0
+force -freeze sim:/project12/Y2 0 0
+force -freeze sim:/project12/Y1 1 0
+run
+# End time: 01:30:13 on Jul 23,2021, Elapsed time: 0:07:29
+# Errors: 0, Warnings: 0

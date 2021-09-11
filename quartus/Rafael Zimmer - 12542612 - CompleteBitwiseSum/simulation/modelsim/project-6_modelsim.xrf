@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, D:/projects/quartus/project-6/project-6.bdf
+source_file = 1, D:/projects/quartus/project-6/db/project-6.cbx.xml
+design_name = \project-6\
+instance = comp, \S~output\, S~output, \project-6\, 1
+instance = comp, \Cout~output\, Cout~output, \project-6\, 1
+instance = comp, \Cin~input\, Cin~input, \project-6\, 1
+instance = comp, \B~input\, B~input, \project-6\, 1
+instance = comp, \A~input\, A~input, \project-6\, 1
+instance = comp, \inst7~0\, inst7~0, \project-6\, 1
+instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, \project-6\, 1

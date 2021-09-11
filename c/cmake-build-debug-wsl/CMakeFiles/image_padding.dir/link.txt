@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/image_padding.dir/lab_icc_1/image_padding/main.c.o  -o ../out/image_padding 

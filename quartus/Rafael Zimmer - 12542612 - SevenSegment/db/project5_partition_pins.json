@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "segment_a",
+					"strict" : false
+				},
+				{
+					"name" : "segment_b",
+					"strict" : false
+				},
+				{
+					"name" : "segment_c",
+					"strict" : false
+				},
+				{
+					"name" : "segment_d",
+					"strict" : false
+				},
+				{
+					"name" : "segment_e",
+					"strict" : false
+				},
+				{
+					"name" : "segment_f",
+					"strict" : false
+				},
+				{
+					"name" : "segment_g",
+					"strict" : false
+				},
+				{
+					"name" : "0",
+					"strict" : false
+				},
+				{
+					"name" : "3",
+					"strict" : false
+				},
+				{
+					"name" : "1",
+					"strict" : false
+				},
+				{
+					"name" : "2",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,98 @@
+# Reading pref.tcl
+# do project9_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying D:/programs/quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {project9.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:00:01 on Jun 29,2021
+# vcom -reportprogress 300 -93 -work work project9.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity project9
+# -- Compiling architecture structure of project9
+# End time: 12:00:02 on Jun 29,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vsim gate_work.project9
+# vsim gate_work.project9 
+# Start time: 12:00:09 on Jun 29,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading altera_lnsim.altera_lnsim_components
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading gate_work.project9(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+add wave -position insertpoint  \
+sim:/project9/display_g \
+sim:/project9/A0 \
+sim:/project9/B0 \
+sim:/project9/A1 \
+sim:/project9/B1 \
+sim:/project9/A2 \
+sim:/project9/B2 \
+sim:/project9/A3 \
+sim:/project9/B3 \
+sim:/project9/display_f \
+sim:/project9/display_e \
+sim:/project9/display_d \
+sim:/project9/display_c \
+sim:/project9/display_b \
+sim:/project9/display_a
+force -freeze sim:/project9/A0 1 0
+force -freeze sim:/project9/A1 0 0
+force -freeze sim:/project9/A2 1 0
+force -freeze sim:/project9/A3 0 0
+force -freeze sim:/project9/B0 0 0
+force -freeze sim:/project9/B1 1 0
+force -freeze sim:/project9/B2 0 0
+force -freeze sim:/project9/B3 1 0
+run
+force -freeze sim:/project9/A0 1000 0
+# ** UI-Msg: (vsim-4026) Value "1000" does not represent a literal of the enumeration type.
+# ** UI-Msg: (vsim-4011) Invalid force value: 1000 0.
+# 
+force -freeze sim:/project9/A1 0011 0
+# ** UI-Msg: (vsim-4026) Value "0011" does not represent a literal of the enumeration type.
+# ** UI-Msg: (vsim-4011) Invalid force value: 0011 0.
+# 
+force -freeze sim:/project9/A0 1 0
+force -freeze sim:/project9/A1 0 0
+force -freeze sim:/project9/A2 1 0
+force -freeze sim:/project9/A3 0 0
+force -freeze sim:/project9/B0 0 0
+force -freeze sim:/project9/B1 0 0
+force -freeze sim:/project9/B2 1 0
+force -freeze sim:/project9/B3 1 0
+run
+force -freeze sim:/project9/A0 1 0
+force -freeze sim:/project9/A1 1 0
+force -freeze sim:/project9/A2 1 0
+force -freeze sim:/project9/A3 0 0
+force -freeze sim:/project9/B0 1 0
+force -freeze sim:/project9/B1 0 0
+force -freeze sim:/project9/B2 1 0
+force -freeze sim:/project9/B3 1 0
+run
+# End time: 14:49:45 on Jun 29,2021, Elapsed time: 2:49:36
+# Errors: 0, Warnings: 0

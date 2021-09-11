@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/fonte12v3v.dir/eletronica_1/fonte.c.o  -o ../out/fonte12v3v  -lm 

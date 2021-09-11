@@ -1,0 +1,106 @@
+# Reading pref.tcl
+# do project5_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {project5.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:50:20 on May 30,2021
+# vcom -reportprogress 300 -93 -work work project5.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity project5
+# -- Compiling architecture structure of project5
+# End time: 01:50:20 on May 30,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.project5
+# vsim work.project5 
+# Start time: 01:56:40 on May 30,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading altera_lnsim.altera_lnsim_components
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.project5(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+add wave -position insertpoint  \
+sim:/project5/segment_a \
+sim:/project5/\\0\\ \
+sim:/project5/\\1\\ \
+sim:/project5/\\2\\ \
+sim:/project5/\\3\\ \
+sim:/project5/segment_b \
+sim:/project5/segment_c \
+sim:/project5/segment_d \
+sim:/project5/segment_e \
+sim:/project5/segment_f \
+sim:/project5/segment_g
+force -freeze sim:/project5/\\0\\ 0 0
+force -freeze sim:/project5/\\1\\ 0 0
+force -freeze sim:/project5/\\2\\ 0 0
+force -freeze sim:/project5/\\3\\ 0 0
+run
+force -freeze sim:/project5/\\3\\ 1 0
+run
+force -freeze sim:/project5/\\2\\ 1 0
+force -freeze sim:/project5/\\3\\ 0 0
+run
+force -freeze sim:/project5/\\3\\ 1 0
+run
+force -freeze sim:/project5/\\1\\ 1 0
+force -freeze sim:/project5/\\3\\ 0 0
+force -freeze sim:/project5/\\2\\ 0 0
+run
+force -freeze sim:/project5/\\3\\ 1 0
+run
+force -freeze sim:/project5/\\2\\ 1 0
+force -freeze sim:/project5/\\3\\ 0 0
+run
+force -freeze sim:/project5/\\3\\ 1 0
+run
+force -freeze sim:/project5/\\0\\ 1 0
+force -freeze sim:/project5/\\2\\ 0 0
+force -freeze sim:/project5/\\1\\ 0 0
+force -freeze sim:/project5/\\2\\ 0 0
+force -freeze sim:/project5/\\3\\ 0 0
+run
+force -freeze sim:/project5/\\3\\ 1 0
+run
+force -freeze sim:/project5/\\2\\ 1 0
+force -freeze sim:/project5/\\3\\ 0 0
+run
+force -freeze sim:/project5/\\3\\ 1 0
+run
+force -freeze sim:/project5/\\1\\ 1 0
+force -freeze sim:/project5/\\2\\ 0 0
+force -freeze sim:/project5/\\3\\ 0 0
+run
+force -freeze sim:/project5/\\3\\ 1 0
+run
+force -freeze sim:/project5/\\2\\ 1 0
+force -freeze sim:/project5/\\3\\ 0 0
+run
+force -freeze sim:/project5/\\3\\ 1 0
+run
+# End time: 02:03:45 on May 30,2021, Elapsed time: 0:07:05
+# Errors: 0, Warnings: 0

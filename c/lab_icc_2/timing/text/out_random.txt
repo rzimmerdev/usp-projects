@@ -1,0 +1,31 @@
+./timing
+
+--------------------------------------------
+
+Vetor de 25 elementos aleatorios entre 0 e 25
+Bubble Sort: 0.000003s
+Insertion Sort: 0.000001s
+Merge Sort: 0.000004s
+
+--------------------------------------------
+
+Vetor de 100 elementos aleatorios entre 0 e 100
+Bubble Sort: 0.000018s
+Insertion Sort: 0.000003s
+Merge Sort: 0.000008s
+
+--------------------------------------------
+
+Vetor de 1000 elementos aleatorios entre 0 e 1000
+Bubble Sort: 0.001179s
+Insertion Sort: 0.000072s
+Merge Sort: 0.000070s
+
+--------------------------------------------
+
+Vetor de 10000 elementos aleatorios entre 0 e 10000
+Bubble Sort: 0.124363s
+Insertion Sort: 0.007362s
+Merge Sort: 0.000913s
+
+--------------------------------------------

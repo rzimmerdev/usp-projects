@@ -1,0 +1,19 @@
+gcc -o main main.c
+./main 169 144
+
+---------------------------
+
+Chamada do Algoritmo de Euclides:
+
+   └- Iteracao 2 -> Dividendo: 169; Divisor: 144
+   └- Iteracao 3 -> Dividendo: 144; Divisor: 25
+    └- Iteracao 4 -> Dividendo: 25; Divisor: 19
+     └- Iteracao 5 -> Dividendo: 19; Divisor: 6
+      └- Iteracao 6 -> Dividendo: 6; Divisor: 1
+       └- Iteracao 7 -> Dividendo: 1; Divisor: 0
+        => Maior divisor em comum: 1
+
+---------------------------
+
+o inverso de 144 em Z_169 e 27
+

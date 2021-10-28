@@ -1,0 +1,21 @@
+gcc -o main main.c
+./main 12542612 1973
+
+---------------------------
+
+Chamada do Algoritmo de Euclides:
+
+ └- Iteracao 1 -> Dividendo: 12542612; Divisor: 1973
+  └- Iteracao 2 -> Dividendo: 1973; Divisor: 251
+   └- Iteracao 3 -> Dividendo: 251; Divisor: 216
+    └- Iteracao 4 -> Dividendo: 216; Divisor: 35
+     └- Iteracao 5 -> Dividendo: 35; Divisor: 6
+      └- Iteracao 6 -> Dividendo: 6; Divisor: 5
+       └- Iteracao 7 -> Dividendo: 5; Divisor: 1
+        └- Iteracao 8 -> Dividendo: 1; Divisor: 0
+         => Maior divisor em comum: 1
+
+---------------------------
+
+o inverso de 1973 em Z_12542612 e 2148709
+

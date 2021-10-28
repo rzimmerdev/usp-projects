@@ -1,0 +1,17 @@
+gcc -o main main.c
+./main 173 13
+
+---------------------------
+
+Chamada do Algoritmo de Euclides:
+
+ └- Iteracao 1 -> Dividendo: 173; Divisor: 13
+  └- Iteracao 2 -> Dividendo: 13; Divisor: 4
+   └- Iteracao 3 -> Dividendo: 4; Divisor: 1
+    └- Iteracao 4 -> Dividendo: 1; Divisor: 0
+     => Maior divisor em comum: 1
+
+---------------------------
+
+o inverso de 13 em Z_173 e 40
+

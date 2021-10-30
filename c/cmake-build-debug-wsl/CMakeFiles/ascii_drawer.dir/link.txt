@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/ascii_drawer.dir/icc_1/ascii_drawer/main.c.o  -o ../out/ascii_drawer 

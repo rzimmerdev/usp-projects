@@ -19,7 +19,7 @@ char *scan_line();
  *  @Returns:
  *            string array pointer: char*;
 */
-char *scan_word(int *size_pointer);
+char *scan_word();
 
 
 /*
@@ -30,7 +30,7 @@ char *scan_word(int *size_pointer);
  *         substring to replace: char *substring,
  *         value to insert in place: char *substitute
 */
-void replace_string(char *string, char *substring, char *substitute)
+void replace_string(char *string, char *substring, char *substitute);
 
 
 #endif

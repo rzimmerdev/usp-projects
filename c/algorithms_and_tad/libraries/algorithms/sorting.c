@@ -1,6 +1,20 @@
-#include <stdlib.h>
+/*
+ *  Property of Rafael Zimmer, rzimmerdev, nUsp 12542612
+ *  Created 31/10/2021
+ *
+ *  Sorting algorithms library, implementing basic popular sorting algorithms for generic use
+*/
+
 #include <string.h>
 
+/*
+ *  Bubble Sort for sorting generic list, using generic compare function
+ *
+ *  @Input:
+ *         pointer to list object: void *,
+ *         total elements of list: int,
+ *         function to compare two elements of list: void (*compare)(void *, void *)
+ */
 void bubble_sort(int *list, int list_size) {
 
 	for (int i = 0; i < list_size; i++) {

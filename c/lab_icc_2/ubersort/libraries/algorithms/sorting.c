@@ -6,6 +6,7 @@
 */
 
 #include <string.h>
+#include <stdlib.h>
 
 /*
  *  Bubble Sort for sorting generic list, using generic compare function
@@ -77,41 +78,43 @@ void merge_sort(int *list, int list_size) {
     }
 }
 
-int create_partition(void **list, int start, int end, int (compare)(void *, void *)) {
+void random_select(void **list, int start, int end, void (change(void *, void *))) {
+
+    int random_index = start + rand() % (end - start);
+
+    change(list[start], list[random_index]);
+}
+
+int create_partition(void **list, int start, int end, int (compare)(void *, void *), void (change)(void *, void *)) {
 
     void *pivot = list[start];
 
     int i = start + 1;
 
     for (int j = start + 1; j < end; j++) {
-        if ((int) (compare(list[j], pivot)) == 1) {
+        if (compare(list[j], pivot) == 1) {
 
-            i++;
-            void *temp = list[i];
-            list[i] = list[j]; list[j] = temp;
+            change(list[i], list[j]); i++;
         }
     }
 
-    i++;
-    list[start] = list[i];
-    list[i] = pivot;
+    change(pivot, list[i - 1]);
 
     return i;
 }
 
-void qs_recursive_call(void **list, int start, int end, int (compare)(void *, void *)) {
+void qs_recursive_call(void **list, int start, int end, int (compare)(void *, void *), void (change)(void *, void *)) {
 
     if (start < end) {
 
-        int partition_index = create_partition(list, start, end, compare);
+        int partition_index = create_partition(list, start, end, compare, change);
 
-        qs_recursive_call(list, start, partition_index - 1, compare);
-        qs_recursive_call(list , partition_index + 1, end, compare);
+        qs_recursive_call(list, start, partition_index - 1, compare, change);
+        qs_recursive_call(list , partition_index + 1, end, compare, change);
     }
 }
 
-void quick_sort(void **list, int list_size, int (compare)(void *, void *)) {
+void quick_sort(void **list, int list_size, int (compare)(void *, void *), void (change)(void *, void *)) {
 
-    qs_recursive_call(list, 0, list_size - 1, compare);
-
+    qs_recursive_call(list, 0, list_size , compare, change);
 }

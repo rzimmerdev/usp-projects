@@ -1,4 +1,4 @@
-dependencies = main.o libraries/tools/string_tools.o libraries/structures/skip_list.o
+dependencies = main.o libraries/tools/string_tools.o libraries/structures/skip_list.o dictionary.o
 case = test_cases/1.in
 
 all: $(dependencies)

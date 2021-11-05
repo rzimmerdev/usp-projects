@@ -10,44 +10,66 @@
 
 #include "libraries/tools/string_tools.h"
 #include "libraries/structures/skip_list.h"
+#include "dictionary.h"
 
 int main() {
+    srand(42);
+
+    skip_list *dictionary = create_dictionary();
 
     char *operation;
 
     while ((operation = scan_word())[0] != '\0') {
-        printf("%s\n", operation);
+
+        /*printf("%s\n", operation);*/
 
         if (strcmp(operation, "insercao") == 0) {
 
             char *word = scan_word();
             char *description = scan_line();
 
-            printf(": %s", word);
-            printf(" - %s", description);
+            int out = add_entry(dictionary, word, description);
+
+            if (out == -1) {
+                printf("OPERACAO INVALIDA\n");
+            }
         }
 
-        else if (strcmp(operation, "alteracao")) {
+        else if (strcmp(operation, "alteracao") == 0) {
 
             scan_word(); scan_line();
         }
 
-        else if (strcmp(operation, "remocao")) {
+        else if (strcmp(operation, "remocao") == 0) {
+
+            char *word = scan_word();
+            int out = remove_entry(dictionary, word);
+
+            if (out == -1) {
+                printf("OPERACAO INVALIDA\n");
+            }
+            free(word);
+
+        }
+
+        else if (strcmp(operation, "busca") == 0) {
+
+            char *word = scan_word();
+            char *description = get_description(dictionary, word);
+            if (description != NULL) {
+                printf("%s %s\n", word, description);
+            } else {
+                printf("OPERACAO INVALIDA\n");
+            }
+            free(word);
+        }
+
+        else if (strcmp(operation, "impressao") == 0) {
 
             scan_word();
         }
 
-        else if (strcmp(operation, "busca")) {
-
-            scan_word();
-        }
-
-        else if (strcmp(operation, "impressao")) {
-
-            scan_word();
-        }
-
-        else { printf("operação inválida\n"); }
+        else { printf("OPERACAO INVALIDA\n"); }
 
         free(operation);
     }

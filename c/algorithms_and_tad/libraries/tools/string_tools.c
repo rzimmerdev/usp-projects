@@ -23,14 +23,14 @@ char *scan_line() {
 
     char current_char;
 
-    while (scanf("%c", &current_char) == 1 && current_char != '\n' && current_char != '\r') {
-
-        str = realloc(str, ++size * sizeof(char));
-        str[size - 1] = current_char;
+    while (scanf("%c", &current_char) == 1 && current_char != '\n') {
+        if (current_char != '\r') {
+            str = realloc(str, ++size * sizeof(char));
+            str[size - 1] = current_char;
+        }
     }
 
     if (size != 0) {
-
         str = realloc(str, (size + 1) * sizeof(char));
         str[size] = '\0';
         return str;
@@ -54,11 +54,11 @@ char *scan_word() {
 
     char current_char;
 
-    while (scanf("%c", &current_char) == 1 &&
-           current_char != ' ' && current_char != '\n' && current_char != '\r') {
-
-        str = realloc(str, ++size * sizeof(char));
-        str[size - 1] = current_char;
+    while (scanf("%c", &current_char) == 1 && current_char != ' ' && current_char != '\n') {
+        if (current_char != '\r') {
+            str = realloc(str, ++size * sizeof(char));
+            str[size - 1] = current_char;
+        }
     }
 
     if (size != 0) {
@@ -118,9 +118,8 @@ void replace_string(char *string, char *substring, char *substitute) {
         }
 
             // If both sizes are equall, simply copying content of substitute into pointer position is enough
-        else {
-            memcpy(pointer, substitute, substitute_size);
-        }
+        else { memcpy(pointer, substitute, substitute_size); }
+
         pointer = strstr(string, substring);
     }
 }

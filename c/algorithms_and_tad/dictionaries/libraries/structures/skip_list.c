@@ -7,26 +7,25 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef struct _QuadNode {
+typedef struct QuadNode {
 
     void *value;
 
-    struct _QuadNode *above;
-    struct _QuadNode *below;
+    struct QuadNode *above;
+    struct QuadNode *below;
 
-    struct _QuadNode *previous;
-    struct _QuadNode *next;
+    struct QuadNode *previous;
+    struct QuadNode *next;
 
 } quad_node;
 
-typedef struct _SkipList {
+typedef struct SkipList {
 
     quad_node *head;
     int height;
-    int size;
 
     int (*compare)(void *, void*);
-    void (*remove)(void *);
+    void (*delete)(void *);
 
 } skip_list;
 
@@ -45,14 +44,13 @@ quad_node *create_quad_node(void *value, quad_node *above, quad_node *previous) 
 }
 
 
-skip_list *create_sl(void *minus_infinity, int (*compare)(void *, void *), void (*remove)(void *)) {
+skip_list *create_sl(void *minus_infinity, int (*compare)(void *, void *), void (*delete)(void *)) {
 
     skip_list *sl = malloc(sizeof(skip_list));
-    sl->height = 0;
-    sl->size = 0;
+    sl->height = 1;
 
     sl->compare = compare;
-    sl->remove = remove;
+    sl->delete = delete;
 
     quad_node *head = create_quad_node(minus_infinity, NULL, NULL);
 
@@ -61,24 +59,21 @@ skip_list *create_sl(void *minus_infinity, int (*compare)(void *, void *), void 
     return sl;
 }
 
-quad_node *find_node(skip_list *list, void *value, int get_parent) {
+quad_node *find_node(skip_list *list, void *value) {
 
     quad_node *current = list->head;
 
     while (current != NULL && current->next != NULL) {
 
-        int comparison = list->compare(value, current->next->value);
+        int comparison = list->compare(current->next->value, value);
 
         if (comparison == 0) {
-            if (get_parent != 1) {
-                current = current->next;
-                while (current->below != NULL) {
+            current = current->next;
+            while (current->below != NULL) {
 
-                    current = current->below;
-                }
-            } else {
-                break;
+                current = current->below;
             }
+            return current;
         }
 
         else if (comparison < 0) {
@@ -86,12 +81,12 @@ quad_node *find_node(skip_list *list, void *value, int get_parent) {
             current = current->next;
         }
 
-        else {
+        else if (comparison > 0) {
             if (current->below != NULL) {
 
                 current = current->below;
             } else {
-                break;
+                return current;
             }
         }
     }
@@ -99,40 +94,109 @@ quad_node *find_node(skip_list *list, void *value, int get_parent) {
     return current;
 }
 
+quad_node **find_levels(skip_list *list, void *value) {
+
+    quad_node **levels = malloc(sizeof(quad_node *) * list->height);
+    int i = list->height;
+    quad_node *current = list->head;
+
+    while (current != NULL) {
+
+        int comparison;
+
+        if (current->next == NULL) {
+            comparison = list->compare(NULL, value);
+        } else {
+            comparison = list->compare(current->next->value, value);
+        }
+
+        if (comparison == 0) {
+            current = current->next;
+            while (current->below != NULL) {
+
+                current = current->below;
+            }
+            return levels;
+        }
+
+        else if (comparison < 0) {
+
+            current = current->next;
+        }
+
+        else if (comparison > 0) {
+            if (current->below != NULL) {
+                levels[--i] = current;
+                current = current->below;
+            } else {
+                return levels;
+            }
+        }
+    }
+
+    return levels;
+}
+
+
+quad_node *get_next(quad_node *node) {
+    return node->next;
+}
+
+quad_node *get_previous(quad_node *node) {
+    return node->previous;
+}
+
 void *get_value(quad_node *node) {
     return node->value;
 }
 
 int add_node(skip_list *list, void *value) {
-    quad_node *parent = list->head;
+    quad_node *parent = find_node(list, value);
 
-    if (parent->next != NULL) {
-        parent = find_node(list, value, 1);
-    }
-
-    if (parent->next != NULL && list->compare(value, parent->next) == 0) {
+    if (parent == NULL || parent->value == NULL) {
+        return -1;
+    } else if (parent->value != list->head->value && list->compare(parent->value, value) == 0) {
         return -1;
     }
 
     quad_node *node = create_quad_node(value, NULL, parent);
+    node->next = parent->next;
+    if (parent->next != NULL) {
+        parent->next->previous = node;
+    }
     parent->next = node;
+
+    quad_node *previous = node;
+
+    while (rand()%2 == 1) { // NOLINT(cert-msc30-c, cert-msc50-cpp)
+
+        quad_node *above = create_quad_node(value, NULL, parent);
+        above->below = previous;
+
+        previous = above;
+    }
 
     return 1;
 }
 
 int remove_node(skip_list *list, void *value) {
 
-    quad_node *parent = list->head;
-    if (parent->next != NULL) {
-        parent = find_node(list, value, 1);
+    if (list->head->next == NULL) {
+        return -1;
+    }
 
-        if (parent->next != NULL) {
-            quad_node *next = parent->next->next;
-            list->remove(parent->next->value);
-            free(parent->next);
-            parent->next = next;
-        }  else return -1;
-    } else return -1;
+    quad_node *found = find_node(list, value);
 
-    return 1;
+    if (found != NULL && list->compare(value, found->value) == 0) {
+
+        found->previous->next = found->next;
+        found->next->previous = found->previous;
+
+        list->delete(found->value);
+        free(found);
+
+        return 1;
+    }
+
+    return -1;
 }

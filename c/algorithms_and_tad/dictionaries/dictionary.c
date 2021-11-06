@@ -5,6 +5,7 @@
 */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 #include "libraries/structures/skip_list.h"
@@ -18,6 +19,10 @@ typedef struct _Entry {
 
 
 int compare_words(void *first_entry, void *second_entry) {
+
+    if (first_entry == NULL) {
+        return 1;
+    }
 
     return strcmp(((entry *) first_entry)->word, ((entry *) second_entry)->word);
 }
@@ -55,9 +60,32 @@ char *get_description(skip_list *dictionary, char *word) {
     entry *placeholder_entry = malloc(sizeof(entry));
     placeholder_entry->word = word;
 
-    char *description = ((entry *) get_value(find_node(dictionary, placeholder_entry, 0)))->description;
+    entry *found = (entry *) get_value(find_node(dictionary, placeholder_entry));
+    char *description = NULL;
+    if (found->word != NULL && compare_words(found, placeholder_entry) == 0) {
+        description = found->description;
+    }
+
     free(placeholder_entry);
     return description;
+}
+
+int replace_description(skip_list *dictionary, char *word, char *new_description) {
+
+    entry *placeholder_entry = malloc(sizeof(entry));
+    placeholder_entry->word = word;
+
+    entry *found_entry = ((entry *) get_value(find_node(dictionary, placeholder_entry)));
+
+    free(placeholder_entry);
+
+    if (strcmp(found_entry->word, word) == 0) {
+        free(found_entry->description);
+        found_entry->description = new_description;
+        return 1;
+    } else {
+        return -1;
+    }
 }
 
 int remove_entry(skip_list *dictionary, char *word) {
@@ -72,16 +100,34 @@ int remove_entry(skip_list *dictionary, char *word) {
     return out;
 }
 
-int compare_prefix(void *prefix, void *substring) {
+int compare_prefix(void *prefix, void *string) {
 
-    int size = sizeof((char *) prefix);
+    int size = strlen(((entry *) prefix)->word);
 
-    return strncmp((char *) prefix, (char *) substring, size);jytrex
+    return strncmp(((entry *) prefix)->word, ((entry *) string)->word, size);
 }
 
 int print_entries(skip_list *dictionary, char *prefix) {
 
+    entry *placeholder_entry = malloc(sizeof(entry));
+    placeholder_entry->word = prefix;
 
+    quad_node *current = find_node(dictionary, placeholder_entry);
+
+    if (current == NULL || get_next(current) == NULL) {
+        free(placeholder_entry);
+        return -1;
+    }
+
+    current = get_next(current);
+
+    while (current != NULL && compare_prefix(placeholder_entry, get_value(current)) == 0) {
+        printf("%s %s\n", ((entry *) get_value(current))->word, ((entry *) get_value(current))->description);
+        current = get_next(current);
+    }
+
+    free(placeholder_entry);
+    return 1;
 }
 
 void free_dictionary(skip_list *dictionary) {

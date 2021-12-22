@@ -17,7 +17,7 @@ int main() {
 		shell_list[i] = scan_shell();
 	}
 
-	// Call shell sorting from shell tools, to sort using insertion sort on virtual sublist
+	// Call shell sorting from shell tool, to sort using insertion sort on virtual sublist
 	shell_sort(shell_list, total_shells);
 
 	// Print shells in ascending diameter order

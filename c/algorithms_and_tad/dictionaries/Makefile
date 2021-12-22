@@ -5,7 +5,9 @@ all: $(dependencies)
 	gcc -o main $(dependencies)
 
 run: main.c
-	./main < $(case) > out.txt
+	make all
+	./main
 
 valgrind: all
-	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./main
+	make all
+	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./main < $(case)

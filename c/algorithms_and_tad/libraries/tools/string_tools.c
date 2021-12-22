@@ -2,7 +2,7 @@
  *  Property of Rafael Zimmer, rzimmerdev, nUsp 12542612
  *  Created 31/10/2021
  *
- *  String tools library, contains functions for scanning and operating on specific string formats
+ *  String tool library, contains functions for scanning and operating on specific string formats
 */
 
 #include <string.h>

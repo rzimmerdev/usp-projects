@@ -2,7 +2,7 @@
  *  Property of Rafael Zimmer, rzimmerdev, nUsp 12542612
  *  Created 31/10/2021
  *
- *  String tools library, contains functions for scanning and operating on specific string formats
+ *  String tool library, contains functions for scanning and operating on specific string formats
 */
 
 #include <string.h>
@@ -14,7 +14,7 @@
  *  and returns allocated string
  *
  *  @Returns:
- *           string array pointer: char*;
+ *           string array pointer: char*
 */
 char *scan_line() {
 
@@ -45,7 +45,7 @@ char *scan_line() {
  *  separated by ' ' (space) or new-line characters
  *
  *  @Returns:
- *            string array pointer: char*;
+ *            string array pointer: char*
 */
 char *scan_word() {
 

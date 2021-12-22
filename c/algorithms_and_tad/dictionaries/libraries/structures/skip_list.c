@@ -1,7 +1,7 @@
 /*
  *  Property of Rafael Zimmer, rzimmerdev, nUsp 12542612
- *  Created 31/10/2021, 13:18
- *  Project for Algorithms and Data Structures - SCC0202, "Projeto 1: Dicionários"
+ *  Created 02/10/2021
+ *  Advanced Data Structure library for creating Skip Lists with generic attributes
 */
 
 #include <stdlib.h>
@@ -11,8 +11,8 @@ typedef struct QuadNode {
 
     void *value;
 
-    struct QuadNode *above;
     struct QuadNode *below;
+    struct QuadNode *above;
 
     struct QuadNode *previous;
     struct QuadNode *next;
@@ -29,16 +29,16 @@ typedef struct SkipList {
 
 } skip_list;
 
-quad_node *create_quad_node(void *value, quad_node *above, quad_node *previous) {
+quad_node *create_quad_node(void *value, quad_node *below, quad_node *previous) {
 
     quad_node *node = malloc(sizeof(quad_node));
     node->value = value;
 
-    node->above = above;
     node->previous = previous;
-
     node->next = NULL;
-    node->below = NULL;
+
+    node->above = NULL;
+    node->below = below;
 
     return node;
 }
@@ -59,44 +59,10 @@ skip_list *create_sl(void *minus_infinity, int (*compare)(void *, void *), void 
     return sl;
 }
 
-quad_node *find_node(skip_list *list, void *value) {
-
-    quad_node *current = list->head;
-
-    while (current != NULL && current->next != NULL) {
-
-        int comparison = list->compare(current->next->value, value);
-
-        if (comparison == 0) {
-            current = current->next;
-            while (current->below != NULL) {
-
-                current = current->below;
-            }
-            return current;
-        }
-
-        else if (comparison < 0) {
-
-            current = current->next;
-        }
-
-        else if (comparison > 0) {
-            if (current->below != NULL) {
-
-                current = current->below;
-            } else {
-                return current;
-            }
-        }
-    }
-
-    return current;
-}
-
 quad_node **find_levels(skip_list *list, void *value) {
 
-    quad_node **levels = malloc(sizeof(quad_node *) * list->height);
+    quad_node **levels = calloc(list->height, sizeof(quad_node *));
+
     int i = list->height;
     quad_node *current = list->head;
 
@@ -105,31 +71,33 @@ quad_node **find_levels(skip_list *list, void *value) {
         int comparison;
 
         if (current->next == NULL) {
-            comparison = list->compare(NULL, value);
+            comparison = list->compare(value, NULL);
         } else {
-            comparison = list->compare(current->next->value, value);
+            comparison = list->compare(value, current->next->value);
         }
 
-        if (comparison == 0) {
-            current = current->next;
-            while (current->below != NULL) {
-
-                current = current->below;
-            }
-            return levels;
-        }
-
-        else if (comparison < 0) {
+        // If comparison is negative, go to next, until found or next is bigger
+        if (comparison < 0) {
 
             current = current->next;
         }
 
+        // If comparison is positive, next value is bigger than searched for value,
+        // thus, search should continue on the level below
         else if (comparison > 0) {
-            if (current->below != NULL) {
+
+            levels[--i] = current;
+            current = current->below;
+        }
+
+        // If value has been found, traverse until lowest level has been reached (null node found)
+        else {
+
+            current = current->next;
+            while (current) {
+
                 levels[--i] = current;
                 current = current->below;
-            } else {
-                return levels;
             }
         }
     }
@@ -137,66 +105,131 @@ quad_node **find_levels(skip_list *list, void *value) {
     return levels;
 }
 
+// Returns first level value of level search function
+quad_node *find_node(skip_list *list, void *value) {
 
-quad_node *get_next(quad_node *node) {
-    return node->next;
+    quad_node **found = find_levels(list, value);
+
+    quad_node *node = found[0];
+    free(found);
+    return node;
 }
 
 quad_node *get_previous(quad_node *node) {
     return node->previous;
 }
 
+quad_node *get_next(quad_node *node) {
+    return node->next;
+}
+
 void *get_value(quad_node *node) {
     return node->value;
 }
 
+// Uses find_levels function to find parent in each level for new node pillar
+// and uses random probabilistic comparison to determine if node value should be added
+// in upper level
 int add_node(skip_list *list, void *value) {
-    quad_node *parent = find_node(list, value);
+    quad_node **parents = find_levels(list, value);
 
-    if (parent == NULL || parent->value == NULL) {
-        return -1;
-    } else if (parent->value != list->head->value && list->compare(parent->value, value) == 0) {
-        return -1;
+    if (parents) {
+        if (list->compare(value, parents[0]->value) == 0) {
+            return -1;
+        } else {
+
+            int current_level = 0;
+
+            quad_node *node = NULL;
+
+            while(rand() % 2 != 1 || current_level == 0) {
+                quad_node *below = node;
+                if (current_level < list->height) {
+
+                    node = create_quad_node(value, below, parents[current_level]);
+
+                } else {
+
+                    quad_node *head = create_quad_node(list->head->value, list->head, NULL);
+                    head->below->above = head;
+                    list->head = head;
+                    node = create_quad_node(value, below, head);
+                    list->height++;
+                }
+
+                if (below) below->above = node;
+
+                node->next = node->previous->next;
+
+                if (node->next) {
+                    node->next->previous = node;
+                } else {
+                    node->next = NULL;
+                }
+
+                node->previous->next = node;
+
+                current_level++;
+            }
+        }
     }
 
-    quad_node *node = create_quad_node(value, NULL, parent);
-    node->next = parent->next;
-    if (parent->next != NULL) {
-        parent->next->previous = node;
-    }
-    parent->next = node;
-
-    quad_node *previous = node;
-
-    while (rand()%2 == 1) { // NOLINT(cert-msc30-c, cert-msc50-cpp)
-
-        quad_node *above = create_quad_node(value, NULL, parent);
-        above->below = previous;
-
-        previous = above;
-    }
-
+    free(parents);
     return 1;
 }
 
 int remove_node(skip_list *list, void *value) {
 
-    if (list->head->next == NULL) {
+    quad_node *node = find_node(list, value);
+
+    if (list->compare(value, node->value) != 0) {
         return -1;
     }
 
-    quad_node *found = find_node(list, value);
+    list->delete(node->value);
 
-    if (found != NULL && list->compare(value, found->value) == 0) {
+    while (node) {
 
-        found->previous->next = found->next;
-        found->next->previous = found->previous;
+        quad_node *temp = node->above;
 
-        list->delete(found->value);
-        free(found);
+        if (node->next) {
+            node->next->previous = node->previous;
+        }
 
-        return 1;
+        node->previous->next = node->next;
+
+        free(node);
+        node = temp;
     }
 
-    return -1;
+    return 1;
+}
+
+// Key strategy is to iterate through list through bottom nodes, as to allow for single freeing
+// of value, as well as being able to iterate upwards without needing to instantiate more memory
+// for recursion alternative to free each node pillar
+void free_list(skip_list *list) {
+
+    quad_node *bottom = list->head;
+
+    while (bottom->below) {
+        bottom = bottom->below;
+    }
+
+    while (bottom) {
+        quad_node *temp;
+        quad_node *current = bottom->above;
+        while(current) {
+            temp = current->above;
+            free(current);
+            current = temp;
+        }
+        temp = bottom->next;
+        list->delete(bottom->value);
+
+        free(bottom);
+        bottom = temp;
+    }
+
+    free(list);
 }

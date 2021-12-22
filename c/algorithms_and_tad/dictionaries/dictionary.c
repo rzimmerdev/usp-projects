@@ -10,7 +10,7 @@
 
 #include "libraries/structures/skip_list.h"
 
-typedef struct _Entry {
+typedef struct Entry {
 
     char *word;
     char *description;
@@ -20,7 +20,7 @@ typedef struct _Entry {
 
 int compare_words(void *first_entry, void *second_entry) {
 
-    if (first_entry == NULL) {
+    if (second_entry == NULL) {
         return 1;
     }
 
@@ -28,19 +28,31 @@ int compare_words(void *first_entry, void *second_entry) {
 }
 
 void free_entry(void *to_remove) {
-    free(((entry *) to_remove)->word);
-    free(((entry *) to_remove)->description);
-    free((entry *) to_remove);
+    if ((entry *) to_remove != NULL) {
+        free(((entry *) to_remove)->word);
+
+        char *description = ((entry *) to_remove)->description;
+        if (description) {
+            free(description);
+        }
+
+        free((entry *) to_remove);
+    }
 }
 
 skip_list *create_dictionary() {
 
     // Since smallest word is "A", which in the ASCII table represents the number 41, any character
     // smaller than 'A' is equivalent to negative infinite if comparing only alphabet characters
-    char *minus_inf = malloc(sizeof(char));
+
+    entry *new_entry = calloc(1, sizeof(entry));
+
+    char *minus_inf = calloc(2, sizeof(char));
     minus_inf[0] = '@';
 
-    skip_list *dictionary = create_sl(minus_inf, compare_words, free_entry);
+    new_entry->word = minus_inf;
+
+    skip_list *dictionary = create_sl(new_entry, compare_words, free_entry);
 
     return dictionary;
 }
@@ -60,14 +72,21 @@ char *get_description(skip_list *dictionary, char *word) {
     entry *placeholder_entry = malloc(sizeof(entry));
     placeholder_entry->word = word;
 
-    entry *found = (entry *) get_value(find_node(dictionary, placeholder_entry));
+    quad_node *found = find_node(dictionary, placeholder_entry);
+    entry *value;
+
     char *description = NULL;
-    if (found->word != NULL && compare_words(found, placeholder_entry) == 0) {
-        description = found->description;
+    if (compare_words(placeholder_entry, get_value(found)) == 0) {
+
+        free(placeholder_entry);
+
+        value = (entry *) get_value(found);
+        description = value->description;
+        return description;
     }
 
     free(placeholder_entry);
-    return description;
+    return NULL;
 }
 
 int replace_description(skip_list *dictionary, char *word, char *new_description) {
@@ -114,16 +133,14 @@ int print_entries(skip_list *dictionary, char *prefix) {
 
     quad_node *current = find_node(dictionary, placeholder_entry);
 
-    if (current == NULL || get_next(current) == NULL) {
+    if (current == NULL || compare_prefix(placeholder_entry, (entry *) get_value(current)) != 0) {
         free(placeholder_entry);
         return -1;
     }
 
-    current = get_next(current);
-
     while (current != NULL && compare_prefix(placeholder_entry, get_value(current)) == 0) {
         printf("%s %s\n", ((entry *) get_value(current))->word, ((entry *) get_value(current))->description);
-        current = get_next(current);
+        current = get_previous(current);
     }
 
     free(placeholder_entry);

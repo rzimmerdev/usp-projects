@@ -1,27 +1,28 @@
 /*
  *  Property of Rafael Zimmer, rzimmerdev, nUsp 12542612
- *  Created 31/10/2021, 13:18
+ *  Created 10/11/2021
  *  Project for Algorithms and Data Structures - SCC0202, "Projeto 1: Dicionários"
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #include "libraries/tools/string_tools.h"
 #include "libraries/structures/skip_list.h"
 #include "dictionary.h"
 
 int main() {
-    srand(42);
+    srand(time(NULL));
 
     skip_list *dictionary = create_dictionary();
 
     char *operation;
 
+    // Scan operation per line and execute respective dictionary function, as
+    // well as scanning each required values for each operation
     while ((operation = scan_word())[0] != '\0') {
-
-        /*printf("%s\n", operation);*/
 
         if (strcmp(operation, "insercao") == 0) {
 
@@ -31,6 +32,8 @@ int main() {
             int out = add_entry(dictionary, word, description);
 
             if (out == -1) {
+                free(word);
+                free(description);
                 printf("OPERACAO INVALIDA\n");
             }
         }
@@ -42,6 +45,7 @@ int main() {
 
             int out = replace_description(dictionary, word, new_description);
             if (out == -1) {
+                free(new_description);
                 printf("OPERACAO INVALIDA\n");
             }
             free(word);
@@ -64,7 +68,7 @@ int main() {
 
             char *word = scan_word();
             char *description = get_description(dictionary, word);
-            if (description != NULL) {
+            if (description) {
                 printf("%s %s\n", word, description);
             } else {
                 printf("OPERACAO INVALIDA\n");
@@ -89,6 +93,8 @@ int main() {
 
         free(operation);
     }
+
+    free_list(dictionary);
 
     return 0;
 }

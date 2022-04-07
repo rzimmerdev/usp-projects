@@ -1,0 +1,16 @@
+gcc -o main main.o
+./main 23 88 25
+
+bit 3 do expoente e 1, e seu fator apos aplicacao do modulo e 6
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(1 * 6) (mod 25) = 6
+
+bit 4 do expoente e 1, e seu fator apos aplicacao do modulo e 11
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(6 * 11) (mod 25) = 16
+
+bit 6 do expoente e 1, e seu fator apos aplicacao do modulo e 16
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(16 * 16) (mod 25) = 6
+
+Resultado da exponenciacao modular 23^88 (mod 25) = 6

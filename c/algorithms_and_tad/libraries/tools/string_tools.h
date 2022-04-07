@@ -1,11 +1,36 @@
-#ifndef WORD_REPLACE_STRING_REPLACER_H
-#define WORD_REPLACE_STRING_REPLACER_H
+#ifndef WORD_STRING_TOOLS_H
+#define WORD_STRING_TOOLS_H
 
-// Replaces all occurences of a substring inside a string
-// with input substitute string
-void replace_string(char *string, char *substring, char *substitute);
 
-// Scans a single line from stdin, ending in \n or \r characters, as well as returning allocated pointer
-char *scan_line(int *size_pointer);
+/*
+ *  Scans and stores characters in string until '\n' or '\r' character from STDIN,
+ *  and returns allocated string
+ *
+ *  @Returns:
+ *           string array pointer: char*;
+*/
+char *scan_line();
+
+
+/*
+ *  Scans and stores a single word in string from STDIN,
+ *  separated by ' ' (space) or new-line characters
+ *
+ *  @Returns:
+ *            string array pointer: char*;
+*/
+char *scan_word(int *size_pointer);
+
+
+/*
+ *  Replaces all occurrences of substring in string with substitute value
+ *
+ *  @Input:
+ *         destination string: char* string,
+ *         substring to replace: char *substring,
+ *         value to insert in place: char *substitute
+*/
+void replace_string(char *string, char *substring, char *substitute)
+
 
 #endif

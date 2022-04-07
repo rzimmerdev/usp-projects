@@ -1,0 +1,28 @@
+gcc -o main main.o
+./main 12702 1000 55579
+
+bit 3 do expoente e 1, e seu fator apos aplicacao do modulo e 21435
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(1 * 21435) (mod 55579) = 21435
+
+bit 5 do expoente e 1, e seu fator apos aplicacao do modulo e 14016
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(21435 * 14016) (mod 55579) = 28465
+
+bit 6 do expoente e 1, e seu fator apos aplicacao do modulo e 32070
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(28465 * 32070) (mod 55579) = 43054
+
+bit 7 do expoente e 1, e seu fator apos aplicacao do modulo e 51084
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(43054 * 51084) (mod 55579) = 53927
+
+bit 8 do expoente e 1, e seu fator apos aplicacao do modulo e 29848
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(53927 * 29848) (mod 55579) = 45256
+
+bit 9 do expoente e 1, e seu fator apos aplicacao do modulo e 27313
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(45256 * 27313) (mod 55579) = 168
+
+Resultado da exponenciacao modular 12702^1000 (mod 55579) = 168

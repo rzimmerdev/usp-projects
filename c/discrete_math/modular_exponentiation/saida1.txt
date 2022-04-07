@@ -1,0 +1,20 @@
+gcc -o main main.o
+./main 10 15 29
+
+bit 0 do expoente e 1, e seu fator apos aplicacao do modulo e 10
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(1 * 10) (mod 29) = 10
+
+bit 1 do expoente e 1, e seu fator apos aplicacao do modulo e 13
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(10 * 13) (mod 29) = 14
+
+bit 2 do expoente e 1, e seu fator apos aplicacao do modulo e 24
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(14 * 24) (mod 29) = 17
+
+bit 3 do expoente e 1, e seu fator apos aplicacao do modulo e 25
+Multiplicando o produto anterior pelo fator atual, tem-se o produto atual dos fatores:
+(17 * 25) (mod 29) = 19
+
+Resultado da exponenciacao modular 10^15 (mod 29) = 19

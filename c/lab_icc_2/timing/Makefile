@@ -1,5 +1,5 @@
 program = timing_specific
-dependencies = $(program).o sorting.o
+dependencies = $(program).o auxiliary/sorting.o
 
 all: $(dependencies)
 	gcc -o $(program) $(dependencies)

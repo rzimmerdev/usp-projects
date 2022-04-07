@@ -1,0 +1,17 @@
+./timing_specific
+
+--------------------------------------------
+
+Vetor de 1000 elementos ordenados decrescentemente
+Bubble Sort: 0.001165s
+Insertion Sort: 0.000134s
+Merge Sort: 0.000052s
+
+--------------------------------------------
+
+Vetor de 1000 elementos ordenados crescentemente
+Bubble Sort: 0.001143s
+Insertion Sort: 0.000004s
+Merge Sort: 0.000061s
+
+--------------------------------------------

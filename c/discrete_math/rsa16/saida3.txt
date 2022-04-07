@@ -1,0 +1,11 @@
+gcc -o main main.o
+./main c 34343
+
+Chave publica: 24329
+Resultado da codificacao =  42591
+
+
+./main d 42591
+
+Chave privada: 15629
+Resultado da decodificacao =  34343

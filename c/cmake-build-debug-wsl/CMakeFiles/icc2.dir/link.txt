@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/icc2.dir/icc_2/main.c.o  -o ../out/icc2 

@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/redrum.dir/icc_1/redrum/main.c.o  -o ../out/redrum 

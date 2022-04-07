@@ -1,9 +1,8 @@
-import java.io.IOException;
-
 import static java.lang.Math.abs;
 
 public class Ex4_1 {
 
+    // Function to obtain square root (^1/2) of given value, with maximum expected error
     static double sqrt(double x, double error) {
 
         double guess = x / 2, prev_guess;
@@ -16,6 +15,7 @@ public class Ex4_1 {
         return guess;
     }
 
+    // Verify if all values up until square root of x divide x, else confirm that x is indeed prime
     static boolean is_prime(double x) {
 
         double error = 0.00000001;
@@ -36,18 +36,27 @@ public class Ex4_1 {
         return true;
     }
 
+    static int scan_int(String error) {
+
+        int value;
+
+        while (true) {
+            try {
+                value = EntradaTeclado.leInt();
+                break;
+            } catch (Exception e) {
+                System.out.println(error);
+            }
+        }
+
+        return value;
+    }
+
     public static void main(String[] args) {
 
         System.out.println("Insira um numero para verificar a primalidade: ");
 
-        int x;
-
-        try {
-            x = EntradaTeclado.leInt();
-            System.out.println("is_prime = " + is_prime(x));
-
-        } catch (IOException e) {
-            System.out.println("Valor invalido para x inserido.");
-        }
+        int x = scan_int("Valor invalido para x inserido.");
+        System.out.println("is_prime = " + is_prime(x));
     }
 }

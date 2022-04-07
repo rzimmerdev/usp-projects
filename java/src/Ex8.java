@@ -1,17 +1,19 @@
-import java.io.IOException;
-
 public class Ex8 {
 
+    // Function to find roots of
     static double f(double x) {
 
         return Math.pow(x, 3) - Math.pow(x, 2) - 13 * x + 8;
     }
 
+    // Derivative of function y = f(x), in respect to x
     static double dy_dx(double x) {
 
         return 3 * Math.pow(x, 2) - 2 * x - 13;
     }
 
+    // Function to obtain square root (^1/2) using Newton-Raphson Metod of given value,
+    // with maximum expected error
     static double find_root(double root, double error) {
         double y;
         int iter = 0;
@@ -29,17 +31,28 @@ public class Ex8 {
         return root;
     }
 
+    static double scan_double(String error) {
+
+        double value;
+
+        while (true) {
+            try {
+                value = EntradaTeclado.leDouble();
+                break;
+            } catch (Exception e) {
+                System.out.println(error);
+            }
+        }
+
+        return value;
+    }
+
     public static void main(String[] args) {
 
         double root = 0, error = Math.pow(10, -7);
 
-        try {
-            System.out.println("Insira o valor de x_0 (ponto proximo): ");
-            root = EntradaTeclado.leDouble();
-        } catch (IOException e) {
-            System.out.println("Valor invalido inserido");
-            System.exit(-1);
-        }
+        System.out.println("Insira o valor de x_0 (ponto proximo): ");
+        root = scan_double("Valor invalido inserido, tente novamente:");
 
         System.out.printf("Raiz encontrada: %f", find_root(root, error));
     }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.Arrays;
 
 public class Placar {
@@ -128,4 +129,7 @@ public class Placar {
 
         return board;
     }
+=======
+package PACKAGE_NAME;public class Placar {
+>>>>>>> master
 }

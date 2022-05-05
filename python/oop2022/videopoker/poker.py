@@ -56,11 +56,16 @@ class Player:
     def get_hand(self) -> List[Card]:
         return self.hand
 
+    def get_score(self):
+        return self._score
+
     def print_hand(self):
 
         card_split = [card.__str__().split("\n") for card in self.hand]
         zipped = zip(*card_split)
-
+        for i in range(len(self.hand)):
+            print("      {}      ".format(i + 1), end="")
+        print("")
         for lines in zipped:
             print("".join(lines))
 
@@ -77,15 +82,16 @@ def sequence_score_multiplier(cards: List[Card]) -> int:
     symbols = [int(card / 13) for card in sequence]
     values = [int(card % 13) for card in sequence]
 
-    follow = [value - min(values) for value in values]
+    ascending = values == list(range(values[0], values[-1] + 1))
     frequency = [0 for _ in range(13)]
+
     for value in values:
         frequency[value] += 1
 
-    if symbols[0] == 8 and symbols[4] == 12 and len(set(symbols)) == 1:
+    if symbols[0] == 8 and ascending and len(set(symbols)) == 1:
         return 200
 
-    elif follow[4] == 5 and len(set(symbols)) == 1:
+    elif ascending and len(set(symbols)) == 1:
         return 100
 
     elif 4 in frequency:
@@ -94,6 +100,15 @@ def sequence_score_multiplier(cards: List[Card]) -> int:
     elif 2 in frequency and 3 in frequency:
         return 20
 
-    elif len(set(symbols)) == 1 and follow[4] != 5:
+    elif len(set(symbols)) == 1:
         return 10
+
+    elif ascending:
+        return 5
+
+    elif 3 in frequency:
+        return 2
+
+    elif frequency.count(2) == 2:
+        return 1
 

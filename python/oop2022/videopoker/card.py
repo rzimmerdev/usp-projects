@@ -1,14 +1,22 @@
-from random import shuffle
 from typing import List
+from random import shuffle
 
 
 class Card:
+    """ Class to instantiate one poker card object, storing a value, a random generator for its value and a string
+    representation override.
+    """
 
-    def __init__(self, maximum=52):
+    def __init__(self, maximum: int = 52):
         self._maximum = maximum - 1
         self._value = -1
 
-    def roll(self, available=None):
+    def roll(self, available: List[int] = None) -> int:
+        """ Randomly sets card value from given list of available values to chose from.
+
+        :param available: List of available values to chose from. Range of values to maximum (default 52) if empty.
+        :return: Chosen value for card
+        """
         if available is None:
             available = list(range(self._maximum))
         shuffle(available)
@@ -23,7 +31,10 @@ class Card:
         return self._value
 
     def __str__(self):
+        """ Representating the card as a normal playing card in ASCII, with its suit symbol and numerical value shown.
 
+        :return: String representation in multiple lines of a playing card in ASCII.
+        """
         card = ("┌───────────┐\n"
                 "│ {value}        │\n"
                 "│           │\n"
@@ -38,51 +49,26 @@ class Card:
         return card.format(value=values[self._value % len(values)], symbol=symbols[int(self._value / len(values))])
 
 
-class Player:
-
-    def __init__(self, deck: list, hand_size=5):
-        self._hand_size = hand_size
-        self._score = 200
-        self.hand = []
-
-        for i in range(hand_size):
-            new_card = Card()
-
-            deck = list(set(deck) - set(card.get_value() for card in self.get_hand()))
-
-            new_card.roll(deck)
-            self.add_card(new_card)
-
-    def get_hand(self) -> List[Card]:
-        return self.hand
-
-    def get_score(self):
-        return self._score
-
-    def print_hand(self):
-
-        card_split = [card.__str__().split("\n") for card in self.hand]
-        zipped = zip(*card_split)
-        for i in range(len(self.hand)):
-            print("      {}      ".format(i + 1), end="")
-        print("")
-        for lines in zipped:
-            print("".join(lines))
-
-    def add_card(self, card):
-        self.hand.append(card)
-
-    def roll_card(self, index, deck):
-        self.hand[index].roll(deck)
-
-
 def sequence_score_multiplier(cards: List[Card]) -> int:
-    sequence = sorted([card.get_value() for card in cards])
+    """ Calculates score multiplies given sequence of cards in hand.\n
+        Possible scores are, as in Poker:\n
+        200x: Royal Straight Flush\n
+        100x: Straight Flush\n
+        50x: Four of a kind\n
+        20x: Full House\n
+        10x: Flush\n
+        5x: Straight\n
+        2x: Three of a kind\n
+        1x: Two pairs\n
+
+    :param cards: List of card objects to get values from, in any order
+    :return: Multiplier to be applied to bet given a poker hand
+    """
+    sequence = [card.get_value() for card in cards]
 
     symbols = [int(card / 13) for card in sequence]
-    values = [int(card % 13) for card in sequence]
-
-    ascending = values == list(range(values[0], values[-1] + 1))
+    values = sorted([int(card % 13) for card in sequence])
+    ascending: bool = values == list(range(values[0], values[-1] + 1))
     frequency = [0 for _ in range(13)]
 
     for value in values:
@@ -112,3 +98,4 @@ def sequence_score_multiplier(cards: List[Card]) -> int:
     elif frequency.count(2) == 2:
         return 1
 
+    return 0

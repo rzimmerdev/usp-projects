@@ -47,7 +47,6 @@ class Card:
         values = ['2 ', '3 ', '4 ', '5 ', '6 ', '7 ', '8 ', '9 ', '10', 'J ', 'Q ', 'K ', 'A ']
 
         return card.format(value=values[self._value % len(values)], symbol=symbols[int(self._value / len(values))])
-
     @staticmethod
     def sequence_score_multiplier(cards: list) -> int:
         """ Calculates score multiplies given sequence of cards in hand.\n

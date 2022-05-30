@@ -57,11 +57,14 @@ class Player:
         if not choice:
             choice = range(self._hand_size)
 
-        original_deck = deck
         for index in choice:
             if index <= 0 or index > 5:
                 continue
+
+            if len(set(deck)) == 0:
+                deck = list(set(range(52)) - set(self.hand))
+
             self.hand[index - 1].roll(deck)
-            deck = list(set(original_deck) - set(card.__int__() for card in self.hand))
+            deck = list(set(deck) - set(card.__int__() for card in self.hand))
 
         return deck

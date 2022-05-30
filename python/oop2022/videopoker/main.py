@@ -1,7 +1,7 @@
 from typing import List
 
 from player import Player
-from card import sequence_score_multiplier
+from card import Card
 
 
 class Main:
@@ -64,7 +64,7 @@ def main():
         player.print_hand()
 
         # Calculate resulting profit by multiplying chosen bet by last hand score multiplier.
-        profit = sequence_score_multiplier(player.get_hand()) * bet
+        profit = Card.sequence_score_multiplier(player.get_hand()) * bet
 
         if profit:
             print(f"Parabéns, você ganhou R$ {profit:.2f}!")

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.Arrays;
 
 public class RolaDados {
@@ -111,7 +110,3 @@ public class RolaDados {
         return horizontal.toString();
     }
 }
-=======
-package PACKAGE_NAME;public class RolaDados {
-}
->>>>>>> master

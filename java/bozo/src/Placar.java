@@ -1,132 +1,165 @@
-<<<<<<< HEAD
 import java.util.Arrays;
 
+
+
+/**
+ * Esta classe representa o placar de um jogo de Bozó. Permite que combinações
+ * de dados sejam alocadas às posições e mantém o escore de um jogador.
+ * @author delamaro
+ *
+ */
 public class Placar {
 
-    int[] placeholder;
+    private final int POSICOES = 10;
+    private int[] placar = new int[POSICOES];
+    private boolean[] taken = new boolean[POSICOES];
 
-    public Placar() {
-
-        placeholder = new int[10];
-
-        for (int i = 0; i < 10; i++) {
-            placeholder[i] = -1;
-        }
-    }
 
     /**
-     * Adds a sequence of dice values into the selected position in the scores placeholder,
-     * unless position is already filled.
-     *
-     * @param posicao Position in placeholder 1-indexed to insert sequence of dices.
-     * @param dados Sequence of dice values in Integer format to calculate value for given position.
-     * @throws IllegalArgumentException when position argument corresponds to already filled position.
+     * Adiciona uma sequencia de dados em uma determinada posição do placar.
+     * Após a chamada, aquela posição torna-se ocupada e não pode ser usada uma segunda vez.
+     * @param posicao  Posição a ser preenchida. As posições 1 a 6 correspondem às quantidas
+     * de uns até seis, ou seja, as laterais do placar. As outas posições são: 7 - full hand;
+     * 8 - sequencia; 9 - quadra; e 10 - quina
+     * @param dados um array de inteiros, de tamanho 5. Cada posição corresponde a um valor
+     * de um dado. Supões-se que cada dado pode ter valor entre 1 e 6.
+     * @throws IllegalArgumentException - Se a posição estiver ocupada ou se for passado
+     * um valor de posição inválido, essa exceção é lançada. Não é feita nenhuma verificação
+     * quanto ao tamanho do array nem quanto ao seu conteúdo.
      */
-    public void add(int posicao, int[] dados) throws IllegalArgumentException {
-
-        if (placeholder[posicao - 1] != -1)
-            throw new IllegalArgumentException("Posição já está ocupada!.");
-
-        placeholder[posicao - 1] = 0;
-
-        switch (posicao) {
-
-            // Calculate score for dice-values as total weighted sum of dices with respective value.
-            case 1, 2, 3, 4, 5, 6: {
-                for (int i = 0; i < dados.length; i++) {
-                    if (dados[i] == posicao)
-                        placeholder[posicao - 1] += posicao;
-                }
+    public void add(int posicao, int[] dados) throws IllegalArgumentException
+    {
+        if (posicao < 1 || posicao > 10)
+            throw new IllegalArgumentException("Valor da posição ilegal");
+        if ( taken[posicao-1] )
+            throw new IllegalArgumentException("Posição ocupada no placar");
+        int k = 0;
+        switch (posicao)
+        {
+            case 1: k = conta(1, dados);
                 break;
-            }
-
-            // Calculate if dice sequence is of type triplet + tuple, setting position score to 15.
-            case 7: {
-                Arrays.sort(dados);
-                if ((dados[0] == dados[2] && dados[3] == dados[4]) || (dados[0] == dados[1] && dados[2] == dados[4]))
-                    placeholder[6] = 15;
+            case 2: k = 2 * conta(2, dados);
                 break;
-            }
-
-            // Calculate if group of five dices is a sequence with step of 1.
-            case 8: {
-                Arrays.sort(dados);
-                int i = 5;
-                if (dados[4] == 6)
-                    i = 6;
-
-                for (int j = 0; j < 5; j++) {
-                    if (dados[4 - j] != i)
-                        i = 0;
-                    i--;
-                }
-                if (i != -1)
-                    placeholder[7] = 20;
+            case 3: k = 3 * conta(3, dados);
                 break;
-            }
-
-            // Calculate if four dices are equal and assign score 30.
-            case 9: {
-                Arrays.sort(dados);
-                if ((dados[0] == dados[3]) || (dados[1] == dados[4]))
-                    placeholder[8] = 30;
+            case 4: k = 4 * conta(4, dados);
                 break;
-            }
-
-            // Calculate if all dices in a group of five are equal and assign score 40.
-            case 10: {
-                Arrays.sort(dados);
-                if (dados[0] == dados[4])
-                    placeholder[9] = 40;
-            }
+            case 5: k = 5 * conta(5, dados);
+                break;
+            case 6: k = 6 * conta(6, dados);
+                break;
+            case 7: // full hand
+                if ( checkFull(dados) )
+                    k = 15;
+                break;
+            case 8: // sequencia
+                if ( checkSeqMaior(dados) )
+                    k = 20;
+                break;
+            case 9: // quadra
+                if ( checkQuadra(dados) )
+                    k = 30;
+                break;
+            case 10: // full hand
+                if ( checkQuina(dados) )
+                    k = 40;
+                break;
         }
+        placar[posicao-1] = k;
+        taken[posicao-1] = true;
     }
 
     /**
-     * Gets current scoreboard values for a single user instance.
-     *
-     * @return Sum of non-empty values in scoreboard placeholder.
+     * Computa a soma dos valores obtidos, considerando apenas as posições que já estão ocupadas.
+     * @return - O valor da soma.
      */
-    public int getScore() {
-        int total = 0;
-        for (int i = 0; i < 10; i++) {
-            if (placeholder[i] > 0)
-                total += placeholder[i];
+    public int getScore()
+    {
+        int t = 0;
+        for (int i = 0; i < POSICOES; i++)
+        {
+            if (taken[i])
+                t += placar[i];
         }
-        return total;
+        return t;
     }
 
+
+    private int conta(int n, int[] vet)
+    {
+        int cont = 0;
+        for (int i: vet)
+        {
+            if (i == n ) cont++;
+        }
+        return cont;
+    }
+
+    private boolean checkFull(int[] dados)
+    {
+        int[] v = dados.clone();
+        Arrays.sort(v);
+        return ( v[0] == v[1] && v[1] == v[2] && v[3] == v[4]) ||
+                ( v[0] == v[1] && v[2] == v[3] && v[3] == v[4]);
+    }
+
+    private boolean checkQuadra(int[] dados)
+    {
+        int[] v = dados.clone();
+        Arrays.sort(v);
+        return ( v[0] == v[1] && v[1] == v[2] && v[2] == v[3]) ||
+                ( v[1] == v[2] && v[2] == v[3] && v[3] == v[4]);
+    }
+
+    private boolean checkQuina(int[] dados)
+    {
+        int[] v = dados;
+        return ( v[0] == v[1] && v[1] == v[2] && v[2] == v[3] && v[3] == v[4]);
+    }
+
+    private boolean checkSeqMaior(int[] dados)
+    {
+        int[] v = dados.clone();
+        Arrays.sort(v);
+        return ( v[0]+1 == v[1] && v[1]+1 == v[2] && v[2]+1 <= v[3] && v[3]+1 == v[4]);
+    }
+
+
     /**
-     * Prints the player board with respective scores assigned to each field.
-     *
-     * @return String representation of game board displayed horizontally.
+     * A representação na forma de string, mostra o placar completo, indicando quais são as
+     * posições livres (com seus respectivos números) e o valor obtido nas posições já ocupadas.
+     * Por exemplo: <br>
+     * <pre>
+     * (1)    |   (7)    |   (4)
+     * --------------------------
+     * (2)    |   20     |   (5)
+     * --------------------------
+     * (3)    |   30     |   (6)
+     *--------------------------
+     *        |   (10)   |
+     *        +----------+ 
+     *</pre><br>
+     *mostra as posições 8 (sequencia) e 9 (quadra) ocupadas.
      */
     @Override
     public String toString() {
-
-        String board =
-                " (1)    |   (7)    |   (4) \n" +
-                " --------------------------\n" +
-                " (2)    |   (8)    |   (5) \n" +
-                " --------------------------\n" +
-                " (3)    |   (9)    |   (6) \n" +
-                " --------------------------\n" +
-                "        |   (10)   |       \n" +
-                "        +----------+       ";
-
-        for (int i = 0; i < 10; i++) {
-            // Maintain empty placeholders if value is still not filled.
-            if (placeholder[i] == -1) {
-                continue;
-            }
-
-            // Else, replace keeping horizontal formatting.
-            board = board.replace(
-                    "(" + (i + 1) + ")",
-                    " " + placeholder[i] + (placeholder[i] > 9 ? "" : " ") + ((i + 1 > 9) ? " " : "")
-            );
+        String num;
+        String s = "";
+        for (int i = 0 ; i < 3; i++) {
+            num = taken[i] ? String.format("%-4d", placar[i]) : "(" + (i+1) + ") ";
+            s +=   num + "   |   ";
+            num = taken[i+6] ? String.format("%-4d", placar[i+6]) : "(" + (i+7) + ") ";
+            s +=   num + "   |   ";
+            num = taken[i+3] ? String.format("%-4d", placar[i+3]) : "(" + (i+4) + ") ";
+            s+= num + "\n--------------------------\n";
         }
-
-        return board;
+        num = taken[9] ? String.format("%-4d", placar[9]) : "(" + 10 + ")";
+        s += "       |   " + num + "   |";
+        s += "\n       +----------+\n";
+        return s;
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

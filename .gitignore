@@ -1,3 +1,8 @@
-.idea
-./idea
-**/__pycache__/
+.idea/
+*.in
+*.out
+*.pajek
+*.class
+*.zip
+__pycache__/
+

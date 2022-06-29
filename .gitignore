@@ -5,4 +5,4 @@
 *.class
 *.zip
 __pycache__/
-
+*.png

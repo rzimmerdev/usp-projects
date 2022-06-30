@@ -1,5 +1,8 @@
-.idea
-./idea
-**/__pycache__/
-coverage/
+.idea/
+*.in
+*.out
+*.pajek
+*.class
 *.zip
+__pycache__/
+*.png

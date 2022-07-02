@@ -8,6 +8,8 @@
 # ========================================================================
 import imageio
 import numpy as np
+import random
+from view import show_images
 
 
 def rmse(original: np.ndarray, reference: np.ndarray) -> float:
@@ -28,7 +30,7 @@ def normalize_image(image: np.ndarray, cap: float = 255) -> np.ndarray:
     return normalized.astype(np.uint8)
 
 
-def normalize_array(array, cap: float = 1):
+def normalize_array(array, cap: float = 1) -> np.ndarray:
     """Normalizes a 1D array, between ranges 0-cap.
 
     Args:
@@ -41,7 +43,7 @@ def normalize_array(array, cap: float = 1):
     return normalized
 
 
-def euclidean(point_1: np.ndarray, point_2: np.ndarray):
+def euclidean(point_1: np.ndarray, point_2: np.ndarray) -> float:
     """Simple method for calculating the euclidean distance between two points, with type np.ndarray."""
     return np.sqrt(np.sum(np.square(point_1 - point_2)))
 
@@ -52,8 +54,32 @@ def grayscale(image: np.ndarray) -> np.ndarray:
     return np.dot(image[:, :, 0:3], [0.299, 0.587, 0.114]).astype(np.uint8)
 
 
+def initialize_clusters(image, total_clusters):
+    size = image[0] * image[1]
+    print(total_clusters)
+    print(size)
+    labels = np.sort(random.sample(range(0, size), total_clusters))
+    return labels
+
+
+def kneighbours_classifier(image, total_clusters):
+    """Generates a label mask for the given image.
+    Uses the kneareset neighbours algorithm for performing classification on the given image.
+    Resulting labeled mask contains the selected k number of labeled groups.
+
+    Args:
+        image:
+        total_clusters:
+
+    Returns:
+        Label mask for the given image, with clusters number of different groups.
+    """
+    labels = initialize_clusters(image, total_clusters)
+    return labels
+
+
 def main():
-    # Read filename for input and reference images
+    # Read filename for files and reference images
     input_filename, reference_filename = input().rstrip(), input().rstrip()
 
     # Reads the image type to be used, can be either
@@ -69,9 +95,13 @@ def main():
     # Seed to be used for the random centroids
     seed = int(input())
 
+    input_image, reference_image = imageio.imread(input_filename), imageio.imread(reference_filename)
 
+    random.seed(seed)
+    kneighbours_classifier(input_image, total_clusters)
 
-
+    show_images([input_image, reference_image])
+    
 
 if __name__ == "__main__":
     main()

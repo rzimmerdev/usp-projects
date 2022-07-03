@@ -43,9 +43,9 @@ def normalize_array(array, cap: float = 1) -> np.ndarray:
     return normalized
 
 
-def euclidean(point_1: np.ndarray, point_2: np.ndarray) -> float:
-    """Simple method for calculating the euclidean distance between two points, with type np.ndarray."""
-    return np.sqrt(np.sum(np.square(point_1 - point_2)))
+def euclidean(first: np.ndarray, last: np.ndarray, axis: int = None):
+    """Simple method for calculating the euclidean distance between points, with type np.ndarray."""
+    return np.sqrt(np.sum(np.square(first - last), axis=axis))
 
 
 def grayscale(image: np.ndarray) -> np.ndarray:
@@ -55,14 +55,12 @@ def grayscale(image: np.ndarray) -> np.ndarray:
 
 
 def initialize_clusters(image, total_clusters):
-    size = image[0] * image[1]
-    print(total_clusters)
-    print(size)
-    labels = np.sort(random.sample(range(0, size), total_clusters))
-    return labels
+    size = image.shape[0] * image.shape[1]
+    ids = np.sort(random.sample(range(0, size), total_clusters))
+    return ids
 
 
-def kneighbours_classifier(image, total_clusters):
+def kneighbours_classifier(image, total_clusters, total_iterations):
     """Generates a label mask for the given image.
     Uses the kneareset neighbours algorithm for performing classification on the given image.
     Resulting labeled mask contains the selected k number of labeled groups.
@@ -70,12 +68,32 @@ def kneighbours_classifier(image, total_clusters):
     Args:
         image:
         total_clusters:
-
+        total_iterations:
     Returns:
         Label mask for the given image, with clusters number of different groups.
     """
-    labels = initialize_clusters(image, total_clusters)
-    return labels
+    centroids = initialize_clusters(image, total_clusters)
+    flatten = image.reshape(image.shape[0] * image.shape[1], -1)
+
+    shape = image.shape[0] * image.shape[1]
+
+    for i in range(total_iterations):
+        distances_map = np.zeros((shape, total_clusters), dtype=np.float32)
+
+        for idx, centroid in enumerate(centroids):
+            distance_to_centroid = euclidean(flatten, flatten[centroid], axis=1)
+            distances_map[:, idx] = distance_to_centroid[:]
+
+        labels_mask = np.argmin(distances_map[:, :], axis=1)
+
+        for idx in range(len(centroids)):
+            positions = np.argwhere(labels_mask == idx)
+            centroids[idx] = positions.sum(axis=0) / len(positions)
+
+    # TODO: Use masks to return labeled image
+    print(centroids)
+
+    return centroids
 
 
 def main():
@@ -95,13 +113,15 @@ def main():
     # Seed to be used for the random centroids
     seed = int(input())
 
-    input_image, reference_image = imageio.imread(input_filename), imageio.imread(reference_filename)
+    input_image = imageio.imread(input_filename).astype(np.float64)
+    reference_image = imageio.imread(reference_filename).astype(np.float64)
 
     random.seed(seed)
-    kneighbours_classifier(input_image, total_clusters)
 
-    show_images([input_image, reference_image])
-    
+    kneighbours_classifier(input_image, total_clusters, total_iterations)
+
+    # show_images([input_image.astype(np.uint8), reference_image.astype(np.uint8)])
+
 
 if __name__ == "__main__":
     main()

@@ -18,15 +18,19 @@ def rmse(original: np.ndarray, reference: np.ndarray) -> float:
 
 
 def normalize_image(image: np.ndarray, cap: float = 255) -> np.ndarray:
-    """Normalizes image in Numpy 2D array format, between ranges 0-cap, as to fit uint8 type.
+    """Normalizes image in Numpy 3D RGB image format, between ranges 0-cap, as to fit uint8 type.
 
     Args:
-        image: 2D numpy array representing image as matrix, with values in any range
+        image: 3D numpy array representing RGB image as matrix, with values in any range
         cap: Maximum cap amount for normalization
     Returns:
-        return 2D numpy array of type uint8, corresponding to limited range matrix
+        return 3D numpy array of type uint8, corresponding to limited range matrix
     """
-    normalized = (image - np.min(image)) / (np.max(image) - np.min(image)) * cap
+    normalized = np.zeros_like(image)
+    for i in range(3):
+        current_channel = image[:, :, i]
+        normalized[:, :, i] = (current_channel - np.min(current_channel)) / \
+                              (np.max(current_channel) - np.min(current_channel)) * cap
     return normalized.astype(np.uint8)
 
 
@@ -60,6 +64,17 @@ def initialize_clusters(image, total_clusters):
     return ids
 
 
+def map_distances(centroids, flatten, shape, total_clusters):
+    distances_map = np.zeros((shape, total_clusters), dtype=np.float32)
+
+    for idx, centroid in enumerate(centroids):
+        distance_to_centroid = euclidean(flatten, flatten[centroid], axis=1)
+        distances_map[:, idx] = distance_to_centroid[:]
+
+    labels_mask = np.argmin(distances_map[:, :], axis=1)
+    return labels_mask
+
+
 def kneighbours_classifier(image, total_clusters, total_iterations):
     """Generates a label mask for the given image.
     Uses the kneareset neighbours algorithm for performing classification on the given image.
@@ -73,27 +88,27 @@ def kneighbours_classifier(image, total_clusters, total_iterations):
         Label mask for the given image, with clusters number of different groups.
     """
     centroids = initialize_clusters(image, total_clusters)
-    flatten = image.reshape(image.shape[0] * image.shape[1], -1)
+    flatten = image.reshape((image.shape[0] * image.shape[1], -1))
 
     shape = image.shape[0] * image.shape[1]
 
     for i in range(total_iterations):
-        distances_map = np.zeros((shape, total_clusters), dtype=np.float32)
-
-        for idx, centroid in enumerate(centroids):
-            distance_to_centroid = euclidean(flatten, flatten[centroid], axis=1)
-            distances_map[:, idx] = distance_to_centroid[:]
-
-        labels_mask = np.argmin(distances_map[:, :], axis=1)
+        labels_mask = map_distances(centroids, flatten, shape, total_clusters)
 
         for idx in range(len(centroids)):
             positions = np.argwhere(labels_mask == idx)
-            centroids[idx] = positions.sum(axis=0) / len(positions)
+            centroids[idx] = np.average(positions)
+    labels_mask = map_distances(centroids, flatten, shape, total_clusters)
 
-    # TODO: Use masks to return labeled image
-    print(centroids)
+    colors = flatten[centroids][:, 0:3]
 
-    return centroids
+    for channel in range(3):
+        colors[:, channel] = normalize_array(colors[:, channel], 255)
+    labels = labels_mask.reshape((image.shape[0], image.shape[1], -1))
+
+    for idx, centroid in enumerate(centroids):
+        labels = np.where(labels == idx, colors[idx], labels)
+    return labels.astype(np.float32)
 
 
 def main():
@@ -118,9 +133,10 @@ def main():
 
     random.seed(seed)
 
-    kneighbours_classifier(input_image, total_clusters, total_iterations)
-
-    # show_images([input_image.astype(np.uint8), reference_image.astype(np.uint8)])
+    labeled_image = kneighbours_classifier(input_image, total_clusters, total_iterations)
+    show_images([labeled_image.astype(np.uint8), reference_image.astype(np.uint8)], "gray")
+    print(np.unique(labeled_image, axis=2))
+    print(rmse(labeled_image, reference_image))
 
 
 if __name__ == "__main__":

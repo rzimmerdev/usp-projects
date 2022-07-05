@@ -9,7 +9,6 @@
 import imageio
 import numpy as np
 import random
-from view import show_images
 
 
 def rmse(original: np.ndarray, reference: np.ndarray) -> float:
@@ -64,18 +63,18 @@ def initialize_clusters(image, total_clusters):
     return ids
 
 
-def map_distances(centroids, flatten, shape, total_clusters):
-    distances_map = np.zeros((shape, total_clusters), dtype=np.float32)
+def map_distances(centroids, flatten, channels):
+    distances_map = np.zeros((flatten.shape[0], len(centroids)), dtype=np.float32)
 
     for idx, centroid in enumerate(centroids):
-        distance_to_centroid = euclidean(flatten, flatten[centroid], axis=1)
-        distances_map[:, idx] = distance_to_centroid[:]
+        distance_to_centroid = euclidean(flatten[:, 0:channels], flatten[:, 0:channels][int(centroid)], axis=1)
+        distances_map[:, idx] = distance_to_centroid
 
     labels_mask = np.argmin(distances_map[:, :], axis=1)
     return labels_mask
 
 
-def kneighbours_classifier(image, total_clusters, total_iterations):
+def kneighbours_classifier(image, total_clusters, total_iterations, channels):
     """Generates a label mask for the given image.
     Uses the kneareset neighbours algorithm for performing classification on the given image.
     Resulting labeled mask contains the selected k number of labeled groups.
@@ -93,17 +92,25 @@ def kneighbours_classifier(image, total_clusters, total_iterations):
     shape = image.shape[0] * image.shape[1]
 
     for i in range(total_iterations):
-        labels_mask = map_distances(centroids, flatten, shape, total_clusters)
+        # For each centroid, calculate the distance between its channels and each individual pixel within
+        # the flattened image. Then, attribute to each position the id of the centroid to which the current pixel
+        # has the smallest distance.
+        # centroids: array with position of each centroid
+        # flatten: flattened original image
+        labels_mask = map_distances(centroids, flatten, channels)
 
         for idx in range(len(centroids)):
             positions = np.argwhere(labels_mask == idx)
-            centroids[idx] = np.average(positions)
-    labels_mask = map_distances(centroids, flatten, shape, total_clusters)
+            if positions.size != 0:
+                centroids[idx] = np.mean(positions)
 
-    colors = flatten[centroids][:, 0:3]
+    labels_mask = map_distances(centroids, flatten, channels)
 
-    for channel in range(3):
+    colors = flatten[centroids][:, 0:channels]
+
+    for channel in range(channels):
         colors[:, channel] = normalize_array(colors[:, channel], 255)
+
     labels = labels_mask.reshape((image.shape[0], image.shape[1], -1))
 
     for idx, centroid in enumerate(centroids):
@@ -133,9 +140,8 @@ def main():
 
     random.seed(seed)
 
-    labeled_image = kneighbours_classifier(input_image, total_clusters, total_iterations)
-    show_images([labeled_image.astype(np.uint8), reference_image.astype(np.uint8)], "gray")
-    print(np.unique(labeled_image, axis=2))
+    labeled_image = kneighbours_classifier(input_image, total_clusters, total_iterations, 3 if image_type < 3 else 1)
+    # show_images([labeled_image.astype(np.uint8), reference_image.astype(np.uint8)])
     print(rmse(labeled_image, reference_image))
 
 

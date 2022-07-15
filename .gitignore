@@ -6,3 +6,6 @@
 *.zip
 __pycache__/
 *.png
+
+*.pth
+*.DS_STORE

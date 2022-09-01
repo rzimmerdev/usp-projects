@@ -28,37 +28,38 @@ bool has_overlay(pair<double, double> first_range, pair<double, double> second_r
 }
 
 int count_sprinklers(vector<pair<double, double>> sprinklers, int num_sprinklers, double strip_length) {
-    if (sprinklers[0].first > 0 || sprinklers[num_sprinklers - 1].second < strip_length)
+    int count = 0;
+
+    int current_sprinkler = 0, next_sprinkler = 1, best_sprinkler = 1;
+    double best_distance = -1;
+
+    if (num_sprinklers <= 0 || sprinklers[0].first > 0 || sprinklers[num_sprinklers - 1].second < strip_length)
         return -1;
 
-    int count = 1;
-    if (sprinklers[0].first <= 0 && sprinklers[0].second >= strip_length)
-        return count;
+    while (current_sprinkler < num_sprinklers) {
 
-    int current = 0;
-    double pos = -1;
+        while (next_sprinkler < num_sprinklers && has_overlay(sprinklers[current_sprinkler], sprinklers[next_sprinkler])) {
 
-    while (current < num_sprinklers) {
-        int last = current;
-
-        while (last + 1 < num_sprinklers && has_overlay(sprinklers[last + 1], sprinklers[current])) {
-            if (sprinklers[last + 1].second >= strip_length)
-                return count + 1;
-            last++;
-
-            if (pos < sprinklers[last].second) {
-                pos = sprinklers[last].second;
+            if (best_distance < sprinklers[next_sprinkler].second) {
+                best_distance = sprinklers[next_sprinkler].second;
+                best_sprinkler = next_sprinkler;
             }
-        }
-        cout << last << " ";
 
-        if (current == last)
+            next_sprinkler++;
+        }
+
+        if (next_sprinkler >= num_sprinklers) {
+            current_sprinkler = best_sprinkler;
+            break;
+        }
+        if (current_sprinkler == best_sprinkler)
             return -1;
-        current = last;
-        count++;
+        current_sprinkler = best_sprinkler;
     }
 
-    return count;
+    if (sprinklers[current_sprinkler].second < strip_length)
+        return -1;
+    return 1;
 }
 
 
@@ -78,7 +79,7 @@ int main() {
     int num_sprinklers;
     double strip_length, strip_width;
     double sprinkler_pos, sprinkler_radius;
-    int j = 0;
+
     while (cin >> num_sprinklers) {
         cin >> strip_length >> strip_width;
 

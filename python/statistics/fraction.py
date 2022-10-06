@@ -234,6 +234,18 @@ class frac:
             d = self.d
         return frac(composite=(n, d))
 
+    def __rtruediv__(self, other):
+        if isinstance(other, frac):
+            n = merge(self.d, other.n)
+            d = merge(self.n, other.d)
+        elif isinstance(other, int):
+            n = insort(self.d, other)
+            d = self.n
+        else:
+            n = self.n
+            d = self.d
+        return frac(composite=(n, d))
+
     __rmul__ = __mul__
     __radd__ = __add__
 

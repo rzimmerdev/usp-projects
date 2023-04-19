@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dogs are Awesome</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+	window.addEventListener('hashchange', function() {
+		let hash = window.location.hash.substr(1);
+		if (hash == "") { hash = "home"; }
+		let new_active = "nav-" + hash;
+
+		let nav_items = document.getElementsByClassName("nav-item");
+		for (let item of nav_items) {
+			if (item.id === new_active) {
+				item.className = "nav-item active";
+			} else {
+				item.className = "nav-item";
+			}
+		}
+	})
+
+	function toggle_navbar() {
+		let mobile_navbar = document.getElementById("mobile-navbar");
+		if (mobile_navbar.style.display == "" || mobile_navbar.style.display == "none") {
+			mobile_navbar.style.display = "Inline";
+		} else {
+			mobile_navbar.style.display = "None";
+		}
+	}
+	</script>
+</head>
+<body>
+	<nav>
+		<h1 class="title">Website about Dogs</h1>
+		<ul id="navbar">
+			<li><a class="nav-item active" id="nav-home" href="#">HOME</a></li>
+			<li><a class="nav-item" id="nav-banner" href="#banner">BANNER</a></li>
+			<li><a class="nav-item" id="nav-dog" href="#dog">DOG</a></li>
+			<li><a class="nav-item" id="nav-facebook-link" href="#facebook-link">CONTACT</a></li>
+		</ul>
+		<ul id="mobile-navbar">
+			<li><a class="nav-item active" id="nav-home" href="#">HOME</a></li>
+			<li><a class="nav-item" id="nav-banner" href="#banner">BANNER</a></li>
+			<li><a class="nav-item" id="nav-dog" href="#dog">DOG</a></li>
+			<li><a class="nav-item" id="nav-facebook-link" href="#facebook-link">CONTACT</a></li>
+		</ul>
+		<div id="mobile-navbar-toggle">
+			<button onclick="toggle_navbar()">Menu</button>
+		</div>
+	</nav>
+	<div class="content" onload="console.log(hash)">
+		<div id="banner">
+			<h1>Welcome to this Website!</h1>
+		</div>
+		<div class="carroussel">
+			<img id="dog" src="https://pngimg.com/uploads/dog/dog_PNG50317.png" width=300>
+		</div>
+	<footer>
+		<div class="footer">
+			<a class="socials" id="facebook-link" href="https://www.facebook.com">Facebook</a>
+		</div>
+	</footer>
+</body>
+</html>

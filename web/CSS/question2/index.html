@@ -21,10 +21,10 @@
 
 	function toggle_navbar() {
 		let mobile_navbar = document.getElementById("mobile-navbar");
-		if (mobile_navbar.style.display == "" || mobile_navbar.style.display == "none") {
-			mobile_navbar.style.display = "Inline";
+		if (mobile_navbar.className == "hidden") {
+			mobile_navbar.className = "";
 		} else {
-			mobile_navbar.style.display = "None";
+			mobile_navbar.className = "hidden";
 		}
 	}
 	</script>

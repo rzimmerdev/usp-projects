@@ -57,6 +57,10 @@ def lu_decomp(A):
     U = np.copy(A)
 
     for k in range(n - 1):
+        pivot_index = np.argmax(np.abs(U[k:, k])) + k
+        U[[k, pivot_index], :] = U[[pivot_index, k], :]
+        L[[k, pivot_index], :k] = L[[pivot_index, k], :k]
+
         for i in range(k + 1, n):
             L[i, k] = U[i, k] / U[k, k]
             U[i, k:] -= L[i, k] * U[k, k:]
@@ -109,7 +113,7 @@ def lup_decomp(A):
     U = np.copy(A)
 
     for k in range(n - 1):
-        p = np.argmax(abs(U[k:, k]))
+        p = k + np.argmax(abs(U[k:, k]))
 
         P[[k, p], :] = P[[p, k], :]
         U[[k, p], k:] = U[[p, k], k:]
@@ -212,4 +216,4 @@ if __name__ == "__main__":
 
     H = cholesky_decomp(A_spd)
 
-    print(np.matmul(H, H.T))
+    print(H @ H.T)

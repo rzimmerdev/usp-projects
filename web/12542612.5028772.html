@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+  <style>
+    /* CSS styles go here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    button {
+      background-color: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #0d47a1;
+    }
+
+    #bar {
+      background-color: #eee;
+      border-radius: 4px;
+      height: 20px;
+      position: relative;
+    }
+
+    .progress-fill {
+      background-color: #1a73e8;
+      border-radius: 4px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    .progress-label {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-top: 5px;
+    }
+  </style>
+  <script>
+    const questions = [
+      {
+        question: "A person standing on a horizontal floor feels two forces: the downward pull of gravity and the upward supporting force from the floor. These two forces,",
+        answers: [
+          "have equal magnitudes and form an action/reaction pair",
+          "have equal magnitudes but do not form an action/reaction pair",
+          "have unequal magnitudes and form an action/reaction pair",
+          "have unequal magnitudes and do not form an action/reaction pair",
+          "None of the above"
+        ],
+        correct: 1
+      },
+      {
+        question: "A frictionless inclined plane of length 20 m has a maximum vertical height of 5 m. If an object of mass 2 kg is placed on the plane, which of the following best approximates the net force it feels?",
+        answers: [
+                "5 N",
+                "10 N",
+                "15 N",
+                "20 N",
+                "30 N"
+        ],
+        correct: 4
+      },{
+        question: "A 20 N block is being pushed across a horizontal table by an 18 N force. If the coefficient of kinetic friction between the block and the table is 0.4, find the acceleration of the block.",
+        answers: [
+          "0.5 m/s2",
+          "1 m/s2",
+          "5 m/s2",
+          "7.5 m/s2",
+          "9 m/s2"
+        ],
+        correct: 0
+      },
+    ]
+    let answers = questions.map(({ question }) => -1);
+
+    function updateProgressBar(next) {
+    }
+
+    function switch_question(curr, next, save_answer) {
+      const form = document.getElementById("questions");
+      let question_holder = form.getElementsByClassName("current")[0];
+      let question = question_holder.children[0];
+      let selected_answers = question_holder.children[1];
+
+      if (save_answer) {
+        let selected = document.querySelector('input[name="answer"]:checked');
+        if (selected)
+          answers[curr] = selected.value;
+        else
+          answers[curr] = -1;
+      }
+
+      if (next < 0 || next >= questions.length) {
+        return;
+      }
+
+      let progressBar = document.getElementById('bar');
+
+      const updateProgressBarEvent = new CustomEvent('updateProgressBar', {
+        bubbles: true,
+        cancelable: true,
+      });
+
+      progressBar.addEventListener('updateProgressBar', function(event) {
+        const percent = (next / questions.length) * 100;
+        let fill = document.getElementById('fill');
+        let label = document.getElementById('label');
+        fill.style.width = Math.round(percent) + '%';
+        label.textContent = 'Question ' + next + ' of ' + questions.length;
+      });
+
+      progressBar.dispatchEvent(updateProgressBarEvent);
+
+      selected_answers.innerHTML = "";
+      question.innerText = questions[next].question;
+
+      for (let answer_id in questions[next].answers) {
+        let new_answer = create_answer(questions[next].answers[answer_id], answer_id);
+        selected_answers.appendChild(new_answer);
+      }
+      document.getElementById("answer").innerText = "";
+    }
+
+    function create_answer(answer, id) {
+      let new_answer = document.createElement("li");
+      let label = document.createElement("label");
+      let input = document.createElement("input");
+
+      input.type = "radio";
+      input.name = "answer";
+      input.value = id;
+      input.id = input.name + "-" + id;
+
+      label.innerText = answer;
+      label.htmlFor = input.id;
+
+      new_answer.appendChild(input);
+      new_answer.append(label);
+      return new_answer
+    }
+
+    function submit() {
+      switch_question(current_question, 0, true);
+      let total = 0;
+
+      for (let answer in answers) {
+        if (answers[answer] == questions[answer].correct) {
+          total += 1;
+        }
+      }
+      let score = total / answers.length;
+      document.getElementById("answer").innerText = "Final score: " + score.toFixed(4) * 100 + "%";
+
+      return score;
+    }
+  </script>
+</head>
+<body>
+  <div class="content">
+    <div class="card">
+      <form id="questions">
+        <div class="current">
+          <p></p>
+          <ol></ol>
+        </div>
+        <div class="navigation">
+          <button type="button" name="prev" id="submit">Submit</button>
+          <button type="button" name="next" id="next">Next</button>
+        </div>
+      </form>
+      <div id="bar">
+        <div id="fill" class="progress-fill"></div>
+        <div id="label" class="progress-label"></div>
+      </div>
+      <p id="answer"></p>
+    </div>
+  </div>
+<script>
+  let current_question = 0;
+  switch_question(0, 0, false);
+
+  document.getElementById("submit").addEventListener("click", submit);
+  document.getElementById("next").addEventListener("click", function () {switch_question(current_question, ++current_question, true)});
+  updateProgressBar(1);
+</script>
+</body>
+</html>

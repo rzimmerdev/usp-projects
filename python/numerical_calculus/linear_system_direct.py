@@ -57,10 +57,6 @@ def lu_decomp(A):
     U = np.copy(A)
 
     for k in range(n - 1):
-        pivot_index = np.argmax(np.abs(U[k:, k])) + k
-        U[[k, pivot_index], :] = U[[pivot_index, k], :]
-        L[[k, pivot_index], :k] = L[[pivot_index, k], :k]
-
         for i in range(k + 1, n):
             L[i, k] = U[i, k] / U[k, k]
             U[i, k:] -= L[i, k] * U[k, k:]

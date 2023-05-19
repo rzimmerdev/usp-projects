@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Activity</title>
+</head>
+<body>
+<h1>DOM Manipulation Activity</h1>
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+<img src="https://via.placeholder.com/100" alt="Placeholder Image">
+<button id="taskButton">Perform Task</button>
+
+<script>
+    function clicked(ref) {
+        ref.innerText = "Clicked!";
+    }
+
+    function tasks(_) {
+        document.getElementsByTagName("p")[0].textContent = "New Paragraph 1";
+
+        let new_list_item = document.createElement("li")
+        new_list_item.textContent = "Item 4";
+
+        document.getElementsByTagName("ul")[0].appendChild(new_list_item)
+
+        document.getElementsByTagName("img")[0].src =
+            "https://upload.wikimedia.org/wikipedia/commons/d/d1/Lord_White_Elephant.jpg";
+
+        document.getElementsByTagName("p")[1].style = "background-color: yellow";
+
+        document.getElementsByTagName("p")[0].addEventListener("click",
+            function (self) {self.target.textContent = "Clicked!"});
+    }
+
+    document.getElementById("taskButton").addEventListener("click", tasks);
+
+</script>
+</body>
+</html>

@@ -9,3 +9,5 @@ __pycache__/
 
 *.pth
 *.DS_STORE
+nft-frontend/
+nft-backend/

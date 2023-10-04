@@ -8,7 +8,7 @@ onibus(sanca, araraquara).
 onibus(sorocaba, franca).
 
 viagemSomenteIda(X, Y):-
-    (onibus(X, Y), !); (viagem(X, Z), viagem(Z, Y)).
+    (onibus(X, Y), !); (viagemSomenteIda(X, Z), viagemSomenteIda(Z, Y)).
 
 viagem(X, Y):-
     (onibus(X, Y), !); (onibus(Y, X), !); (viagem(X, Z), viagem(Z, Y)).
